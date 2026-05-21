@@ -1,20 +1,61 @@
-import Home from "@/pages/home/Home.vue";
-import { createRouter, createWebHashHistory } from "vue-router";
+import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router';
+import HomeView from '../views/HomeView.vue';
 
+const routes: Array<RouteRecordRaw> = [
+  {
+    path: '/',
+    name: 'Home',
+    component: HomeView
+  },
+  {
+    path: '/artistas',
+    name: 'Artistas',
+    component: () => import('../views/ArtistasView.vue')
+  },
+  {
+    path: '/programa',
+    name: 'ProgramaParent',
+    component: () => import('../views/ProgramaLayout.vue'), // Contenedor estructural de rutas anidadas
+    children: [
+      {
+        path: '',
+        redirect: '/programa/viernes'
+      },
+      {
+        path: 'viernes',
+        name: 'ProgramaViernes',
+        component: () => import('../views/ProgramaDiaView.vue'),
+        props: { dia: 'Viernes' }
+      },
+      {
+        path: 'sabado',
+        name: 'ProgramaSabado',
+        component: () => import('../views/ProgramaDiaView.vue'),
+        props: { dia: 'Sábado' }
+      },
+      {
+        path: 'domingo',
+        name: 'ProgramaDomingo',
+        component: () => import('../views/ProgramaDiaView.vue'),
+        props: { dia: 'Domingo' }
+      }
+    ]
+  },
+  {
+    path: '/entradas',
+    name: 'Entradas',
+    component: () => import('../views/EntradasView.vue')
+  },
+  {
+    path: '/info',
+    name: 'Info',
+    component: () => import('../views/InfoView.vue')
+  }
+];
 
+const router = createRouter({
+  history: createWebHistory(),
+  routes
+});
 
-export const router = createRouter({
-  history: createWebHashHistory(import.meta.env.BASE_URL),
-
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: Home
-    },
-    {
-      path: '/:patchMatch(.*)',
-      redirect: '/'
-    }
-  ]
-})
+export default router;
