@@ -11,25 +11,25 @@ import { FESTIVAL_INFO } from '../data/mockData';
       
       <div class="container mx-auto max-w-4xl text-center relative z-10 space-y-6">
         <p class="text-emerald-400 font-mono tracking-widest uppercase text-sm font-bold">
-          ¿Y si un festival fuera algo más que música? [cite: 97]
+          ¿Y si un festival fuera algo más que música?
         </p>
         
         <h1 class="text-5xl md:text-8xl font-black tracking-tighter text-white">
-          {{ FESTIVAL_INFO.nombre }} [cite: 17]
+          {{ FESTIVAL_INFO.nombre }} 
         </h1>
         
         <p class="text-xl md:text-2xl text-neutral-300 font-medium max-w-2xl mx-auto leading-relaxed">
-          {{ FESTIVAL_INFO.lema }} [cite: 12]
+          {{ FESTIVAL_INFO.lema }}
         </p>
 
         <div class="flex flex-wrap justify-center gap-6 pt-4 text-sm md:text-base text-neutral-400 font-medium">
           <div class="flex items-center gap-2 bg-neutral-900/80 px-4 py-2 rounded-full border border-neutral-800">
             <Calendar class="h-4 w-4 text-emerald-400" />
-            <span>Del 23 al 25 de octubre de 2026</span> [cite: 98]
+            <span>Del 23 al 25 de octubre de 2026</span> 
           </div>
           <div class="flex items-center gap-2 bg-neutral-900/80 px-4 py-2 rounded-full border border-neutral-800">
             <MapPin class="h-4 w-4 text-emerald-400" />
-            <span>Las Naves (València)</span> [cite: 98]
+            <span>Las Naves (València)</span>
           </div>
         </div>
 
@@ -49,19 +49,19 @@ import { FESTIVAL_INFO } from '../data/mockData';
     <section class="container mx-auto px-4 max-w-5xl">
       <div class="grid md:grid-cols-2 gap-8 items-center bg-neutral-900/40 p-8 md:p-12 rounded-3xl border border-neutral-900">
         <div class="space-y-4">
-          <h2 class="text-3xl font-black text-neutral-100">Creación joven para escuchar, pensar y crear [cite: 18, 99]</h2>
-          <p class="text-neutral-400 leading-relaxed">{{ FESTIVAL_INFO.descripcion }} [cite: 19]</p>
-          <p class="text-neutral-400 leading-relaxed">{{ FESTIVAL_INFO.enfoque }} [cite: 20]</p>
+          <h2 class="text-3xl font-black text-neutral-100">Creación joven para escuchar, pensar y crear</h2>
+          <p class="text-neutral-400 leading-relaxed">{{ FESTIVAL_INFO.descripcion }}</p>
+          <p class="text-neutral-400 leading-relaxed">{{ FESTIVAL_INFO.enfoque }}</p>
         </div>
         <div class="bg-gradient-to-tr from-emerald-500/20 to-neutral-900 p-8 rounded-2xl border border-neutral-800 space-y-4">
-          <span class="text-xs font-bold uppercase tracking-wider text-emerald-400 block">Enfoque Crítico Transversal</span>
+          <span class="text-xs font-bold uppercase tracking-wider text-emerald-400 block">Enfoque Crítico</span>
           <p class="text-neutral-300 text-sm md:text-base italic leading-relaxed">
-            "{{ FESTIVAL_INFO.valores }}" [cite: 33, 34]
+            "{{ FESTIVAL_INFO.valores }}"
           </p>
           <div class="flex gap-3 text-xs font-mono text-neutral-400 pt-2">
-            <span class="bg-neutral-950 px-3 py-1 rounded-full border border-neutral-800">#DiversidadCultural</span> [cite: 33]
-            <span class="bg-neutral-950 px-3 py-1 rounded-full border border-neutral-800">#Género</span> [cite: 33]
-            <span class="bg-neutral-950 px-3 py-1 rounded-full border border-neutral-800">#Sostenibilidad</span> [cite: 33]
+            <span class="bg-neutral-950 px-3 py-1 rounded-full border border-neutral-800">#DiversidadCultural</span>
+            <span class="bg-neutral-950 px-3 py-1 rounded-full border border-neutral-800">#Género</span>
+            <span class="bg-neutral-950 px-3 py-1 rounded-full border border-neutral-800">#Sostenibilidad</span>
           </div>
         </div>
       </div>
@@ -70,7 +70,7 @@ import { FESTIVAL_INFO } from '../data/mockData';
     <section class="container mx-auto px-4 max-w-5xl space-y-8">
       <div class="text-center">
         <h2 class="text-3xl font-black text-neutral-100">¿Qué vas a encontrar?</h2>
-        <p class="text-neutral-400 mt-2">Dos grandes bloques diseñados de forma participativa para la cultura contemporánea[cite: 25, 39].</p>
+        <p class="text-neutral-400 mt-2">Dos grandes bloques diseñados de forma participativa para la cultura contemporánea.</p>
       </div>
 
       <div class="grid md:grid-cols-2 gap-6">
@@ -79,9 +79,9 @@ import { FESTIVAL_INFO } from '../data/mockData';
           <div class="p-3 bg-emerald-500/10 text-emerald-400 rounded-xl w-fit">
             <Music class="h-6 w-6" />
           </div>
-          <h3 class="text-2xl font-bold text-neutral-100">Música en Directo [cite: 19, 26]</h3>
+          <h3 class="text-2xl font-bold text-neutral-100">Música en Directo</h3>
           <p class="text-neutral-400 text-sm leading-relaxed">
-            Un 60% de la programación dedicado en exclusiva a conciertos en vivo que combinan de manera orgánica propuestas tanto emergentes como consolidadas[cite: 26].
+            Un 60% de la programación dedicado en exclusiva a conciertos en vivo que combinan de manera orgánica propuestas tanto emergentes como consolidadas.
           </p>
         </div>
 
@@ -90,9 +90,9 @@ import { FESTIVAL_INFO } from '../data/mockData';
           <div class="p-3 bg-emerald-500/10 text-emerald-400 rounded-xl w-fit">
             <Lightbulb class="h-6 w-6" />
           </div>
-          <h3 class="text-2xl font-bold text-neutral-100">Pensamiento y Creatividad [cite: 27]</h3>
+          <h3 class="text-2xl font-bold text-neutral-100">Pensamiento y Creatividad</h3>
           <p class="text-neutral-400 text-sm leading-relaxed">
-            Un 40% centrado en talleres interactivos, conversaciones en formatos accesibles, contenidos audiovisuales y videojuegos independientes[cite: 27, 28].
+            Un 40% centrado en talleres interactivos, conversaciones en formatos accesibles, contenidos audiovisuales y videojuegos independientes.
           </p>
         </div>
       </div>
@@ -103,13 +103,12 @@ import { FESTIVAL_INFO } from '../data/mockData';
         <div class="max-w-2xl mx-auto space-y-2">
           <h2 class="text-2xl font-black text-neutral-100">Spot Publicitario Oficial</h2>
           <p class="text-sm text-neutral-400">
-            Campaña audiovisual de 20 segundos realizada bajo los principios básicos de la animación[cite: 91, 92].
+            Spot animado.
           </p>
         </div>
         <div class="aspect-video w-full max-w-3xl mx-auto bg-neutral-900 rounded-2xl border border-neutral-800 flex flex-col items-center justify-center gap-4 shadow-2xl relative overflow-hidden group">
           <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-transparent to-transparent opacity-80"></div>
           <Play class="h-16 w-16 text-emerald-400 bg-emerald-500/10 p-4 rounded-full border border-emerald-400/20 group-hover:scale-110 transition-transform relative z-10 cursor-pointer" />
-          <span class="text-xs font-mono text-neutral-500 relative z-10">[ Enlace media.upv.es / Formato MP4 H264 1920x1080px ]</span> [cite: 94, 96, 111]
         </div>
       </div>
     </section>

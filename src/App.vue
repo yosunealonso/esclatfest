@@ -54,8 +54,7 @@ const toggleMenu = () => {
           <p class="mt-1">Música, pensament i creativitat jove en Las Naves, València.</p>
         </div>
         <div class="text-neutral-600 text-xs text-center md:text-right">
-          <p>Proyecto Transversal 4 • Grado en Diseño y Tecnologías Creativas</p>
-          <p>Facultat de Belles Arts de Sant Carles</p>
+          <p>esclat bla bla bla</p>
         </div>
       </div>
     </footer>
