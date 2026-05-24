@@ -15,7 +15,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/programa',
     name: 'ProgramaParent',
-    component: () => import('../views/ProgramaLayout.vue'), // Contenedor estructural de rutas anidadas
+    component: () => import('../views/ProgramaLayout.vue'), 
     children: [
       {
         path: '',
