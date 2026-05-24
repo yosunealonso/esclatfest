@@ -46,5 +46,47 @@ const artistasFiltrados = computed(() => {
         {{ dis }}
       </button>
     </div>
+    <div v-if="artistasFiltrados.length > 0" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div 
+        v-for="artista in artistasFiltrados" 
+        :key="artista.id"
+        class="bg-neutral-900 border border-neutral-800 rounded-2xl overflow-hidden group hover:border-neutral-700 transition-all flex flex-col"
+      >
+        <div class="aspect-video w-full bg-neutral-950 relative overflow-hidden">
+          <img 
+            :src="artista.imagen" 
+            :alt="artista.nombre"
+            class="object-cover w-full h-full filter grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+          />
+          <span class="absolute top-3 right-3 bg-neutral-950/80 backdrop-blur px-3 py-1 rounded-full text-xs font-mono font-bold border border-neutral-800 text-emerald-400">
+            {{ artista.disciplina }}
+          </span>
+        </div>
+
+        <div class="p-6 flex flex-col grow space-y-4">
+          <h3 class="text-xl font-bold text-neutral-100 group-hover:text-emerald-400 transition-colors">
+            {{ artista.nombre }}
+          </h3>
+          
+          <p class="text-sm text-neutral-400 leading-relaxed grow">
+            {{ artista.bio }}
+          </p>
+
+          <div class="space-y-2 pt-4 border-t border-neutral-800/60">
+            <span class="text-xs font-mono text-neutral-500 uppercase tracking-wider block">Actividades en el festival:</span>
+            <ul class="space-y-1.5">
+              <li 
+                v-for="(actividad, index) in artista.actividades" 
+                :key="index"
+                class="text-xs text-neutral-300 flex items-center gap-2"
+              >
+                <span class="h-1.5 w-1.5 bg-emerald-400 rounded-full shrink-0"></span>
+                <span>{{ actividad }}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
