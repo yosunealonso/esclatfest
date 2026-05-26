@@ -29,7 +29,12 @@ export const FESTIVAL_INFO = {
   ubicacion: "Las Naves (València)",
   descripcion: "Esclat es un festival dirigido a público joven que combina música en directo con talleres, conversaciones y otras propuestas vinculadas a la creación contemporánea.",
   enfoque: "",
-  valores: ""
+  valores: "",
+  normas: [
+    "Respeto absoluto a la diversidad de género, cultural y sostenibilidad del espacio.",
+    "El acceso a las zonas comunes es libre; los talleres prácticos requieren inscripción previa.",
+    "Prohibida la entrada de plásticos de un solo uso en todo el recinto de Las Naves."
+  ]
 };
 
 export const ARTISTAS: Artista[] = [
