@@ -1,17 +1,17 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import { Ticket, CheckCircle2, GraduationCap, Info, Send } from 'lucide-vue-next';
+import { Ticket, GraduationCap, Info} from 'lucide-vue-next';
 
-const inscrito = ref<boolean>(false);
-const nombreUsuario = ref<string>('');
-const emailUsuario = ref<string>('');
+// const inscrito = ref<boolean>(false);
+// const nombreUsuario = ref<string>('');
+// const emailUsuario = ref<string>('');
 const actividadSeleccionada = ref<string>('');
 
-const procesarInscripcion = () => {
-  if (nombreUsuario.value && emailUsuario.value && actividadSeleccionada.value) {
-    inscrito.value = true;
-  }
-};
+// const procesarInscripcion = () => {
+//   if (nombreUsuario.value && emailUsuario.value && actividadSeleccionada.value) {
+//     inscrito.value = true;
+//   }
+//};
 </script>
 
 <template>
