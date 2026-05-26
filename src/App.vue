@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { RouterLink, RouterView } from 'vue-router';
-import { Menu, X, Zap } from 'lucide-vue-next'; // Iconos de Lucide según requisitos técnicos
+import { Menu, X} from 'lucide-vue-next'; // Iconos de Lucide según requisitos técnicos
 
 const menuAbierto = ref(false);
 const toggleMenu = () => {
@@ -12,38 +12,35 @@ const toggleMenu = () => {
 <template>
   <div class="min-h-screen bg-neutral-950 text-neutral-50 flex flex-col font-sans selection:bg-emerald-400 selection:text-neutral-950">
     
-    <header class="border-b border-neutral-800 bg-neutral-900/60 backdrop-blur sticky top-0 z-50">
-      <div class="container mx-auto px-4 h-16 flex items-center justify-between">
-        
-        <RouterLink to="/" class="flex items-center gap-2 text-2xl font-black tracking-tighter text-emerald-400 hover:opacity-90 transition-opacity">
-          <Zap class="h-6 w-6 fill-emerald-400" />
-          <span>ESCLAT.</span>
+    <header class="bg-[#2f1204] sticky top-0 z-50 shadow-md">
+      <div class="w-full px-6 md:px-12 h-16 flex items-center justify-between">     
+
+        <RouterLink to="/" class="font-variex text-[#fff3d7] text-3xl tracking-wide hover:opacity-90 transition-opacity">
+          ESCLAT
         </RouterLink>
         
-        <nav class="hidden md:flex items-center space-x-8 font-medium text-sm tracking-wide">
-          <RouterLink to="/" class="hover:text-emerald-400 transition-colors" active-class="text-emerald-400">Home</RouterLink>
-          <RouterLink to="/artistas" class="hover:text-emerald-400 transition-colors" active-class="text-emerald-400">Artistas</RouterLink>
-          <RouterLink to="/programa" class="hover:text-emerald-400 transition-colors" active-class="text-emerald-400">Programa</RouterLink>
-          <RouterLink to="/entradas" class="hover:text-emerald-400 transition-colors" active-class="text-emerald-400">Entradas / Acceso</RouterLink>
-          <RouterLink to="/info" class="hover:text-emerald-400 transition-colors" active-class="text-emerald-400">Espacios & Dudas</RouterLink>
+        <nav class="hidden md:flex items-center space-x-8 font-articulat-medium text-xl tracking-wider">
+          <RouterLink to="/artistas" class="text-[#fff3d7] hover:text-[#8bb2f1] transition-colors" active-class="text-[#8bb2f1]">ARTISTAS</RouterLink>
+          <RouterLink to="/programa" class="text-[#fff3d7] hover:text-[#8bb2f1] transition-colors" active-class="text-[#8bb2f1]">PROGRAMA</RouterLink>
+          <RouterLink to="/entradas" class="text-[#fff3d7] hover:text-[#8bb2f1] transition-colors" active-class="text-[#8bb2f1]">ENTRADAS</RouterLink>
+          <RouterLink to="/info" class="text-[#fff3d7] hover:text-[#8bb2f1] transition-colors" active-class="text-[#8bb2f1]">FAQs</RouterLink>
         </nav>
 
-        <button @click="toggleMenu" class="md:hidden p-2 text-neutral-400 hover:text-neutral-100 transition-colors" aria-label="Abrir menú">
+        <button @click="toggleMenu" class="md:hidden p-2 text-[#fff3d7] hover:opacity-80 transition-opacity" aria-label="Abrir menú">
           <Menu v-if="!menuAbierto" class="h-6 w-6" />
           <X v-else class="h-6 w-6" />
         </button>
       </div>
 
-      <div v-if="menuAbierto" class="md:hidden border-t border-neutral-800 bg-neutral-950 px-4 py-4 space-y-3 flex flex-col font-medium">
-        <RouterLink to="/" @click="menuAbierto = false" class="py-2 hover:text-emerald-400" active-class="text-emerald-400">Home</RouterLink>
-        <RouterLink to="/artistas" @click="menuAbierto = false" class="py-2 hover:text-emerald-400" active-class="text-emerald-400">Artistas</RouterLink>
-        <RouterLink to="/programa" @click="menuAbierto = false" class="py-2 hover:text-emerald-400" active-class="text-emerald-400">Programa</RouterLink>
-        <RouterLink to="/entradas" @click="menuAbierto = false" class="py-2 hover:text-emerald-400" active-class="text-emerald-400">Entradas / Acceso</RouterLink>
-        <RouterLink to="/info" @click="menuAbierto = false" class="py-2 hover:text-emerald-400" active-class="text-emerald-400">Espacios & Dudas</RouterLink>
+      <div v-if="menuAbierto" class="md:hidden bg-[#2f1204] border-t border-amber-950/20 px-4 py-4 space-y-3 flex flex-col font-articulat text-sm tracking-wider">
+        <RouterLink to="/artistas" @click="menuAbierto = false" class="py-2 text-[#fff3d7] hover:text-[#8bb2f1]" active-class="text-[#8bb2f1]">ARTISTAS</RouterLink>
+        <RouterLink to="/programa" @click="menuAbierto = false" class="py-2 text-[#fff3d7] hover:text-[#8bb2f1]" active-class="text-[#8bb2f1]">PROGRAMA</RouterLink>
+        <RouterLink to="/entradas" @click="menuAbierto = false" class="py-2 text-[#fff3d7] hover:text-[#8bb2f1]" active-class="text-[#8bb2f1]">ENTRADAS</RouterLink>
+        <RouterLink to="/info" @click="menuAbierto = false" class="py-2 text-[#fff3d7] hover:text-[#8bb2f1]" active-class="text-[#8bb2f1]">FAQs</RouterLink>
       </div>
     </header>
 
-    <main class="flex-grow">
+    <main class="grow">
       <RouterView />
     </main>
 
@@ -60,3 +57,19 @@ const toggleMenu = () => {
     </footer>
   </div>
 </template>
+
+<style>
+@import url("https://use.typekit.net/wzo0fzz.css");
+
+.font-variex {
+  font-family: "variex", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-articulat {
+  font-family: "articulat-cf-medium", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+</style>
