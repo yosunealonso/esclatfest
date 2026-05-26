@@ -56,8 +56,41 @@ const toggleFaq = (index: number) => {
 
     </div>
 
-    <div class="text-neutral-600 text-xs font-mono text-center italic">
-      sistema interactivo de FAQs
+    <div class="space-y-4 pt-4">
+      <div class="flex items-center gap-2 text-emerald-400 font-bold justify-center md:justify-start">
+        <HelpCircle class="h-5 w-5" />
+        <h2 class="text-2xl font-black text-neutral-100">Dudas Frecuentes</h2>
+      </div>
+
+      <div class="space-y-3">
+        <div 
+          v-for="(faq, index) in FAQS" 
+          :key="index"
+          class="bg-neutral-900 border border-neutral-800 rounded-2xl overflow-hidden transition-all"
+        >
+          <button 
+            @click="toggleFaq(index)"
+            class="w-full text-left p-5 flex justify-between items-center gap-4 hover:bg-neutral-800/40 transition-colors group"
+          >
+            <span class="font-semibold text-neutral-200 group-hover:text-emerald-400 transition-colors text-sm md:text-base">
+              {{ faq.pregunta }}
+            </span>
+            <ChevronDown 
+              :class="[
+                'h-5 w-5 text-neutral-500 transition-transform duration-300 shrink-0',
+                faqAbierta === index ? 'rotate-180 text-emerald-400' : ''
+              ]"
+            />
+          </button>
+
+          <div 
+            v-if="faqAbierta === index"
+            class="px-5 pb-5 pt-1 text-sm text-neutral-400 leading-relaxed border-t border-neutral-800/40 bg-neutral-950/20"
+          >
+            {{ faq.respuesta }}
+          </div>
+        </div>
+      </div>
     </div>
 
   </div>
