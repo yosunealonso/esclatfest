@@ -16,19 +16,22 @@ const artistasFiltrados = computed(() => {
 </script>
 
 <template>
-  <div class="w-full bg-[#fff3d7] text-[#2f1204] py-12 font-articulat-medium">
-    <div class="container mx-auto px-4 max-w-6xl space-y-10">
+  <div class="w-full bg-[#8bb2f1] text-[#2f1204] py-12 font-articulat-medium">
+    
+    <div class="container mx-auto px-5 max-w-[96%] space-y-8">
       
-      <div class="space-y-2">
-        <div class="flex items-center gap-2 text-[#7a8c36] font-articulat-bold text-xs uppercase tracking-widest">
-          <Sparkles class="h-4 w-4 fill-[#7a8c36]" />
+      <div class="space-y-2 text-left">
+        <div class="flex items-center gap-2 text-[#fff3d7] font-articulat-bold text-xs uppercase tracking-widest">
+          <Sparkles class="h-4 w-4 fill-[#fff3d7]" />
           <span>Line-up Oficial ESCLAT 2026</span>
         </div>
+        
         <h1 class="text-4xl md:text-5xl font-articulat-bold uppercase tracking-tight text-[#2f1204]">
           Creadores y Artistas
         </h1>
-        <p class="text-[#2f1204]/80 max-w-xl text-sm">
-          Explora las propuestas que cruzan música, pensamiento y tecnología.
+        
+        <p class="font-articulat-medium text-lg md:text-2xl text-[#2f1204]/90 max-w-3xl leading-relaxed">
+          Explora los artistas presentes en esta edición del festival.
         </p>
       </div>
 
@@ -38,52 +41,56 @@ const artistasFiltrados = computed(() => {
           :key="dis"
           @click="disciplinaSeleccionada = dis"
           :class="[
-            'px-4 py-2 text-xs uppercase font-articulat-bold border-2 transition-all rounded-none',
+            'px-4 py-2 text-xs uppercase font-articulat-bold transition-all rounded-none',
             disciplinaSeleccionada === dis 
               ? 'bg-[#dd2f03] text-[#fff3d7] border-[#dd2f03]' 
-              : 'bg-transparent text-[#2f1204]/80 border-[#2f1204]/20 hover:border-[#2f1204] hover:bg-[#2f1204]/5'
+              : 'bg-[#fff3d7] text-[#2f1204]/80 hover:bg-[#fff3d7]/50'
           ]"
         >
           {{ dis }}
         </button>
       </div>
 
-      <div v-if="artistasFiltrados.length > 0" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div v-if="artistasFiltrados.length > 0" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
         <div 
           v-for="artista in artistasFiltrados" 
           :key="artista.id"
-          class="bg-[#2f1204] text-[#fff3d7] rounded-none overflow-hidden flex flex-col border border-[#2f1204] group"
+          class="bg-[#fff3d7] hover:bg-[#dd2f03] text-[#2f1204] rounded-none overflow-hidden flex flex-col transition-all duration-300 group"
         >
           <div class="aspect-video w-full bg-[#1a0a02] relative overflow-hidden">
             <img 
               :src="artista.imagen" 
               :alt="artista.nombre"
-              class="object-cover w-full h-full filter grayscale group-hover:grayscale-0 transition-all duration-500"
+              class="object-cover w-full h-full filter transition-all duration-500"
             />
-            <span class="absolute top-2 right-2 bg-[#dd2f03] text-[#fff3d7] px-2 py-0.5 text-[10px] uppercase font-articulat-bold rounded-none">
+            <div class="absolute inset-0 bg-[#dd2f03] mix-blend-multiply opacity-0 group-hover:opacity-70 transition-opacity duration-500 pointer-events-none"></div>
+            
+            <span class="absolute top-2 right-2 bg-[#dd2f03] group-hover:bg-[#fff3d7] text-[#fff3d7] group-hover:text-[#dd2f03] px-2 py-0.5 text-[10px] uppercase font-articulat-bold rounded-none transition-colors duration-300 z-10">
               {{ artista.disciplina }}
             </span>
           </div>
 
-          <div class="p-5 flex flex-col grow space-y-3">
-            <h3 class="text-xl font-articulat-bold uppercase text-[#fff3d7]">
+          <div class="p-4 flex flex-col grow space-y-2">
+            <h3 class="text-lg font-articulat-bold uppercase text-[#2f1204] group-hover:text-[#fff3d7] transition-colors duration-300">
               {{ artista.nombre }}
             </h3>
             
-            <p class="text-xs md:text-sm text-[#fff3d7]/90 leading-relaxed grow">
+            <p class="text-xs md:text-sm text-[#2f1204]/90 group-hover:text-[#fff3d7]/90 leading-relaxed grow line-clamp-3 transition-colors duration-300">
               {{ artista.bio }}
             </p>
 
-            <div class="space-y-2 pt-4 border-t border-[#fff3d7]/10">
-              <span class="text-xs font-articulat-bold text-[#7a8c36] uppercase tracking-widest block">Actividades en el festival:</span>
-              <ul class="space-y-1">
+            <div class="space-y-1 pt-2.5 border-t border-[#2f1204]/10 group-hover:border-[#fff3d7]/20 transition-colors duration-300">
+              <span class="text-[10px] font-articulat-bold text-[#7a8c36] group-hover:text-[#fff3d7] uppercase tracking-widest block transition-colors duration-300">
+                Actividades:
+              </span>
+              <ul class="space-y-0.5">
                 <li 
                   v-for="(actividad, index) in artista.actividades" 
                   :key="index"
-                  class="text-xs text-[#fff3d7] font-articulat-medium flex items-center gap-2"
+                  class="text-xs text-[#2f1204] group-hover:text-[#fff3d7] font-articulat-medium flex items-center gap-2 transition-colors duration-300"
                 >
-                  <span class="h-2 w-2 bg-[#dd2f03] shrink-0 rounded-none"></span>
-                  <span>{{ actividad }}</span>
+                  <span class="h-1.5 w-1.5 bg-[#dd2f03] group-hover:bg-[#fff3d7] shrink-0 rounded-none transition-colors duration-300"></span>
+                  <span class="truncate">{{ actividad }}</span>
                 </li>
               </ul>
             </div>
@@ -98,7 +105,7 @@ const artistasFiltrados = computed(() => {
 <style scoped>
 .font-articulat-bold {
   font-family: "articulat-cf", sans-serif;
-  font-weight: 700;
+  font-weight: 800;
 }
 .font-articulat-medium {
   font-family: "articulat-cf", sans-serif;

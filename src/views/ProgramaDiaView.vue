@@ -4,7 +4,7 @@ import { AGENDA } from '../data/mockData';
 import { Clock, MapPin, Tag } from 'lucide-vue-next'; 
 
 const props = defineProps<{
-  dia: 'Viernes 23' | 'Sábado 24' | 'Domingo 25';
+  dia: 'Viernes' | 'Sábado' | 'Domingo';
 }>();
 
 const eventosDelDia = computed(() => {
