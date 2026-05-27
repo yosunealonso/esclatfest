@@ -13,7 +13,7 @@ const eventosDelDia = computed(() => {
 </script>
 
 <template>
-  <div class="w-full min-h-screen bg-[#fff3d7] text-[#2f1204] py-12 font-articulat-medium">
+  <div class="w-full min-h-screen bg-[#fff3d7] text-[#2f1204] font-articulat-medium">
   <div class="space-y-6 text-[#2f1204] font-articulat-medium">
     
     <div v-if="eventosDelDia.length > 0" class="space-y-4">
