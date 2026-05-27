@@ -4,7 +4,7 @@ import { CalendarDays } from 'lucide-vue-next';
 </script>
 
 <template>
- <div class="w-full min-h-screen bg-[#fff3d7] text-[#2f1204] py-12 font-articulat-medium">
+ <div class="w-full min-h-screen bg-[#fff3d7] text-[#2f1204] py-12 ">
   <div class="container mx-auto px-5 max-w-[96%]">    
     
     <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-8 items-start">
@@ -71,7 +71,7 @@ import { CalendarDays } from 'lucide-vue-next';
 <style scoped>
 .font-articulat-bold {
   font-family: "articulat-cf", sans-serif;
-  font-weight: 700;
+  font-weight: 800;
 }
 .font-articulat-medium {
   font-family: "articulat-cf", sans-serif;
