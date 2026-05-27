@@ -8,24 +8,24 @@ import { FESTIVAL_INFO } from '../data/mockData';
     
     <section class="relative min-h-[85vh] flex flex-col items-center justify-center bg-[#dd2f03] px-4 overflow-hidden">      
       
-      <div class="absolute lg:text-5xl top-6 left-6 md:left-12 font-articulat-medium text-[#2f1204] md:text-base tracking-wider uppercase">
+      <div class="absolute top-6 left-6 text-xl sm:text-2xl md:left-12 md:text-3xl lg:text-5xl font-articulat-medium text-[#2f1204] tracking-wider">
         20 - 23.10 2026
       </div>
 
-      <div class="absolute lg:text-5xl top-6 right-6 md:right-12 font-articulat-medium text-[#2f1204] md:text-base tracking-wider">
+      <div class="absolute top-6 right-6 text-xl sm:text-2xl md:right-12 md:text-3xl lg:text-5xl font-articulat-medium text-[#2f1204] tracking-wider">        
         Las Naves, València
       </div>
 
       <div class="container mx-auto text-center relative z-10 flex flex-col items-center justify-center pt-24 pb-8">
         
-        <h1 class="relative z-10 font-variex text-[#fff3d7] text-7xl md:text-[13rem] lg:text-[16rem] leading-none uppercase select-none">
+        <h1 class="relative z-10 font-variex text-[#fff3d7] text-8xl md:text-[10rem] lg:text-[22rem] leading-none uppercase select-none">
           esclat
         </h1>
         
         <img 
           src="/baterista.png" 
           alt="Ilustración Baterista ESCLAT" 
-          class="relative z-20 -mt-24 md:-mt-52 lg:-mt-55 w-96 md:w-175 lg:w-480 h-auto object-contain pointer-events-none drop-shadow-2xl" 
+          class="relative z-20 -mt-20 md:-mt-40 lg:-mt-80 w-96 md:w-175 lg:w-480 h-auto object-contain pointer-events-none drop-shadow-2xl" 
         />
                 
       </div>

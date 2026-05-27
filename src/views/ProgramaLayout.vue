@@ -4,42 +4,43 @@ import { CalendarDays } from 'lucide-vue-next';
 </script>
 
 <template>
-  <div class="container mx-auto px-4 py-12 max-w-5xl space-y-8">
+ <div class="w-full min-h-screen bg-[#fff3d7] text-[#2f1204] py-12 font-articulat-medium">
+  <div class="container mx-auto px-4 py-12 max-w-5xl space-y-8 text-[#2f1204] font-articulat-medium">
     
     <div class="space-y-2 text-center md:text-left">
-      <div class="flex items-center justify-center md:justify-start gap-2 text-emerald-400 font-mono text-sm font-bold uppercase tracking-wider">
+      <div class="flex items-center justify-center md:justify-start gap-2 text-[#7a8c36] font-articulat-bold text-xs uppercase tracking-widest">
         <CalendarDays class="h-4 w-4" />
         <span>Horarios y Espacios oficiales</span>
       </div>
-      <h1 class="text-4xl md:text-5xl font-black tracking-tight text-white">
+      <h1 class="text-4xl md:text-5xl font-articulat-bold uppercase tracking-tight text-[#2f1204]">
         Programa del Festival
       </h1>
-      <p class="text-neutral-400 max-w-xl">
+      <p class="text-[#2f1204]/80 max-w-xl text-sm">
         Descubre la distribución de actividades en Las Naves. 
       </p>
     </div>
 
-    <nav class="flex justify-center md:justify-start bg-neutral-900 p-1.5 rounded-2xl border border-neutral-800 max-w-md w-full">
+    <nav class="flex justify-center md:justify-start bg-[#2f1204] p-1.5 rounded-none border border-[#2f1204] max-w-md w-full">
       <RouterLink 
         to="/programa/viernes" 
-        class="flex-1 text-center py-2.5 rounded-xl text-sm font-semibold tracking-wide transition-all"
-        active-class="bg-emerald-400 text-neutral-950 font-bold shadow-md"
+        class="flex-1 text-center py-2.5 rounded-none text-xs uppercase font-articulat-bold tracking-wider transition-all text-[#fff3d7]/70 hover:text-[#fff3d7]"
+        active-class="bg-[#dd2f03] !text-[#fff3d7] font-articulat-bold"
       >
         Viernes 23
       </RouterLink>
       
       <RouterLink 
         to="/programa/sabado" 
-        class="flex-1 text-center py-2.5 rounded-xl text-sm font-semibold tracking-wide transition-all"
-        active-class="bg-emerald-400 text-neutral-950 font-bold shadow-md"
+        class="flex-1 text-center py-2.5 rounded-none text-xs uppercase font-articulat-bold tracking-wider transition-all text-[#fff3d7]/70 hover:text-[#fff3d7]"
+        active-class="bg-[#dd2f03] !text-[#fff3d7] font-articulat-bold"
       >
         Sábado 24
       </RouterLink>
       
       <RouterLink 
         to="/programa/domingo" 
-        class="flex-1 text-center py-2.5 rounded-xl text-sm font-semibold tracking-wide transition-all"
-        active-class="bg-emerald-400 text-neutral-950 font-bold shadow-md"
+        class="flex-1 text-center py-2.5 rounded-none text-xs uppercase font-articulat-bold tracking-wider transition-all text-[#fff3d7]/70 hover:text-[#fff3d7]"
+        active-class="bg-[#dd2f03] !text-[#fff3d7] font-articulat-bold"
       >
         Domingo 25
       </RouterLink>
@@ -50,4 +51,16 @@ import { CalendarDays } from 'lucide-vue-next';
     </div>
 
   </div>
+  </div>
 </template>
+
+<style scoped>
+.font-articulat-bold {
+  font-family: "articulat-cf", sans-serif;
+  font-weight: 700;
+}
+.font-articulat-medium {
+  font-family: "articulat-cf", sans-serif;
+  font-weight: 600;
+}
+</style>
