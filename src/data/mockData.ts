@@ -10,7 +10,7 @@ export interface Evento {
   id: string;
   titulo: string;
   hora: string;
-  dia: 'Viernes 23' | 'Sábado 24' | 'Domingo 25';
+  dia: 'Viernes' | 'Sábado' | 'Domingo';
   espacio: 'Sala La Polivalent' | 'Hall Sala La Polivalent' | 'Sala Factoría' | 'Sala Visual Room' | 'Sala Exposiciones' | 'Patio 1' | 'Patio 2';
   categoria: Artista['disciplina'];
   descripcion: string;
@@ -64,7 +64,7 @@ export const ARTISTAS: Artista[] = [
     nombre: 'Santiago de Aranda',
     disciplina: 'Conciertos',
     bio: 'Banda afincada en Madrid. Con influencias tan dispares como Las Vulpes o Radiohead, han construido un sonido madrileño, garajero y potente, que combina voces enfadadas y letras provocativas.',
-    imagen: '',
+    imagen: 'santiagodearanda.jpg',
     actividades: ['Concierto - Viernes 23']
   },
   {
@@ -72,7 +72,7 @@ export const ARTISTAS: Artista[] = [
     nombre: 'Agosto',
     disciplina: 'Conciertos',
     bio: 'Gusto por el dream pop y el shoegaze, géneros que se caracterizan por letras nostálgicas, sonidos etéreos y atmosféricos.',
-    imagen: '',
+    imagen: 'agosto.jpg',
     actividades: ['Concierto - Viernes 23']
   },
   {
@@ -80,7 +80,7 @@ export const ARTISTAS: Artista[] = [
     nombre: 'Paula Margalef',
     disciplina: 'Conciertos',
     bio: 'Música con influencia de los 60s, bossa-nova y samba. Indie rock de guitarra, con letras principalmente autobiográficas y armonías vocales.',
-    imagen: '',
+    imagen: 'paulamargalef.jpg',
     actividades: ['Concierto - Viernes 23']
   },
   {
@@ -88,7 +88,7 @@ export const ARTISTAS: Artista[] = [
     nombre: 'Tetas frías',
     disciplina: 'Conciertos',
     bio: 'Banda de Barcelona con su propuesta “turbo electro mega roc de tu abuela”. Punk entre el cachondeo y el cabreo. Sus canciones duran solo un instante.',
-    imagen: '',
+    imagen: 'tetasfrias.jpg',
     actividades: ['Concierto - Viernes 23']
   },
   {
@@ -128,7 +128,7 @@ export const ARTISTAS: Artista[] = [
     nombre: 'Malditas Gaviotas',
     disciplina: 'Conciertos',
     bio: 'Una banda que ha sabido capturar la esencia del indie y el romanticismo en su música. Con un sonido único que fusiona melodías suaves y letras profundas.',
-    imagen: '',
+    imagen: 'malditasgaviotas.jpg',
     actividades: ['Concierto - Sábado 24']
   },
   {
@@ -136,7 +136,7 @@ export const ARTISTAS: Artista[] = [
     nombre: 'Diamante Negro',
     disciplina: 'Conciertos',
     bio: 'Grupo de pop de guitarras con letras en español formado en Barcelona, con su formato de trío estable desde 2019.',
-    imagen: '',
+    imagen: 'diamantenegro.jpg',
     actividades: ['Concierto - Sábado 24']
   },
   {
@@ -144,7 +144,7 @@ export const ARTISTAS: Artista[] = [
     nombre: 'Las Petunias',
     disciplina: 'Conciertos',
     bio: 'Una de las voces más emocionantes de la nueva ola underground española. Su primer LP es un testimonio sonoro de sus ansiedades, romances y el vértigo de ser veinteañeras.',
-    imagen: '',
+    imagen: 'petunias.jpg',
     actividades: ['Concierto - Sábado 24']
   },
   {
@@ -152,7 +152,7 @@ export const ARTISTAS: Artista[] = [
     nombre: 'Hanna Plum',
     disciplina: 'Dj Sets',
     bio: 'Los sonidos que vertebran a esta DJ son pop y electrónicos sin cerrarse a muchos otros, que dan sentido a su imaginario fuera de los márgenes.',
-    imagen: '',
+    imagen: 'hannaplum.jpg',
     actividades: ['Dj Set - Sábado 24']
   },
   {
@@ -176,7 +176,7 @@ export const ARTISTAS: Artista[] = [
     nombre: 'La Kala',
     disciplina: 'Conciertos',
     bio: 'Una de las nuevas propuestas frescas que se suman a la escena contemporánea.',
-    imagen: '',
+    imagen: 'lakala.jpg',
     actividades: ['Concierto - Domingo 25']
   },
   {
@@ -184,7 +184,7 @@ export const ARTISTAS: Artista[] = [
     nombre: 'Amarillo Fiesta',
     disciplina: 'Conciertos',
     bio: 'Canciones divertidas, frikis y con nostalgia dosmilera. Hablan sobre el amor, problemas de precariedad juvenil, dramas millenials, noches de fiesta y pelis.',
-    imagen: '',
+    imagen: 'amarillofiesta.jpg',
     actividades: ['Concierto - Domingo 25']
   },
   {
@@ -192,7 +192,7 @@ export const ARTISTAS: Artista[] = [
     nombre: 'La Reina Mora',
     disciplina: 'Conciertos',
     bio: 'Directo vibrante que fusiona géneros y pone el foco en la presencia escénica y la conexión emocional con el público.',
-    imagen: '',
+    imagen: 'lareinamora.jpg',
     actividades: ['Concierto - Domingo 25']
   },
   {
@@ -200,7 +200,7 @@ export const ARTISTAS: Artista[] = [
     nombre: 'Luna Valle',
     disciplina: 'Conciertos',
     bio: 'Artista valenciana que refleja su propio universo a través de composiciones honestas y melodías cautivadoras.',
-    imagen: '',
+    imagen: 'lunavalle.jpg',
     actividades: ['Concierto - Domingo 25']
   },
   {
@@ -208,29 +208,214 @@ export const ARTISTAS: Artista[] = [
     nombre: 'LG1DO',
     disciplina: 'Conciertos',
     bio: 'Propuesta musical emergente que cierra el festival rompiendo las barreras de los géneros tradicionales.',
-    imagen: '',
+    imagen: 'lg1do.jpg',
     actividades: ['Concierto - Domingo 25']
   }
 ];
 
 export const AGENDA: Evento[] = [
+  // DÍA 23
   {
     id: 'e1',
-    titulo: 'Apertura de Puertas y Exposición Permanente',
-    hora: '17:00',
-    dia: 'Viernes 23',
-    espacio: 'Sala Exposiciones',
-    categoria: 'Exposiciones',
-    descripcion: 'Inauguración de "Visiones Emergentes".'
+    titulo: 'Ansiedad y Autotune',
+    hora: '11:00 - 12:30',
+    dia: 'Viernes',
+    espacio: 'Sala Visual Room',
+    categoria: 'Charlas',
+    descripcion: 'La salud mental en la industria musical.'
   },
   {
     id: 'e2',
-    titulo: 'Conciertos Principal - Día 23',
-    hora: '19:00 - 23:30',
-    dia: 'Viernes 23',
+    titulo: 'Fanzine Lab',
+    hora: '12:30 - 14:00',
+    dia: 'Viernes',
+    espacio: 'Sala Factoría',
+    categoria: 'Talleres',
+    descripcion: 'Risografía y la escena independiente (En colaboración con Nice Guy Press).'
+  },
+  {
+    id: 'e3',
+    titulo: 'Visiones Emergentes',
+    hora: '16:30 - 18:30',
+    dia: 'Viernes',
+    espacio: 'Sala Exposiciones',
+    categoria: 'Exposiciones',
+    descripcion: 'Muestra de arte y diseño de estudiantes.'
+  },
+  {
+    id: 'e4',
+    titulo: 'Santiago de Aranda',
+    hora: '18:00 - 19:00',
+    dia: 'Viernes',
     espacio: 'Patio 1',
     categoria: 'Conciertos',
-    descripcion: 'Santiago de Aranda, Agosto, Paula Margalef, Tetas frías'
+    descripcion: 'Concierto en directo en el Patio Principal.'
+  },
+  {
+    id: 'e5',
+    titulo: 'Agosto',
+    hora: '19:30 - 20:30',
+    dia: 'Viernes',
+    espacio: 'Patio 1',
+    categoria: 'Conciertos',
+    descripcion: 'Concierto en directo en el Patio Principal.'
+  },
+  {
+    id: 'e6',
+    titulo: 'Paula Margalef',
+    hora: '21:00 - 22:00',
+    dia: 'Viernes',
+    espacio: 'Patio 1',
+    categoria: 'Conciertos',
+    descripcion: 'Concierto en directo en el Patio Principal.'
+  },
+  {
+    id: 'e7',
+    titulo: 'Tetas frías',
+    hora: '22:30 - 24:00',
+    dia: 'Viernes',
+    espacio: 'Patio 1',
+    categoria: 'Conciertos',
+    descripcion: 'Cierre de jornada con concierto en directo.'
+  },
+
+  // DÍA 24
+  {
+    id: 'e8',
+    titulo: '¿Dónde estaban las tías?',
+    hora: '11:00 - 12:30',
+    dia: 'Sábado',
+    espacio: 'Sala Visual Room',
+    categoria: 'Charlas',
+    descripcion: 'Invisibilización de las mujeres en la historia del arte.'
+  },
+  {
+    id: 'e9',
+    titulo: 'Barro y Sonido',
+    hora: '12:30 - 14:00',
+    dia: 'Sábado',
+    espacio: 'Sala Factoría',
+    categoria: 'Talleres',
+    descripcion: 'Creación de instrumentos de cerámica.'
+  },
+  {
+    id: 'e10',
+    titulo: 'El impacto de la IA generativa',
+    hora: '16:00 - 17:30',
+    dia: 'Sábado',
+    espacio: 'Sala Visual Room',
+    categoria: 'Charlas',
+    descripcion: 'Su repercusión en el medioambiente y en el arte.'
+  },
+  {
+    id: 'e11',
+    titulo: 'Cine de Foso',
+    hora: '17:30 - 18:40',
+    dia: 'Sábado',
+    espacio: 'Sala Exposiciones',
+    categoria: 'Exposiciones',
+    descripcion: 'Muestra de cortometrajes independientes y videoclips de la escena valenciana.'
+  },
+  {
+    id: 'e12',
+    titulo: 'Malditas Gaviotas',
+    hora: '19:00 - 20:00',
+    dia: 'Sábado',
+    espacio: 'Patio 1',
+    categoria: 'Conciertos',
+    descripcion: 'Concierto en directo en el Patio Principal.'
+  },
+  {
+    id: 'e13',
+    titulo: 'Diamante Negro',
+    hora: '20:30 - 21:30',
+    dia: 'Sábado',
+    espacio: 'Patio 1',
+    categoria: 'Conciertos',
+    descripcion: 'Concierto en directo en el Patio Principal.'
+  },
+  {
+    id: 'e14',
+    titulo: 'Las Petunias',
+    hora: '22:00 - 23:15',
+    dia: 'Sábado',
+    espacio: 'Patio 1',
+    categoria: 'Conciertos',
+    descripcion: 'Concierto en directo en el Patio Principal.'
+  },
+  {
+    id: 'e15',
+    titulo: 'Hanna Plum',
+    hora: '23:45 - 02:00',
+    dia: 'Sábado',
+    espacio: 'Patio 2',
+    categoria: 'Dj Sets',
+    descripcion: 'Sesión nocturna de DJ Set.'
+  },
+
+  // DÍA 25
+  {
+    id: 'e16',
+    titulo: 'Vivir del Cuento (Literalmente)',
+    hora: '11:00 - 12:15',
+    dia: 'Domingo',
+    espacio: 'Sala Visual Room',
+    categoria: 'Charlas',
+    descripcion: 'Cómo autopublicarse, sobrevivir a las redes y vender en ferias de autopublicación.'
+  },
+  {
+    id: 'e17',
+    titulo: 'Upcycling de Ropa',
+    hora: '12:15 - 14:00',
+    dia: 'Domingo',
+    espacio: 'Sala Factoría',
+    categoria: 'Talleres',
+    descripcion: 'Taller práctico de prendas de segunda mano.'
+  },
+  {
+    id: 'e18',
+    titulo: 'La Kala',
+    hora: '19:00 - 19:45',
+    dia: 'Domingo',
+    espacio: 'Patio 1',
+    categoria: 'Conciertos',
+    descripcion: 'Concierto en directo en el Patio Principal.'
+  },
+  {
+    id: 'e19',
+    titulo: 'Amarillo Fiesta',
+    hora: '20:15 - 21:15',
+    dia: 'Domingo',
+    espacio: 'Patio 1',
+    categoria: 'Conciertos',
+    descripcion: 'Concierto en directo en el Patio Principal.'
+  },
+  {
+    id: 'e20',
+    titulo: 'La Reina Mora',
+    hora: '21:45 - 22:30',
+    dia: 'Domingo',
+    espacio: 'Patio 1',
+    categoria: 'Conciertos',
+    descripcion: 'Concierto en directo en el Patio Principal.'
+  },
+  {
+    id: 'e21',
+    titulo: 'Luna Valle',
+    hora: '22:45 - 23:45',
+    dia: 'Domingo',
+    espacio: 'Patio 1',
+    categoria: 'Conciertos',
+    descripcion: 'Concierto en directo en el Patio Principal.'
+  },
+  {
+    id: 'e22',
+    titulo: 'LG1DO',
+    hora: '00:00 - 01:30',
+    dia: 'Domingo',
+    espacio: 'Patio 1',
+    categoria: 'Conciertos',
+    descripcion: 'Actuación de cierre del festival.'
   }
 ];
 
