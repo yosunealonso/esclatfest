@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { RouterLink, RouterView } from 'vue-router';
-import { Menu, X} from 'lucide-vue-next'; // Iconos de Lucide según requisitos técnicos
-
+import { Menu, X} from 'lucide-vue-next'; 
 const menuAbierto = ref(false);
 const toggleMenu = () => {
   menuAbierto.value = !menuAbierto.value;
@@ -44,10 +43,10 @@ const toggleMenu = () => {
       <RouterView />
     </main>
 
-    <footer class="border-t border-neutral-900 bg-neutral-950 py-12 text-sm text-neutral-500">
+    <footer class=" bg-[#2f1204] py-12 text-sm text-[#fff3d7]">
       <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
         <div class="text-center md:text-left">
-          <p class="font-bold text-neutral-300 text-base">ESCLAT Festival 2026</p>
+          <p class="font-bold text-[#fff3d7] text-base">ESCLAT Festival 2026</p>
           <p class="mt-1">Música, pensament i creativitat jove en Las Naves, València.</p>
         </div>
         <div class="text-neutral-600 text-xs text-center md:text-right">
