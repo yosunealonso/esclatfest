@@ -9,9 +9,9 @@ const toggleMenu = () => {
 </script>
 
 <template>
-  <div class="min-h-screen bg-neutral-950 text-neutral-50 flex flex-col font-sans selection:bg-emerald-400 selection:text-neutral-950">
+  <div class="min-h-screen bg-neutral-950 text-neutral-50 flex flex-col font-sans selection:text-neutral-950">
     
-    <header class="bg-[#2f1204] sticky top-0 z-50 shadow-md">
+    <header class="bg-[#2f1204] sticky top-0 z-100 shadow-md">
       <div class="w-full px-6 md:px-12 h-16 flex items-center justify-between">     
 
         <RouterLink to="/" class="font-variex text-[#fff3d7] text-3xl tracking-wide hover:opacity-90 transition-opacity">
