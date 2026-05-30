@@ -10,7 +10,11 @@ const artista = ARTISTAS.find(
 
 const imagenCabecera = `/cabeceras/${artista?.nombre
   .toLowerCase()
-  .replace(/\s+/g, '-')}.cabecera.jpeg`;
+  .normalize('NFD')
+  .replace(/[\u0300-\u036f]/g, '')
+  .replace(/[¿?]/g, '')
+  .replace(/\s+/g, '-')}.cabecera.jpg`;
+
 </script>
 
 <template>
@@ -27,7 +31,7 @@ const imagenCabecera = `/cabeceras/${artista?.nombre
         class="w-full h-full object-cover object-center"
         />
         
-      <div class="absolute inset-0 bg-black/40"></div>
+      <div class="absolute inset-0"></div>
 
       <div class="absolute bottom-10 left-6 md:left-12 lg:left-20 z-10">
         <span class="bg-[#dd2f03] text-[#fff3d7] px-4 py-2 uppercase text-sm font-articulat-bold">
