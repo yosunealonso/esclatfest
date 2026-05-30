@@ -11,27 +11,23 @@ const toggleFaq = (index: number) => {
 </script>
 
 <template>
-  <div class="w-full min-h-screen bg-[#efe4c9] text-[#2f1204] py-12 font-articulat-medium overflow-hidden">
+  <div class="w-full min-h-screen bg-[#fff3d7] text-[#2f1204] py-12 font-articulat-medium overflow-hidden">
 
     <div class="container mx-auto px-5 max-w-[96%] relative space-y-14">
 
       <!-- HEADER -->
       <div class="space-y-2 text-left">
-        <h1 class="text-4xl md:text-5xl font-articulat-bold uppercase tracking-tight text-[#2f1204]">
+        <h1 class="text-4xl md:text-5xl font-articulat-bold uppercase tracking-tight]">
           Guia del Asistente
         </h1>
 
-        <p class="text-lg md:text-2xl text-[#2f1204]/90 max-w-4xl leading-relaxed">
+        <p class="font-articulat-medium text-[#2f1204]/80 text-lg">
           Todo lo que necesitas saber sobre el espacio, entradas y los accesos a ESCLAT 2026.
         </p>
       </div>
-
-      <!-- BLOQUES -->
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 relative z-10">
-
-        <!-- ESPACIO -->
-        <div class="bg-[#7b9200] text-[#fff3d7] p-8 md:p-10 min-h-[320px]">
-          
+        <div class="bg-[#fff3d7] border-[#aaa59b]/30 border-3 text-[#2f1204] p-8 md:p-10 min-h-[320px] duration-300 group" >
+        
           <div class="space-y-6">
 
             <h2 class="text-3xl md:text-4xl font-articulat-bold uppercase leading-none">
@@ -51,8 +47,7 @@ const toggleFaq = (index: number) => {
           </div>
         </div>
 
-        <!-- NORMAS -->
-        <div class="bg-[#7b9200] text-[#fff3d7] p-8 md:p-10 min-h-[320px]">
+        <div class="bg-[#fff3d7] border-[#aaa59b]/30 border-3 text-[#2f1204] p-8 md:p-10 min-h-[320px] duration-300 group" >
 
           <div class="space-y-6">
 
@@ -73,10 +68,9 @@ const toggleFaq = (index: number) => {
         </div>
       </div>
 
-      <!-- FAQS -->
-      <div class="space-y-6 relative z-10">
+      <div class="space-y-6 text-xl leading-relaxed">
 
-        <h2 class="mt-30 text-3xl md:text-4xl font-articulat-bold uppercase text-[#2f1204]">
+        <h2 class="text-3xl md:text-4xl font-articulat-bold uppercase leading-none">
           Dudas Frecuentes
         </h2>
 
@@ -85,17 +79,24 @@ const toggleFaq = (index: number) => {
           <div
             v-for="(faq, index) in FAQS"
             :key="index"
-            class="bg-[#3a0d00] overflow-hidden"
+            :class="[
+              'border-[#aaa59b]/30 border-3 overflow-hidden transition-all duration-300',
+              faqAbierta === index
+                ? 'bg-[#dd2f03] text-[#fff3d7] border-0'
+                : 'bg-[#fff3d7] text-[#2f1204]'
+            ]"
           >
 
             <button
               @click="toggleFaq(index)"
-              class="w-full flex justify-between items-center text-left px-6 py-5 uppercase font-articulat-bold text-[#fff3d7] text-lg md:text-2xl hover:opacity-90 transition-all"
-            >
+              :class="[
+                'w-full flex justify-between items-center text-left px-6 py-5 uppercase font-articulat-bold text-lg md:text-2xl transition-all',
+                faqAbierta === index
+                  ? 'bg-[#dd2f03] text-[#fff3d7]'
+                  : 'text-[#2f1204] hover:bg-[#dd2f03] hover:text-[#fff3d7]']">
               <span>
                 {{ faq.pregunta }}
               </span>
-
               <ChevronDown
                 :class="[
                   'h-6 w-6 transition-transform duration-300 shrink-0',
@@ -106,7 +107,7 @@ const toggleFaq = (index: number) => {
 
             <div
               v-if="faqAbierta === index"
-              class="px-6 pb-6 text-[#fff3d7]/90 text-lg leading-relaxed"
+              class="px-6 pb-6 text-[#fff3d7] text-lg leading-relaxed"
             >
               {{ faq.respuesta }}
             </div>
@@ -115,14 +116,12 @@ const toggleFaq = (index: number) => {
         </div>
       </div>
 
-      <!-- DECORACION IZQUIERDA -->
       <img
         src="/vinilo.png"
         alt="Decoración vinilo"
         class="absolute left-[-90px] top-[450px] w-[220px] mb-10 z-20 pointer-events-none"
       />
 
-      <!-- DECORACION DERECHA -->
       <img
         src="/estrella.png"
         alt="Decoración estrella"
