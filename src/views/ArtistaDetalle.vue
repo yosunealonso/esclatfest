@@ -15,6 +15,14 @@ const imagenCabecera = `/cabeceras/${artista?.nombre
   .replace(/[¿?]/g, '')
   .replace(/\s+/g, '-')}.cabecera.jpg`;
 
+  const tipoElemento = {
+  Charlas: 'la charla',
+  Talleres: 'el taller',
+  Exposiciones: 'la exposición',
+  'Dj Sets': 'el DJ set',
+  Conciertos: 'el artista'
+}[artista?.disciplina ?? ''] ?? 'la actividad';
+
 </script>
 
 <template>
@@ -52,7 +60,7 @@ const imagenCabecera = `/cabeceras/${artista?.nombre
           
           <div>
             <h2 class="font-articulat-bold uppercase text-3xl mb-6">
-              Sobre el artista
+            Sobre {{ tipoElemento }}
             </h2>
 
             <p class="text-lg md:text-xl leading-relaxed">

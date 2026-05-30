@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
 import { RouterLink } from 'vue-router';
-import { Sparkles } from 'lucide-vue-next';
 import { ARTISTAS } from '../data/mockData';
 
 const disciplinaSeleccionada = ref<string>('Todas');
@@ -27,18 +26,14 @@ const artistasFiltrados = computed(() => {
 </script>
 
 <template>
-  <div class="w-full bg-[#8bb2f1] text-[#2f1204] py-12 font-articulat-medium">
+  <div class="w-full bg-[#fff3d7] text-[#2f1204] py-12 font-articulat-medium">
     
     <div class="container mx-auto px-5 max-w-[96%] space-y-8">
       
       <div class="space-y-2 text-left">
-        <div class="flex items-center gap-2 text-[#fff3d7] font-articulat-bold text-xs uppercase tracking-widest">
-          <Sparkles class="h-4 w-4 fill-[#fff3d7]" />
-          <span>Line-up Oficial ESCLAT 2026</span>
-        </div>
         
         <h1 class="text-4xl md:text-5xl font-articulat-bold uppercase tracking-tight text-[#2f1204]">
-          Creadores y Artistas
+          Lineup
         </h1>
         
         <p class="font-articulat-medium text-lg md:text-2xl text-[#2f1204]/90 max-w-3xl leading-relaxed">
@@ -52,7 +47,7 @@ const artistasFiltrados = computed(() => {
           :key="dis"
           @click="disciplinaSeleccionada = dis"
           :class="[
-            'px-4 py-2 text-xs uppercase font-articulat-bold transition-all rounded-none',
+            'px-4 py-2 text-xs uppercase font-articulat-bold transition-all rounded-none border-[#aaa59b]/50 border-2',
             disciplinaSeleccionada === dis 
               ? 'bg-[#dd2f03] text-[#fff3d7]'
               : 'bg-[#fff3d7] text-[#2f1204]/80 hover:bg-[#fff3d7]/50'
@@ -71,7 +66,7 @@ const artistasFiltrados = computed(() => {
           v-for="artista in artistasFiltrados"
           :key="artista.id"
           :to="`/artistas/${artista.id}`"
-          class="bg-[#fff3d7] hover:bg-[#dd2f03] text-[#2f1204] rounded-none overflow-hidden flex flex-col transition-all duration-300 group hover:scale-[1.02]"
+          class="bg-[#fff3d7] border-[#aaa59b]/50 border-2 hover:bg-[#dd2f03] hover:border-0 text-[#2f1204] rounded-none overflow-hidden flex flex-col transition-all duration-300 group hover:scale-[1.02]"
         >
 
           <div class="aspect-video w-full bg-[#1a0a02] relative overflow-hidden">
