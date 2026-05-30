@@ -15,7 +15,7 @@ const toggleMenu = () => {
       <div class="w-full px-6 md:px-12 h-16 flex items-center justify-between">     
 
         <RouterLink to="/" class="font-variex text-[#fff3d7] text-3xl tracking-wide hover:opacity-90 transition-opacity">
-          ESCLAT
+          eSclat
         </RouterLink>
         
         <nav class="hidden md:flex items-center space-x-8 font-articulat-medium text-xl tracking-wider">

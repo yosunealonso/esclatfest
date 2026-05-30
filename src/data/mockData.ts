@@ -1,10 +1,12 @@
 export interface Artista {
   id: string;
   nombre: string;
-  disciplina: 'Conciertos' | 'Dj Sets' | 'Talleres' | 'Exposiciones' | 'Charlas';
   bio: string;
   imagen: string;
+  disciplina: string;
   actividades: string[];
+  spotify?: string;
+  galeria?: string[];
 }
 export interface Evento {
   id: string;
@@ -41,7 +43,9 @@ export const ARTISTAS: Artista[] = [
     disciplina: 'Charlas',
     bio: 'La salud mental en la industria musical. Un espacio para debatir y visibilizar los retos psicológicos de la creación artística contemporánea.',
     imagen: '',
-    actividades: ['Charla - Viernes 23']
+    actividades: ['Charla - Viernes 23'],
+    spotify: "https://open.spotify.com/artist/...",
+    galeria: [ "/artistas/artist1-1.jpg","/artistas/artist1-2.jpg"],
   },
   {
     id: 't2',
@@ -49,7 +53,9 @@ export const ARTISTAS: Artista[] = [
     disciplina: 'Talleres',
     bio: 'Risografía y la escena independiente (En colaboración con Nice Guy Press). Aprende técnicas de autoedición e impresión.',
     imagen: '',
-    actividades: ['Taller - Viernes 23']
+    actividades: ['Taller - Viernes 23'],
+    spotify: "https://open.spotify.com/artist/...",
+    galeria: [ "/artistas/artist1-1.jpg","/artistas/artist1-2.jpg"]
   },
   {
     id: 't3',
@@ -57,7 +63,9 @@ export const ARTISTAS: Artista[] = [
     disciplina: 'Exposiciones',
     bio: 'Muestra permanente de arte y diseño de estudiantes locales. Una mirada al futuro de la creatividad visual.',
     imagen: '',
-    actividades: ['Exposición Permanente - Todos los días']
+    actividades: ['Exposición Permanente - Todos los días'],
+    spotify: "https://open.spotify.com/artist/...",
+    galeria: [ "/artistas/artist1-1.jpg","/artistas/artist1-2.jpg"],
   },
   {
     id: 'c1',
@@ -65,7 +73,9 @@ export const ARTISTAS: Artista[] = [
     disciplina: 'Conciertos',
     bio: 'Banda afincada en Madrid. Con influencias tan dispares como Las Vulpes o Radiohead, han construido un sonido madrileño, garajero y potente, que combina voces enfadadas y letras provocativas.',
     imagen: 'santiagodearanda.jpg',
-    actividades: ['Concierto - Viernes 23']
+    actividades: ['Concierto - Viernes 23'],
+    spotify: "https://open.spotify.com/artist/...",
+    galeria: [ "/artistas/artist1-1.jpg","/artistas/artist1-2.jpg"],
   },
   {
     id: 'c2',
@@ -73,7 +83,9 @@ export const ARTISTAS: Artista[] = [
     disciplina: 'Conciertos',
     bio: 'Gusto por el dream pop y el shoegaze, géneros que se caracterizan por letras nostálgicas, sonidos etéreos y atmosféricos.',
     imagen: 'agosto.jpg',
-    actividades: ['Concierto - Viernes 23']
+    actividades: ['Concierto - Viernes 23'],
+    spotify: "https://open.spotify.com/artist/...",
+    galeria: [ "/artistas/artist1-1.jpg","/artistas/artist1-2.jpg"],
   },
   {
     id: 'c3',
@@ -81,7 +93,9 @@ export const ARTISTAS: Artista[] = [
     disciplina: 'Conciertos',
     bio: 'Música con influencia de los 60s, bossa-nova y samba. Indie rock de guitarra, con letras principalmente autobiográficas y armonías vocales.',
     imagen: 'paulamargalef.jpg',
-    actividades: ['Concierto - Viernes 23']
+    actividades: ['Concierto - Viernes 23'],
+    spotify: "https://open.spotify.com/artist/...",
+    galeria: [ "/artistas/artist1-1.jpg","/artistas/artist1-2.jpg"],
   },
   {
     id: 'c4',
@@ -89,7 +103,9 @@ export const ARTISTAS: Artista[] = [
     disciplina: 'Conciertos',
     bio: 'Banda de Barcelona con su propuesta “turbo electro mega roc de tu abuela”. Punk entre el cachondeo y el cabreo. Sus canciones duran solo un instante.',
     imagen: 'tetasfrias.jpg',
-    actividades: ['Concierto - Viernes 23']
+    actividades: ['Concierto - Viernes 23'],
+    spotify: "https://open.spotify.com/artist/...",
+    galeria: [ "/artistas/artist1-1.jpg","/artistas/artist1-2.jpg"],
   },
   {
     id: 't4',
@@ -97,7 +113,9 @@ export const ARTISTAS: Artista[] = [
     disciplina: 'Charlas',
     bio: 'Conversación sobre la invisibilización de las mujeres en la historia del arte y cómo reescribir el relato desde el presente.',
     imagen: '',
-    actividades: ['Charla - Sábado 24']
+    actividades: ['Charla - Sábado 24'],
+    spotify: "https://open.spotify.com/artist/...",
+    galeria: [ "/artistas/artist1-1.jpg","/artistas/artist1-2.jpg"],
   },
   {
     id: 't5',
@@ -105,7 +123,9 @@ export const ARTISTAS: Artista[] = [
     disciplina: 'Talleres',
     bio: 'Creación de instrumentos de cerámica. Un taller experimental que une la alfarería tradicional con el diseño sonoro.',
     imagen: '',
-    actividades: ['Taller - Sábado 24']
+    actividades: ['Taller - Sábado 24'],
+    spotify: "https://open.spotify.com/artist/...",
+    galeria: [ "/artistas/artist1-1.jpg","/artistas/artist1-2.jpg"],
   },
   {
     id: 't6',
@@ -113,7 +133,9 @@ export const ARTISTAS: Artista[] = [
     disciplina: 'Charlas',
     bio: 'El impacto de la Inteligencia Artificial generativa en el medioambiente y en el arte. Retos éticos y ecológicos.',
     imagen: '',
-    actividades: ['Charla - Sábado 24']
+    actividades: ['Charla - Sábado 24'],
+    spotify: "https://open.spotify.com/artist/...",
+    galeria: [ "/artistas/artist1-1.jpg","/artistas/artist1-2.jpg"],
   },
   {
     id: 'p1',
@@ -121,7 +143,9 @@ export const ARTISTAS: Artista[] = [
     disciplina: 'Exposiciones',
     bio: 'Muestra de cortometrajes independientes y videoclips de la escena valenciana.',
     imagen: '',
-    actividades: ['Proyecciones - Sábado 24']
+    actividades: ['Proyecciones - Sábado 24'],
+    spotify: "https://open.spotify.com/artist/...",
+    galeria: [ "/artistas/artist1-1.jpg","/artistas/artist1-2.jpg"],
   },
   {
     id: 'c5',
@@ -129,7 +153,9 @@ export const ARTISTAS: Artista[] = [
     disciplina: 'Conciertos',
     bio: 'Una banda que ha sabido capturar la esencia del indie y el romanticismo en su música. Con un sonido único que fusiona melodías suaves y letras profundas.',
     imagen: 'malditasgaviotas.jpg',
-    actividades: ['Concierto - Sábado 24']
+    actividades: ['Concierto - Sábado 24'],
+    spotify: "https://open.spotify.com/artist/...",
+    galeria: [ "/artistas/artist1-1.jpg","/artistas/artist1-2.jpg"],
   },
   {
     id: 'c6',
@@ -137,7 +163,9 @@ export const ARTISTAS: Artista[] = [
     disciplina: 'Conciertos',
     bio: 'Grupo de pop de guitarras con letras en español formado en Barcelona, con su formato de trío estable desde 2019.',
     imagen: 'diamantenegro.jpg',
-    actividades: ['Concierto - Sábado 24']
+    actividades: ['Concierto - Sábado 24'],
+    spotify: "https://open.spotify.com/artist/...",
+    galeria: [ "/artistas/artist1-1.jpg","/artistas/artist1-2.jpg"],
   },
   {
     id: 'c7',
@@ -145,7 +173,9 @@ export const ARTISTAS: Artista[] = [
     disciplina: 'Conciertos',
     bio: 'Una de las voces más emocionantes de la nueva ola underground española. Su primer LP es un testimonio sonoro de sus ansiedades, romances y el vértigo de ser veinteañeras.',
     imagen: 'petunias.jpg',
-    actividades: ['Concierto - Sábado 24']
+    actividades: ['Concierto - Sábado 24'],
+    spotify: "https://open.spotify.com/artist/...",
+    galeria: [ "/artistas/artist1-1.jpg","/artistas/artist1-2.jpg"],
   },
   {
     id: 'd1',
@@ -153,7 +183,9 @@ export const ARTISTAS: Artista[] = [
     disciplina: 'Dj Sets',
     bio: 'Los sonidos que vertebran a esta DJ son pop y electrónicos sin cerrarse a muchos otros, que dan sentido a su imaginario fuera de los márgenes.',
     imagen: 'hannaplum.jpg',
-    actividades: ['Dj Set - Sábado 24']
+    actividades: ['Dj Set - Sábado 24'],
+    spotify: "https://open.spotify.com/artist/...",
+    galeria: [ "/artistas/artist1-1.jpg","/artistas/artist1-2.jpg"],
   },
   {
     id: 't7',
@@ -161,7 +193,9 @@ export const ARTISTAS: Artista[] = [
     disciplina: 'Charlas',
     bio: 'Cómo autopublicarse, sobrevivir a las redes sociales y vender en ferias de autopublicación. Guía de supervivencia creativa.',
     imagen: '',
-    actividades: ['Charla - Domingo 25']
+    actividades: ['Charla - Domingo 25'],
+    spotify: "https://open.spotify.com/artist/...",
+    galeria: [ "/artistas/artist1-1.jpg","/artistas/artist1-2.jpg"],
   },
   {
     id: 't8',
@@ -169,7 +203,9 @@ export const ARTISTAS: Artista[] = [
     disciplina: 'Talleres',
     bio: 'Taller de Upcycling de Ropa de Segunda Mano. Dale una segunda vida a tus prendas mediante la customización y el diseño circular.',
     imagen: '',
-    actividades: ['Taller - Domingo 25']
+    actividades: ['Taller - Domingo 25'],
+    spotify: "https://open.spotify.com/artist/...",
+    galeria: [ "/artistas/artist1-1.jpg","/artistas/artist1-2.jpg"],
   },
   {
     id: 'c8',
@@ -177,7 +213,9 @@ export const ARTISTAS: Artista[] = [
     disciplina: 'Conciertos',
     bio: 'Una de las nuevas propuestas frescas que se suman a la escena contemporánea.',
     imagen: 'lakala.jpg',
-    actividades: ['Concierto - Domingo 25']
+    actividades: ['Concierto - Domingo 25'],
+    spotify: "https://open.spotify.com/artist/...",
+    galeria: [ "/artistas/artist1-1.jpg","/artistas/artist1-2.jpg"],
   },
   {
     id: 'c9',
@@ -185,7 +223,9 @@ export const ARTISTAS: Artista[] = [
     disciplina: 'Conciertos',
     bio: 'Canciones divertidas, frikis y con nostalgia dosmilera. Hablan sobre el amor, problemas de precariedad juvenil, dramas millenials, noches de fiesta y pelis.',
     imagen: 'amarillofiesta.jpg',
-    actividades: ['Concierto - Domingo 25']
+    actividades: ['Concierto - Domingo 25'],
+    spotify: "https://open.spotify.com/artist/...",
+    galeria: [ "/artistas/artist1-1.jpg","/artistas/artist1-2.jpg"],
   },
   {
     id: 'c10',
@@ -193,7 +233,9 @@ export const ARTISTAS: Artista[] = [
     disciplina: 'Conciertos',
     bio: 'Directo vibrante que fusiona géneros y pone el foco en la presencia escénica y la conexión emocional con el público.',
     imagen: 'lareinamora.jpg',
-    actividades: ['Concierto - Domingo 25']
+    actividades: ['Concierto - Domingo 25'],
+    spotify: "https://open.spotify.com/artist/...",
+    galeria: [ "/artistas/artist1-1.jpg","/artistas/artist1-2.jpg"],
   },
   {
     id: 'c11',
@@ -201,7 +243,9 @@ export const ARTISTAS: Artista[] = [
     disciplina: 'Conciertos',
     bio: 'Artista valenciana que refleja su propio universo a través de composiciones honestas y melodías cautivadoras.',
     imagen: 'lunavalle.jpg',
-    actividades: ['Concierto - Domingo 25']
+    actividades: ['Concierto - Domingo 25'],
+    spotify: "https://open.spotify.com/artist/...",
+    galeria: [ "/artistas/artist1-1.jpg","/artistas/artist1-2.jpg"],
   },
   {
     id: 'c12',
@@ -209,7 +253,9 @@ export const ARTISTAS: Artista[] = [
     disciplina: 'Conciertos',
     bio: 'Propuesta musical emergente que cierra el festival rompiendo las barreras de los géneros tradicionales.',
     imagen: 'lg1do.jpg',
-    actividades: ['Concierto - Domingo 25']
+    actividades: ['Concierto - Domingo 25'],
+    spotify: "https://open.spotify.com/artist/...",
+    galeria: [ "/artistas/artist1-1.jpg","/artistas/artist1-2.jpg"],
   }
 ];
 
