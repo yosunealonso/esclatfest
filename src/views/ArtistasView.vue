@@ -36,18 +36,18 @@ const artistasFiltrados = computed(() => {
           Lineup
         </h1>
         
-        <p class="font-articulat-medium text-lg md:text-2xl text-[#2f1204]/90 max-w-3xl leading-relaxed">
+        <p class="font-articulat-medium text-[#2f1204]/80 text-lg">
           Explora los artistas presentes en esta edición del festival.
         </p>
       </div>
 
-      <div class="flex flex-wrap gap-2 border-b-2 border-[#2f1204]/10 pb-6">
+      <div class="flex flex-wrap gap-2 border-b-3 border-[#2f1204]/10 pb-6">
         <button 
           v-for="dis in disciplinas" 
           :key="dis"
           @click="disciplinaSeleccionada = dis"
           :class="[
-            'px-4 py-2 text-xs uppercase font-articulat-bold transition-all rounded-none border-[#aaa59b]/50 border-2',
+            'px-4 py-2 text-xs uppercase font-articulat-bold transition-all rounded-none border-[#aaa59b]/50 border-3',
             disciplinaSeleccionada === dis 
               ? 'bg-[#dd2f03] text-[#fff3d7]'
               : 'bg-[#fff3d7] text-[#2f1204]/80 hover:bg-[#fff3d7]/50'
@@ -66,7 +66,7 @@ const artistasFiltrados = computed(() => {
           v-for="artista in artistasFiltrados"
           :key="artista.id"
           :to="`/artistas/${artista.id}`"
-          class="bg-[#fff3d7] border-[#aaa59b]/50 border-2 hover:bg-[#dd2f03] hover:border-0 text-[#2f1204] rounded-none overflow-hidden flex flex-col transition-all duration-300 group hover:scale-[1.02]"
+          class="bg-[#fff3d7] border-[#aaa59b]/50 border-3 hover:bg-[#dd2f03] hover:border-0 text-[#2f1204] rounded-none overflow-hidden flex flex-col transition-all duration-300 group hover:scale-[1.02]"
         >
 
           <div class="aspect-video w-full bg-[#1a0a02] relative overflow-hidden">

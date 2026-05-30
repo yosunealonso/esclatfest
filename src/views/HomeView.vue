@@ -148,11 +148,11 @@ onUnmounted(() => {
           Escucha la playlist oficial de Esclat 2026
         </h2>
 
-        <div class="w-full rounded-[3rem] overflow-hidden bg-[#2f1204] p-2 md:p-4">
+        <div class="w-full rounded-[3rem] overflow-hidden bg-[#dd2f03] p-2 md:p-4">
           
           <iframe
             style="border-radius: 2.5rem"
-            src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M?utm_source=generator"
+            src="https://open.spotify.com/embed/playlist/6Dadud4pF7SaHwwfAmgZdi"
             width="100%"
             height="500"
             frameBorder="0"

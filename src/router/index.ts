@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
 import ArtistaDetalle from '../views/ArtistaDetalle.vue';
+import MiHorarioView from '../views/MiHorarioView.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -21,7 +22,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/programa',
     name: 'ProgramaParent',
-    component: () => import('../views/ProgramaLayout.vue'), 
+    component: () => import('../views/ProgramaLayout.vue'),
     children: [
       {
         path: '',
@@ -44,6 +45,11 @@ const routes: Array<RouteRecordRaw> = [
         name: 'ProgramaDomingo',
         component: () => import('../views/ProgramaDiaView.vue'),
         props: { dia: 'Domingo' }
+      },
+      {
+        path: 'mihorario',
+        name: 'MiHorario',
+        component: MiHorarioView
       }
     ]
   },
