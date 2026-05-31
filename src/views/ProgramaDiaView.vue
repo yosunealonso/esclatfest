@@ -2,6 +2,7 @@
 import { computed, ref } from 'vue';
 import { AGENDA } from '../data/mockData';
 import { Clock, MapPin, Tag, Star } from 'lucide-vue-next';
+import { RouterLink } from 'vue-router';
 
 const favoritos = ref<string[]>(
   JSON.parse(localStorage.getItem('favoritos') || '[]')
@@ -38,13 +39,15 @@ const eventosDelDia = computed(() => {
     <div class="space-y-6 text-[#2f1204] font-articulat-medium">
 
       <div v-if="eventosDelDia.length > 0" class="space-y-4">
-        <div
+        <RouterLink
           v-for="evento in eventosDelDia"
           :key="evento.id"
-          class="relative bg-[#fff3d7] border-[#aaa59b]/30 border-3 hover:bg-[#dd2f03] hover:border-0 text-[#2f1204] rounded-none overflow-hidden flex flex-col transition-all duration-300 group hover:shadow-lg p-4 md:p-4"
+          :to="`/artistas/${evento.artistaId}`"
+          class="relative block bg-[#fff3d7] border-[#aaa59b]/30 border-3 hover:bg-[#dd2f03] hover:border-0 text-[#2f1204] rounded-none overflow-hidden flex flex-col transition-all duration-300 group hover:shadow-lg p-4 md:p-4"
         >
+
           <button
-            @click="toggleFavorito(evento.id)"
+            @click.stop.prevent="toggleFavorito(evento.id)"
             class="absolute top-4 right-4 z-30 cursor-pointer"
           >
             <Star
@@ -56,6 +59,7 @@ const eventosDelDia = computed(() => {
               ]"
             />
           </button>
+
           <div class="space-y-1 grow">
             <div class="flex flex-wrap gap-2 items-center text-xs">
 
@@ -96,7 +100,7 @@ const eventosDelDia = computed(() => {
             </span>
           </div>
 
-        </div>
+        </RouterLink>
       </div>
 
       <div

@@ -11,6 +11,7 @@ export interface Artista {
 export interface Evento {
   id: string;
   titulo: string;
+  artistaId: string;
   hora: string;
   dia: 'Viernes' | 'Sábado' | 'Domingo';
   espacio: 'Sala La Polivalent' | 'Hall Sala La Polivalent' | 'Sala Factoría' | 'Sala Visual Room' | 'Sala Exposiciones' | 'Patio 1' | 'Patio 2'| 'La Mutant';
@@ -268,7 +269,8 @@ export const AGENDA: Evento[] = [
     dia: 'Viernes',
     espacio: 'Sala La Polivalent',
     categoria: 'Charlas',
-    descripcion: 'La salud mental en la industria musical.'
+    descripcion: 'La salud mental en la industria musical.',
+    artistaId: 't1'
   },
   {
     id: 'e2',
@@ -277,7 +279,8 @@ export const AGENDA: Evento[] = [
     dia: 'Viernes',
     espacio: 'Sala Factoría',
     categoria: 'Talleres',
-    descripcion: 'Risografía y la escena independiente (En colaboración con Nice Guy Press).'
+    descripcion: 'Risografía y la escena independiente (En colaboración con Nice Guy Press).',
+    artistaId: 't2'
   },
   {
     id: 'e3',
@@ -286,7 +289,8 @@ export const AGENDA: Evento[] = [
     dia: 'Viernes',
     espacio: 'Sala Exposiciones',
     categoria: 'Exposiciones',
-    descripcion: 'Muestra de arte y diseño de estudiantes.'
+    descripcion: 'Muestra de arte y diseño de estudiantes.',
+    artistaId: 't3'
   },
   {
     id: 'e4',
@@ -295,7 +299,8 @@ export const AGENDA: Evento[] = [
     dia: 'Viernes',
     espacio: 'La Mutant',
     categoria: 'Conciertos',
-    descripcion: 'Concierto en directo en el Patio Principal.'
+    descripcion: 'Concierto en directo en el Patio Principal.',
+    artistaId: 'c1'
   },
   {
     id: 'e5',
@@ -304,7 +309,8 @@ export const AGENDA: Evento[] = [
     dia: 'Viernes',
     espacio: 'La Mutant',
     categoria: 'Conciertos',
-    descripcion: 'Concierto en directo en el Patio Principal.'
+    descripcion: 'Concierto en directo en el Patio Principal.',
+    artistaId: 'c2'
   },
   {
     id: 'e6',
@@ -313,7 +319,8 @@ export const AGENDA: Evento[] = [
     dia: 'Viernes',
     espacio: 'La Mutant',
     categoria: 'Conciertos',
-    descripcion: 'Concierto en directo en el Patio Principal.'
+    descripcion: 'Concierto en directo en el Patio Principal.',
+    artistaId: 'c3'
   },
   {
     id: 'e7',
@@ -322,10 +329,9 @@ export const AGENDA: Evento[] = [
     dia: 'Viernes',
     espacio: 'La Mutant',
     categoria: 'Conciertos',
-    descripcion: 'Cierre de jornada con concierto en directo.'
+    descripcion: 'Cierre de jornada con concierto en directo.',
+    artistaId: 'c4'
   },
-
-  // DÍA 24
   {
     id: 'e8',
     titulo: '¿Dónde estaban las tías?',
@@ -333,7 +339,8 @@ export const AGENDA: Evento[] = [
     dia: 'Sábado',
     espacio: 'Sala La Polivalent',
     categoria: 'Charlas',
-    descripcion: 'Invisibilización de las mujeres en la historia del arte.'
+    descripcion: 'Invisibilización de las mujeres en la historia del arte.',
+    artistaId: 't4'
   },
   {
     id: 'e9',
@@ -342,7 +349,8 @@ export const AGENDA: Evento[] = [
     dia: 'Sábado',
     espacio: 'Patio 2',
     categoria: 'Talleres',
-    descripcion: 'Creación de instrumentos de cerámica.'
+    descripcion: 'Creación de instrumentos de cerámica.',
+    artistaId: 't5'
   },
   {
     id: 'e10',
@@ -351,7 +359,8 @@ export const AGENDA: Evento[] = [
     dia: 'Sábado',
     espacio: 'Sala Visual Room',
     categoria: 'Charlas',
-    descripcion: 'Su repercusión en el medioambiente y en el arte.'
+    descripcion: 'Su repercusión en el medioambiente y en el arte.',
+    artistaId: 't6'
   },
   {
     id: 'e11',
@@ -360,7 +369,8 @@ export const AGENDA: Evento[] = [
     dia: 'Sábado',
     espacio: 'Sala La Polivalent',
     categoria: 'Exposiciones',
-    descripcion: 'Muestra de cortometrajes independientes y videoclips de la escena valenciana.'
+    descripcion: 'Muestra de cortometrajes independientes y videoclips de la escena valenciana.',
+    artistaId: 'p1'
   },
   {
     id: 'e12',
@@ -369,7 +379,8 @@ export const AGENDA: Evento[] = [
     dia: 'Sábado',
     espacio: 'La Mutant',
     categoria: 'Conciertos',
-    descripcion: 'Concierto en directo en el Patio Principal.'
+    descripcion: 'Concierto en directo en el Patio Principal.',
+    artistaId: 'c5'
   },
   {
     id: 'e13',
@@ -378,7 +389,8 @@ export const AGENDA: Evento[] = [
     dia: 'Sábado',
     espacio: 'La Mutant',
     categoria: 'Conciertos',
-    descripcion: 'Concierto en directo en el Patio Principal.'
+    descripcion: 'Concierto en directo en el Patio Principal.',
+    artistaId: 'c6'
   },
   {
     id: 'e14',
@@ -387,7 +399,8 @@ export const AGENDA: Evento[] = [
     dia: 'Sábado',
     espacio: 'La Mutant',
     categoria: 'Conciertos',
-    descripcion: 'Concierto en directo en el Patio Principal.'
+    descripcion: 'Concierto en directo en el Patio Principal.',
+    artistaId: 'c7'
   },
   {
     id: 'e15',
@@ -396,10 +409,9 @@ export const AGENDA: Evento[] = [
     dia: 'Sábado',
     espacio: 'Patio 2',
     categoria: 'Dj Sets',
-    descripcion: 'Sesión nocturna de DJ Set.'
+    descripcion: 'Sesión nocturna de DJ Set.',
+    artistaId: 'd1'
   },
-
-  // DÍA 25
   {
     id: 'e16',
     titulo: 'Vivir del Cuento (Literalmente)',
@@ -407,7 +419,8 @@ export const AGENDA: Evento[] = [
     dia: 'Domingo',
     espacio: 'Sala La Polivalent',
     categoria: 'Charlas',
-    descripcion: 'Cómo autopublicarse, sobrevivir a las redes y vender en ferias de autopublicación.'
+    descripcion: 'Cómo autopublicarse, sobrevivir a las redes y vender en ferias de autopublicación.',
+    artistaId: 't7'
   },
   {
     id: 'e17',
@@ -416,7 +429,8 @@ export const AGENDA: Evento[] = [
     dia: 'Domingo',
     espacio: 'Sala Factoría',
     categoria: 'Talleres',
-    descripcion: 'Taller práctico de prendas de segunda mano.'
+    descripcion: 'Taller práctico de prendas de segunda mano.',
+    artistaId: 't8'
   },
   {
     id: 'e18',
@@ -425,7 +439,8 @@ export const AGENDA: Evento[] = [
     dia: 'Domingo',
     espacio: 'La Mutant',
     categoria: 'Conciertos',
-    descripcion: 'Concierto en directo en el Patio Principal.'
+    descripcion: 'Concierto en directo en el Patio Principal.',
+    artistaId: 'c8'
   },
   {
     id: 'e19',
@@ -434,7 +449,8 @@ export const AGENDA: Evento[] = [
     dia: 'Domingo',
     espacio: 'La Mutant',
     categoria: 'Conciertos',
-    descripcion: 'Concierto en directo en el Patio Principal.'
+    descripcion: 'Concierto en directo en el Patio Principal.',
+    artistaId: 'c9'
   },
   {
     id: 'e20',
@@ -443,7 +459,8 @@ export const AGENDA: Evento[] = [
     dia: 'Domingo',
     espacio: 'La Mutant',
     categoria: 'Conciertos',
-    descripcion: 'Concierto en directo en el Patio Principal.'
+    descripcion: 'Concierto en directo en el Patio Principal.',
+    artistaId: 'c10'
   },
   {
     id: 'e21',
@@ -452,7 +469,8 @@ export const AGENDA: Evento[] = [
     dia: 'Domingo',
     espacio: 'La Mutant',
     categoria: 'Conciertos',
-    descripcion: 'Concierto en directo en el Patio Principal.'
+    descripcion: 'Concierto en directo en el Patio Principal.',
+    artistaId: 'c11'
   },
   {
     id: 'e22',
@@ -461,8 +479,9 @@ export const AGENDA: Evento[] = [
     dia: 'Domingo',
     espacio: 'La Mutant',
     categoria: 'Conciertos',
-    descripcion: 'Actuación de cierre del festival.'
-  }
+    descripcion: 'Actuación de cierre del festival.',
+    artistaId: 'c12'
+  },
 ];
 
 export const FAQS: FAQ[] = [
