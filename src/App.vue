@@ -9,7 +9,7 @@ const toggleMenu = () => {
 </script>
 
 <template>
-  <div class="min-h-screen bg-neutral-950 text-neutral-50 flex flex-col font-sans selection:text-neutral-950">
+  <div class="min-h-screen bg-[#2f1204] text-[#fff3d7] flex flex-col font-sans selection:text-neutral-950">
     
     <header class="bg-[#2f1204] sticky top-0 z-100 shadow-md">
       <div class="w-full px-6 md:px-12 h-16 flex items-center justify-between">     
@@ -43,18 +43,163 @@ const toggleMenu = () => {
       <RouterView />
     </main>
 
-    <footer class=" bg-[#2f1204] py-12 text-sm text-[#fff3d7]">
-      <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
-        <div class="text-center md:text-left">
-          <p class="font-bold text-[#fff3d7] text-base">ESCLAT Festival 2026</p>
-          <p class="mt-1">Música, pensament i creativitat jove en Las Naves, València.</p>
+    <div class="container mx-auto px-6 md:px-12 py-16">
+
+        <div>
+
+          <h4 class="font-articulat uppercase text-sm tracking-widest mb-5 text-[#8bb2f1]">
+            Organiza
+          </h4>
+
+          <div class="flex flex-wrap items-center gap-8">
+
+            <img
+              src="/logos/esclat.png"
+              alt="ESCLAT"
+              class="h-10 object-contain"
+            />
+
+            <img
+              src="/logos/ajuntament.png"
+              alt="Ajuntament de València"
+              class="h-10 object-contain"
+            />
+
+          </div>
         </div>
-        <div class="text-neutral-600 text-xs text-center md:text-right">
-          <p>esclat bla bla bla</p>
+
+        <div class="mt-10 pb-12 border-b border-[#fff3d7]/20">
+          <h4 class="font-articulat uppercase text-sm tracking-widest mb-5 text-[#8bb2f1]">
+            Colaboran
+          </h4>
+          <div class="flex flex-wrap items-center gap-6">
+
+            <img
+              src="/logos/diputacio.png"
+              alt="Diputació"
+              class="h-8 object-contain"
+            />
+
+            <img
+              src="/logos/ivaj.png"
+              alt="IVAJ"
+              class="h-8 object-contain"
+            />
+
+            <img
+              src="/logos/turia.png"
+              alt="Turia"
+              class="h-8 object-contain"
+            />
+
+            <img
+              src="/logos/cocacola.png"
+              alt="Coca Cola"
+              class="h-8 object-contain"
+            />
+
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-12 mt-12">
+          <div class="space-y-4">
+
+            <h3 class="font-articulat text-xl uppercase">
+              ESCLAT Festival
+            </h3>
+
+            <p class="text-[#fff3d7]/80 leading-relaxed">
+              Música, pensament i creativitat jove.
+              Un espai de trobada per a la nova cultura emergent.
+            </p>
+
+            <p class="text-[#fff3d7]/60 text-sm">
+              Las Naves · València
+            </p>
+          </div>
+
+          <div class="space-y-4">
+
+            <h3 class="font-articulat text-xl uppercase">
+              Contacto
+            </h3>
+
+            <div class="space-y-2 text-[#fff3d7]/80">
+              <p>hola@esclatfestival.com</p>
+              <p>Valencia, España</p>
+            </div>
+
+            <div class="flex gap-4 pt-2">
+
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                class="hover:text-[#8bb2f1] transition-colors"
+              >
+                Instagram
+              </a>
+
+              <a
+                href="https://tiktok.com"
+                target="_blank"
+                class="hover:text-[#8bb2f1] transition-colors"
+              >
+                TikTok
+              </a>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <h3 class="font-articulat text-xl uppercase">
+              Festival
+            </h3>
+
+            <div class="flex flex-col gap-2">
+
+              <RouterLink
+                to="/artistas"
+                class="hover:text-[#8bb2f1] transition-colors"
+              >
+                Artistas
+              </RouterLink>
+
+              <RouterLink
+                to="/programa"
+                class="hover:text-[#8bb2f1] transition-colors"
+              >
+                Programa
+              </RouterLink>
+
+              <RouterLink
+                to="/entradas"
+                class="hover:text-[#8bb2f1] transition-colors"
+              >
+                Entradas
+              </RouterLink>
+
+              <RouterLink
+                to="/info"
+                class="hover:text-[#8bb2f1] transition-colors"
+              >
+                Información
+              </RouterLink>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-16 pt-8 border-t border-[#fff3d7]/20 flex flex-col md:flex-row justify-between gap-4 text-xs text-[#fff3d7]/60">
+
+          <p>
+            © 2026 ESCLAT Festival. Todos los derechos reservados.
+          </p>
+
+          <p>
+            Diseño y desarrollo del proyecto ESCLAT.
+          </p>
+
         </div>
       </div>
-    </footer>
-  </div>
+    </div>
 </template>
 
 <style>

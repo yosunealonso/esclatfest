@@ -13,7 +13,7 @@ export interface Evento {
   titulo: string;
   hora: string;
   dia: 'Viernes' | 'Sábado' | 'Domingo';
-  espacio: 'Sala La Polivalent' | 'Hall Sala La Polivalent' | 'Sala Factoría' | 'Sala Visual Room' | 'Sala Exposiciones' | 'Patio 1' | 'Patio 2';
+  espacio: 'Sala La Polivalent' | 'Hall Sala La Polivalent' | 'Sala Factoría' | 'Sala Visual Room' | 'Sala Exposiciones' | 'Patio 1' | 'Patio 2'| 'La Mutant';
   categoria: Artista['disciplina'];
   descripcion: string;
 }
@@ -266,7 +266,7 @@ export const AGENDA: Evento[] = [
     titulo: 'Ansiedad y Autotune',
     hora: '11:00 - 12:30',
     dia: 'Viernes',
-    espacio: 'Sala Visual Room',
+    espacio: 'Sala La Polivalent',
     categoria: 'Charlas',
     descripcion: 'La salud mental en la industria musical.'
   },
@@ -293,7 +293,7 @@ export const AGENDA: Evento[] = [
     titulo: 'Santiago de Aranda',
     hora: '18:00 - 19:00',
     dia: 'Viernes',
-    espacio: 'Patio 1',
+    espacio: 'La Mutant',
     categoria: 'Conciertos',
     descripcion: 'Concierto en directo en el Patio Principal.'
   },
@@ -302,7 +302,7 @@ export const AGENDA: Evento[] = [
     titulo: 'Agosto',
     hora: '19:30 - 20:30',
     dia: 'Viernes',
-    espacio: 'Patio 1',
+    espacio: 'La Mutant',
     categoria: 'Conciertos',
     descripcion: 'Concierto en directo en el Patio Principal.'
   },
@@ -311,7 +311,7 @@ export const AGENDA: Evento[] = [
     titulo: 'Paula Margalef',
     hora: '21:00 - 22:00',
     dia: 'Viernes',
-    espacio: 'Patio 1',
+    espacio: 'La Mutant',
     categoria: 'Conciertos',
     descripcion: 'Concierto en directo en el Patio Principal.'
   },
@@ -320,7 +320,7 @@ export const AGENDA: Evento[] = [
     titulo: 'Tetas frías',
     hora: '22:30 - 24:00',
     dia: 'Viernes',
-    espacio: 'Patio 1',
+    espacio: 'La Mutant',
     categoria: 'Conciertos',
     descripcion: 'Cierre de jornada con concierto en directo.'
   },
@@ -331,7 +331,7 @@ export const AGENDA: Evento[] = [
     titulo: '¿Dónde estaban las tías?',
     hora: '11:00 - 12:30',
     dia: 'Sábado',
-    espacio: 'Sala Visual Room',
+    espacio: 'Sala La Polivalent',
     categoria: 'Charlas',
     descripcion: 'Invisibilización de las mujeres en la historia del arte.'
   },
@@ -340,7 +340,7 @@ export const AGENDA: Evento[] = [
     titulo: 'Barro y Sonido',
     hora: '12:30 - 14:00',
     dia: 'Sábado',
-    espacio: 'Sala Factoría',
+    espacio: 'Patio 2',
     categoria: 'Talleres',
     descripcion: 'Creación de instrumentos de cerámica.'
   },
@@ -358,7 +358,7 @@ export const AGENDA: Evento[] = [
     titulo: 'Cine de Foso',
     hora: '17:30 - 18:40',
     dia: 'Sábado',
-    espacio: 'Sala Exposiciones',
+    espacio: 'Sala La Polivalent',
     categoria: 'Exposiciones',
     descripcion: 'Muestra de cortometrajes independientes y videoclips de la escena valenciana.'
   },
@@ -367,7 +367,7 @@ export const AGENDA: Evento[] = [
     titulo: 'Malditas Gaviotas',
     hora: '19:00 - 20:00',
     dia: 'Sábado',
-    espacio: 'Patio 1',
+    espacio: 'La Mutant',
     categoria: 'Conciertos',
     descripcion: 'Concierto en directo en el Patio Principal.'
   },
@@ -376,7 +376,7 @@ export const AGENDA: Evento[] = [
     titulo: 'Diamante Negro',
     hora: '20:30 - 21:30',
     dia: 'Sábado',
-    espacio: 'Patio 1',
+    espacio: 'La Mutant',
     categoria: 'Conciertos',
     descripcion: 'Concierto en directo en el Patio Principal.'
   },
@@ -385,7 +385,7 @@ export const AGENDA: Evento[] = [
     titulo: 'Las Petunias',
     hora: '22:00 - 23:15',
     dia: 'Sábado',
-    espacio: 'Patio 1',
+    espacio: 'La Mutant',
     categoria: 'Conciertos',
     descripcion: 'Concierto en directo en el Patio Principal.'
   },
@@ -405,7 +405,7 @@ export const AGENDA: Evento[] = [
     titulo: 'Vivir del Cuento (Literalmente)',
     hora: '11:00 - 12:15',
     dia: 'Domingo',
-    espacio: 'Sala Visual Room',
+    espacio: 'Sala La Polivalent',
     categoria: 'Charlas',
     descripcion: 'Cómo autopublicarse, sobrevivir a las redes y vender en ferias de autopublicación.'
   },
@@ -423,7 +423,7 @@ export const AGENDA: Evento[] = [
     titulo: 'La Kala',
     hora: '19:00 - 19:45',
     dia: 'Domingo',
-    espacio: 'Patio 1',
+    espacio: 'La Mutant',
     categoria: 'Conciertos',
     descripcion: 'Concierto en directo en el Patio Principal.'
   },
@@ -432,7 +432,7 @@ export const AGENDA: Evento[] = [
     titulo: 'Amarillo Fiesta',
     hora: '20:15 - 21:15',
     dia: 'Domingo',
-    espacio: 'Patio 1',
+    espacio: 'La Mutant',
     categoria: 'Conciertos',
     descripcion: 'Concierto en directo en el Patio Principal.'
   },
@@ -441,7 +441,7 @@ export const AGENDA: Evento[] = [
     titulo: 'La Reina Mora',
     hora: '21:45 - 22:30',
     dia: 'Domingo',
-    espacio: 'Patio 1',
+    espacio: 'La Mutant',
     categoria: 'Conciertos',
     descripcion: 'Concierto en directo en el Patio Principal.'
   },
@@ -450,7 +450,7 @@ export const AGENDA: Evento[] = [
     titulo: 'Luna Valle',
     hora: '22:45 - 23:45',
     dia: 'Domingo',
-    espacio: 'Patio 1',
+    espacio: 'La Mutant',
     categoria: 'Conciertos',
     descripcion: 'Concierto en directo en el Patio Principal.'
   },
@@ -459,7 +459,7 @@ export const AGENDA: Evento[] = [
     titulo: 'LG1DO',
     hora: '00:00 - 01:30',
     dia: 'Domingo',
-    espacio: 'Patio 1',
+    espacio: 'La Mutant',
     categoria: 'Conciertos',
     descripcion: 'Actuación de cierre del festival.'
   }
