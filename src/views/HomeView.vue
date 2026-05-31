@@ -98,12 +98,12 @@ onUnmounted(() => {
           
           <h3 class="font-articulat-bold uppercase text-[#dd2f03] text-2xl md:text-4xl lg:text-5xl">
             Festival de música<br>
-            pensament i<br>
-            creativitat
+            pensamiento y<br>
+            creatividad
           </h3>
           
           <p class="mt-8 text-[#dd2f03] font-articulat-demibold text-xl md:text-2xl max-w-2xl">
-            Esclat es un festival dirigido a público joven que combina música en directo con talleres, conversaciones y otras propuestas vinculadas a la creación contemporánea.
+            Esclat es un festival dirigido a público joven que combina música en directo con talleres, conversaciones y otras propuestas vinculadas a la creación contemporánea. Busca ser una amplificación para las voces de los artistas emergentes del país.
           </p>
           
           <a
@@ -187,13 +187,13 @@ onUnmounted(() => {
             class="group flex flex-col items-center text-center transition-transform duration-300 hover:scale-110 hover:-rotate-3"
           >
             <img
-              src="/baterista1.png"
+              src="/camiseta1.png"
               alt="Ropa"
               class="w-44 md:w-56 lg:w-64 h-auto object-contain pointer-events-none select-none transition-transform duration-300"
             />
 
             <h3 class="mt-10 font-articulat-bold uppercase text-[#2f1204] text-3xl md:text-4xl">
-              Ropa
+              Camisetas
             </h3>
           </a>
 
@@ -202,13 +202,13 @@ onUnmounted(() => {
             class="group flex flex-col items-center text-center transition-transform duration-300 hover:scale-110 hover:rotate-2"
           >
             <img
-              src="/baterista1.png"
+              src="/tote.png"
               alt="Accesorios"
               class="w-52 md:w-64 lg:w-72 h-auto object-contain pointer-events-none select-none transition-transform duration-300"
             />
 
             <h3 class="mt-10 font-articulat-bold uppercase text-[#2f1204] text-3xl md:text-4xl">
-              Accesorios
+              Tote Bag
             </h3>
           </a>
 
@@ -217,13 +217,13 @@ onUnmounted(() => {
             class="group flex flex-col items-center text-center transition-transform duration-300 hover:scale-110 hover:-rotate-2"
           >
             <img
-              src="/baterista1.png"
-              alt="Otros"
-              class="w-52 md:w-64 lg:w-72 h-auto object-contain pointer-events-none select-none transition-transform duration-300"
+              src="/poster1.png"
+              alt="Posters"
+              class="w-49 md:w-60 lg:w-69 h-auto object-contain pointer-events-none select-none transition-transform duration-300"
             />
 
             <h3 class="mt-10 font-articulat-bold uppercase text-[#2f1204] text-3xl md:text-4xl">
-              Otros
+              Posters
             </h3>
           </a>
 
