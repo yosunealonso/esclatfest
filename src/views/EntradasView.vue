@@ -110,14 +110,15 @@ const actividadSeleccionada = ref<string>('');
           Entradas y Pases Completos
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="bg-[#7d9400] p-8 text-center text-[#fff3d7] min-h-[360px] flex flex-col justify-between">
+          <div class="bg-[#7d9400] p-8 text-left text-[#fff3d7] min-h-[360px] flex flex-col justify-between">
             <div>
-              <h3 class="text-3xl uppercase font-articulat-bold mb-6">
+              <h3 class="text-3xl text-center uppercase font-articulat-bold mb-6">
                 Entrada x Día
               </h3>
-              <p>
-                Acceso completo a una única jornada del festival.
-              </p>
+              <p>• Acceso a todos los conciertos de una única jornada del festival.</p>
+              <p>• Acceso a las zonas de relax y alimentación.</p>
+              <p>• Pulsera para acceder e ingresar libremente al espacio.</p>
+              <p>• Entrada conmemorativa personalizada.</p>
             </div>
             <button
               class="bg-[#fff3d7] text-[#2f1204] px-8 py-4 uppercase font-articulat-bold"
@@ -126,14 +127,15 @@ const actividadSeleccionada = ref<string>('');
             </button>
           </div>
 
-          <div class="bg-[#89a9e8] p-8 text-center text-[#fff3d7] min-h-[360px] flex flex-col justify-between">
+          <div class="bg-[#89a9e8] p-8 text-left text-[#fff3d7] min-h-[360px] flex flex-col justify-between">
             <div>
-              <h3 class="text-3xl uppercase font-articulat-bold mb-6">
+              <h3 class="text-3xl text-center uppercase font-articulat-bold mb-6">
                 Entrada x 2 Días
               </h3>
-              <p>
-                Acceso a dos jornadas consecutivas del festival.
-              </p>
+              <p>• Acceso a todos los conciertos de dos jornadas a elección del festival.</p>
+              <p>• Acceso a las zonas de relax y alimentación.</p>
+              <p>• Pulsera para acceder e ingresar libremente al espacio.</p>
+              <p>• Entrada conmemorativa personalizada.</p>
             </div>
             <button
               class="bg-[#fff3d7] text-[#89a9e8] px-8 py-4 uppercase font-articulat-bold"
@@ -142,14 +144,15 @@ const actividadSeleccionada = ref<string>('');
             </button>
           </div>
 
-          <div class="bg-[#dd2f03] p-8 text-center text-[#fff3d7] min-h-[360px] flex flex-col justify-between">
+          <div class="bg-[#dd2f03] p-8 text-left text-[#fff3d7] min-h-[360px] flex flex-col justify-between">
             <div>
-              <h3 class="text-3xl uppercase font-articulat-bold mb-6">
+              <h3 class="text-3xl text-center uppercase font-articulat-bold mb-6">
                 Abono Completo
               </h3>
-              <p>
-                Acceso a todas las actividades y conciertos del festival.
-              </p>
+              <p>• Acceso a todos los conciertos de las tres jornadas del festival.</p>
+              <p>• Acceso a las zonas de relax y alimentación.</p>
+              <p>• Pulsera para acceder e ingresar libremente al espacio.</p>
+              <p>• Entrada conmemorativa personalizada.</p>
             </div>
             <button
               class="bg-[#fff3d7] text-[#dd2f03] px-8 py-4 uppercase font-articulat-bold"
