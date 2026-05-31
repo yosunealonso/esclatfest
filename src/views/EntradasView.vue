@@ -1,8 +1,49 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, nextTick } from 'vue';
 import { Ticket, Info } from 'lucide-vue-next';
+import * as htmlToImage from 'html-to-image';
 
 const actividadSeleccionada = ref<string>('');
+
+const nombre = ref('');
+const email = ref('');
+const telefono = ref('');
+const asistentes = ref(1);
+
+const inscripcionCompletada = ref(false);
+const comprobanteRef = ref<HTMLElement | null>(null);
+const comprobanteContainerRef = ref<HTMLElement | null>(null);
+
+const enviarInscripcion = async (e: Event) => {
+  e.preventDefault();
+
+  inscripcionCompletada.value = true;
+
+  await nextTick();
+
+  comprobanteContainerRef.value?.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  });
+};
+
+const descargarComprobante = async () => {
+  if (!comprobanteRef.value) return;
+
+  const dataUrl = await htmlToImage.toJpeg(
+    comprobanteRef.value,
+    {
+      quality: 0.95,
+      pixelRatio: 2
+    }
+  );
+
+  const link = document.createElement('a');
+  link.download = 'comprobante-esclat.jpg';
+  link.href = dataUrl;
+  link.click();
+};
+
 </script>
 
 <template>
@@ -172,6 +213,7 @@ const actividadSeleccionada = ref<string>('');
         </h2>
         <div class="max-w-3xl mx-auto">
           <form
+            @submit="enviarInscripcion"
             name="inscripciones"
             method="POST"
             data-netlify="true"
@@ -200,6 +242,7 @@ const actividadSeleccionada = ref<string>('');
               </label>
 
               <input
+                v-model="nombre"
                 id="nombre"
                 name="nombre"
                 type="text"
@@ -217,6 +260,7 @@ const actividadSeleccionada = ref<string>('');
               </label>
 
               <input
+                v-model="email"
                 id="email"
                 name="email"
                 type="email"
@@ -234,6 +278,7 @@ const actividadSeleccionada = ref<string>('');
               </label>
 
               <input
+                v-model="telefono"
                 id="telefono"
                 name="telefono"
                 type="tel"
@@ -304,14 +349,14 @@ const actividadSeleccionada = ref<string>('');
               </label>
 
               <input
+                v-model="asistentes"
                 id="asistentes"
                 name="asistentes"
                 type="number"
                 min="1"
                 max="4"
-                value="1"
                 class="w-full border-2 border-[#c7b8a6] bg-[#fff3d7] px-4 py-3 outline-none focus:border-[#dd2f03]"
-              />
+              />  
             </div>
 
             <div class="space-y-2">
@@ -352,6 +397,81 @@ const actividadSeleccionada = ref<string>('');
             </button>
 
           </form>
+
+          <div
+            v-if="inscripcionCompletada"
+            ref="comprobanteContainerRef"
+            class="mt-12 space-y-6"
+          >
+            <div
+              ref="comprobanteRef"
+              class="bg-[#fff3d7] border-4 border-[#2f1204] p-8 relative overflow-hidden"
+            >
+
+              <img
+                src="/estrella.png"
+                alt=""
+                class="absolute top-4 right-4 w-20 opacity-20"
+              />
+
+              <p
+                class="text-[#dd2f03] uppercase font-articulat-bold text-sm tracking-widest"
+              >
+                Festival ESCLAT 2026
+              </p>
+
+              <h3
+                class="text-4xl font-articulat-bold uppercase mt-2 mb-8"
+              >
+                Comprobante de inscripción
+              </h3>
+
+              <div class="space-y-3 text-lg">
+                <p>
+                  <strong>Nombre:</strong>
+                  {{ nombre }}
+                </p>
+
+                <p>
+                  <strong>Email:</strong>
+                  {{ email }}
+                </p>
+
+                <p>
+                  <strong>Actividad:</strong>
+                  {{ actividadSeleccionada }}
+                </p>
+
+                <p>
+                  <strong>Asistentes:</strong>
+                  {{ asistentes }}
+                </p>
+
+                <p>
+                  <strong>Estado:</strong>
+                  Reserva confirmada
+                </p>
+              </div>
+
+              <div class="border-t-2 border-[#2f1204]/20 mt-8 pt-4">
+                <p class="uppercase font-articulat-bold">
+                  Las Naves · Valencia
+                </p>
+
+                <p class="text-sm opacity-70">
+                  Presenta este comprobante en el punto de acceso de la actividad.
+                </p>
+              </div>
+
+              </div>
+
+              <button
+                @click="descargarComprobante"
+                class="w-full bg-[#7d9400] text-[#fff3d7] py-5 uppercase text-xl font-articulat-bold hover:opacity-90 transition"
+              >
+                Descargar comprobante JPG
+              </button>
+            </div>
 
         </div>
 
