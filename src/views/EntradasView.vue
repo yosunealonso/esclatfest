@@ -261,7 +261,23 @@ const actividadSeleccionada = ref<string>('');
                 </option>
 
                 <option>
-                  Taller: Ansiedad y Autotune
+                  Taller: Barro y sonido
+                </option>
+
+                <option>
+                  Taller: Fanzine lab
+                </option>
+
+                <option>
+                  Taller: Upcycling de ropa
+                </option>
+
+                <option>
+                  Proyección: Cine de foso
+                </option>
+
+                <option>
+                  Charla: Ansiedad y autotune
                 </option>
 
                 <option>
@@ -269,12 +285,13 @@ const actividadSeleccionada = ref<string>('');
                 </option>
 
                 <option>
-                  Taller de Producción Musical
+                  Charla: El impacto de la IA generativa
                 </option>
 
                 <option>
-                  Visiones Emergentes
+                  Charla: Vivir del cuento (Literalmente)
                 </option>
+
               </select>
             </div>
 
