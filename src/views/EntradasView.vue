@@ -14,6 +14,36 @@ const inscripcionCompletada = ref(false);
 const comprobanteRef = ref<HTMLElement | null>(null);
 const comprobanteContainerRef = ref<HTMLElement | null>(null);
 
+const mostrarCompra = ref(false);
+const tipoEntrada = ref('');
+
+const compradorNombre = ref('');
+const compradorEmail = ref('');
+const compradorCantidad = ref(1);
+
+const diaSeleccionado = ref('');
+const diasSeleccionados = ref<string[]>([]);
+
+const abrirCompra = (tipo: string) => {
+  tipoEntrada.value = tipo;
+  mostrarCompra.value = true;
+
+  diaSeleccionado.value = '';
+  diasSeleccionados.value = [];
+};
+
+const cerrarCompra = () => {
+  mostrarCompra.value = false;
+};
+
+const finalizarCompra = () => {
+  alert(
+    `Compra simulada completada.\n\nEntrada: ${tipoEntrada.value}`
+  );
+
+  mostrarCompra.value = false;
+};
+
 const enviarInscripcion = async (e: Event) => {
   e.preventDefault();
 
@@ -162,7 +192,8 @@ const descargarComprobante = async () => {
               <p>• Entrada conmemorativa personalizada.</p>
             </div>
             <button
-              class="bg-[#fff3d7] text-[#2f1204] px-8 py-4 uppercase font-articulat-bold"
+              @click="abrirCompra('1 día')"
+              class="bg-[#fff3d7] text-[#2f1204] px-8 py-4 uppercase font-articulat-bold cursor-pointer"
             >
               Comprar
             </button>
@@ -179,7 +210,8 @@ const descargarComprobante = async () => {
               <p>• Entrada conmemorativa personalizada.</p>
             </div>
             <button
-              class="bg-[#fff3d7] text-[#89a9e8] px-8 py-4 uppercase font-articulat-bold"
+              @click="abrirCompra('2 días')"
+              class="bg-[#fff3d7] text-[#2f1204] px-8 py-4 uppercase font-articulat-bold cursor-pointer"
             >
               Comprar
             </button>
@@ -196,7 +228,8 @@ const descargarComprobante = async () => {
               <p>• Entrada conmemorativa personalizada.</p>
             </div>
             <button
-              class="bg-[#fff3d7] text-[#dd2f03] px-8 py-4 uppercase font-articulat-bold"
+              @click="abrirCompra('abono completo')"
+              class="bg-[#fff3d7] text-[#2f1204] px-8 py-4 uppercase font-articulat-bold cursor-pointer"
             >
               Comprar
             </button>
@@ -484,6 +517,147 @@ const descargarComprobante = async () => {
       </section>
 
     </div>
+
+    <div
+      v-if="mostrarCompra"
+      class="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4"
+    >
+      <div
+        class="w-full max-w-2xl bg-[#fff3d7] border-4 border-[#2f1204] p-8 relative"
+      >
+        <button
+          @click="cerrarCompra"
+          class="absolute top-4 right-4 text-2xl font-bold"
+        >
+          ×
+        </button>
+
+        <p
+          class="uppercase text-[#dd2f03] font-articulat-bold tracking-widest text-sm"
+        >
+          Festival ESCLAT 2026
+        </p>
+
+        <h3
+          class="text-3xl uppercase font-articulat-bold mt-2 mb-8"
+        >
+          Compra de entradas
+        </h3>
+
+        <div class="space-y-5">
+
+          <div>
+            <label class="block uppercase font-articulat-bold text-sm mb-2">
+              Tipo de entrada
+            </label>
+
+            <input
+              :value="tipoEntrada"
+              disabled
+              class="w-full border-2 border-[#c7b8a6] bg-[#f5ead1] px-4 py-3"
+            />
+          </div>
+
+          <div v-if="tipoEntrada === '1 día'">
+            <label class="block uppercase font-articulat-bold text-sm mb-2">
+              Selecciona el día
+            </label>
+
+            <select
+              v-model="diaSeleccionado"
+              class="w-full border-2 border-[#c7b8a6] px-4 py-3"
+            >
+              <option value="">Seleccionar</option>
+              <option>Viernes</option>
+              <option>Sábado</option>
+              <option>Domingo</option>
+            </select>
+          </div>
+
+          <div v-if="tipoEntrada === '2 días'">
+            <label class="block uppercase font-articulat-bold text-sm mb-2">
+              Selecciona los días
+            </label>
+
+            <div class="space-y-2">
+              <label class="flex gap-2">
+                <input
+                  type="checkbox"
+                  value="Viernes"
+                  v-model="diasSeleccionados"
+                />
+                Viernes
+              </label>
+
+              <label class="flex gap-2">
+                <input
+                  type="checkbox"
+                  value="Sábado"
+                  v-model="diasSeleccionados"
+                />
+                Sábado
+              </label>
+
+              <label class="flex gap-2">
+                <input
+                  type="checkbox"
+                  value="Domingo"
+                  v-model="diasSeleccionados"
+                />
+                Domingo
+              </label>
+            </div>
+          </div>
+
+          <div>
+            <label class="block uppercase font-articulat-bold text-sm mb-2">
+              Nombre completo
+            </label>
+
+            <input
+              v-model="compradorNombre"
+              type="text"
+              class="w-full border-2 border-[#c7b8a6] px-4 py-3"
+            />
+          </div>
+
+          <div>
+            <label class="block uppercase font-articulat-bold text-sm mb-2">
+              Email
+            </label>
+
+            <input
+              v-model="compradorEmail"
+              type="email"
+              class="w-full border-2 border-[#c7b8a6] px-4 py-3"
+            />
+          </div>
+
+          <div>
+            <label class="block uppercase font-articulat-bold text-sm mb-2">
+              Cantidad
+            </label>
+
+            <input
+              v-model="compradorCantidad"
+              type="number"
+              min="1"
+              max="10"
+              class="w-full border-2 border-[#c7b8a6] px-4 py-3"
+            />
+          </div>
+
+          <button
+            @click="finalizarCompra"
+            class="w-full bg-[#dd2f03] text-[#fff3d7] py-4 uppercase font-articulat-bold"
+          >
+            Finalizar compra (demo)
+          </button>
+
+        </div>
+      </div>
+    </div>
+
   </div>
 </template>
 
