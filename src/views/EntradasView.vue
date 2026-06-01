@@ -517,12 +517,15 @@ const descargarComprobante = async () => {
     </div>
 
     <div
-      v-if="mostrarCompra"
-      class="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4"
-    >
-      <div
-        class="w-full max-w-2xl bg-[#fff3d7] border-4 border-[#2f1204] p-8 relative"
-      >
+  v-if="mostrarCompra"
+  class="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4"
+>
+  <div
+    :class="[
+      'w-full max-w-2xl p-8 relative',
+      compraCompletada ? 'bg-[#de3f26]' : 'bg-[#fff3d7]'
+    ]"
+  >
         <button
           @click="cerrarCompra"
           class="absolute top-4 right-4 text-2xl font-bold"
@@ -531,18 +534,18 @@ const descargarComprobante = async () => {
         </button>
 
         <p
-          class="uppercase text-[#dd2f03] font-articulat-bold tracking-widest text-sm"
+          class="uppercase text-[#fff3d7] font-articulat-bold tracking-widest text-sm"
         >
           Festival ESCLAT 2026
         </p>
 
         <h3
-          class="text-3xl uppercase font-articulat-bold mt-2 mb-8"
+          class="text-[#2f1204] text-3xl uppercase font-articulat-bold mt-2 mb-8"
         >
           Compra de entradas
         </h3>
 
-        <div v-if="!compraCompletada" class="space-y-5">
+        <div v-if="!compraCompletada" class="space-y-5 ">
 
           <div>
             <label class="block uppercase font-articulat-bold text-sm mb-2">
@@ -648,9 +651,15 @@ const descargarComprobante = async () => {
         >
 
           <img
-            src="/estrella.png"
+            src="/3.PNG"
             alt=""
-            class="absolute top-4 right-4 w-20 opacity-20"
+            class="absolute top-30 right-4 w-20 opacity-100"
+          />
+
+          <img
+            src="/9.PNG"
+            alt=""
+            class="absolute top-50 right-13 w-35 opacity-100"
           />
 
           <p
@@ -702,7 +711,7 @@ const descargarComprobante = async () => {
 
           </div>
 
-          <div class="border-t-2 border-[#2f1204]/20 mt-8 pt-4">
+          <div class="text-[#de3f26] border-t-2 border-[#2f1204]/20 mt-8 pt-4">
             <p class="uppercase font-articulat-bold">
               Las Naves · Valencia
             </p>
