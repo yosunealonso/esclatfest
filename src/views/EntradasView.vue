@@ -20,6 +20,7 @@ const tipoEntrada = ref('');
 const compradorNombre = ref('');
 const compradorEmail = ref('');
 const compradorCantidad = ref(1);
+const compraCompletada = ref(false);
 
 const diaSeleccionado = ref('');
 const diasSeleccionados = ref<string[]>([]);
@@ -27,6 +28,7 @@ const diasSeleccionados = ref<string[]>([]);
 const abrirCompra = (tipo: string) => {
   tipoEntrada.value = tipo;
   mostrarCompra.value = true;
+  compraCompletada.value = false;
 
   diaSeleccionado.value = '';
   diasSeleccionados.value = [];
@@ -37,11 +39,7 @@ const cerrarCompra = () => {
 };
 
 const finalizarCompra = () => {
-  alert(
-    `Compra simulada completada.\n\nEntrada: ${tipoEntrada.value}`
-  );
-
-  mostrarCompra.value = false;
+  compraCompletada.value = true;
 };
 
 const enviarInscripcion = async (e: Event) => {
@@ -544,7 +542,7 @@ const descargarComprobante = async () => {
           Compra de entradas
         </h3>
 
-        <div class="space-y-5">
+        <div v-if="!compraCompletada" class="space-y-5">
 
           <div>
             <label class="block uppercase font-articulat-bold text-sm mb-2">
@@ -581,29 +579,17 @@ const descargarComprobante = async () => {
 
             <div class="space-y-2">
               <label class="flex gap-2">
-                <input
-                  type="checkbox"
-                  value="Viernes"
-                  v-model="diasSeleccionados"
-                />
+                <input type="checkbox" value="Viernes" v-model="diasSeleccionados" />
                 Viernes
               </label>
 
               <label class="flex gap-2">
-                <input
-                  type="checkbox"
-                  value="Sábado"
-                  v-model="diasSeleccionados"
-                />
+                <input type="checkbox" value="Sábado" v-model="diasSeleccionados" />
                 Sábado
               </label>
 
               <label class="flex gap-2">
-                <input
-                  type="checkbox"
-                  value="Domingo"
-                  v-model="diasSeleccionados"
-                />
+                <input type="checkbox" value="Domingo" v-model="diasSeleccionados" />
                 Domingo
               </label>
             </div>
@@ -653,6 +639,78 @@ const descargarComprobante = async () => {
           >
             Finalizar compra (demo)
           </button>
+
+        </div>
+
+        <div
+          v-else
+          class="bg-[#fff3d7] border-4 border-[#2f1204] p-8 relative overflow-hidden"
+        >
+
+          <img
+            src="/estrella.png"
+            alt=""
+            class="absolute top-4 right-4 w-20 opacity-20"
+          />
+
+          <p
+            class="text-[#dd2f03] uppercase font-articulat-bold text-sm tracking-widest"
+          >
+            Festival ESCLAT 2026
+          </p>
+
+          <h3 class="text-4xl font-articulat-bold uppercase mt-2 mb-8">
+            Entrada Confirmada
+          </h3>
+
+          <div class="space-y-3 text-lg">
+
+            <p>
+              <strong>Nombre:</strong>
+              {{ compradorNombre }}
+            </p>
+
+            <p>
+              <strong>Email:</strong>
+              {{ compradorEmail }}
+            </p>
+
+            <p>
+              <strong>Entrada:</strong>
+              {{ tipoEntrada }}
+            </p>
+
+            <p v-if="tipoEntrada === '1 día'">
+              <strong>Día:</strong>
+              {{ diaSeleccionado }}
+            </p>
+
+            <p v-if="tipoEntrada === '2 días'">
+              <strong>Días:</strong>
+              {{ diasSeleccionados.join(', ') }}
+            </p>
+
+            <p>
+              <strong>Cantidad:</strong>
+              {{ compradorCantidad }}
+            </p>
+
+            <p>
+              <strong>Estado:</strong>
+              Compra confirmada
+            </p>
+
+          </div>
+
+          <div class="border-t-2 border-[#2f1204]/20 mt-8 pt-4">
+            <p class="uppercase font-articulat-bold">
+              Las Naves · Valencia
+            </p>
+
+            <p class="text-sm opacity-70">
+              Presenta este ticket en el acceso del festival.
+            </p>
+          </div>
 
         </div>
       </div>
