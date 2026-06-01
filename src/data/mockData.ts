@@ -40,9 +40,9 @@ export const FESTIVAL_INFO = {
 export const ARTISTAS: Artista[] = [
   {
     id: 't1',
-    nombre: 'Ansiedad y Autotune',
+    nombre: 'Música y Ansiedad',
     disciplina: 'Charlas',
-    bio: 'La salud mental en la industria musical. Un espacio para debatir y visibilizar los retos psicológicos de la creación artística contemporánea.',
+    bio: 'La salud mental en la industria musical. Un espacio para debatir y visibilizar los retos psicológicos de la creación artística contemporánea. Impartida por Las Petunias.',
     imagen: 'ansiedad.jpg',
     actividades: ['Charla - Viernes 23'],
     spotify: "https://open.spotify.com/artist/...",
@@ -75,7 +75,7 @@ export const ARTISTAS: Artista[] = [
     bio: 'Banda afincada en Madrid. Con influencias tan dispares como Las Vulpes o Radiohead, han construido un sonido madrileño, garajero y potente, que combina voces enfadadas y letras provocativas.',
     imagen: 'santiagodearanda.jpg',
     actividades: ['Concierto - Viernes 23'],
-    spotify: "https://open.spotify.com/artist/...",
+    spotify: "https://open.spotify.com/intl-es/artist/6slM2ATphvO1yWqZRoMyye?si=IiLCWomNQfmNLm8NZ2lEhw",
     galeria: [ "/artistas/artist1-1.jpg","/artistas/artist1-2.jpg"],
   },
   {
@@ -85,7 +85,7 @@ export const ARTISTAS: Artista[] = [
     bio: 'Gusto por el dream pop y el shoegaze, géneros que se caracterizan por letras nostálgicas, sonidos etéreos y atmosféricos.',
     imagen: 'agosto.jpg',
     actividades: ['Concierto - Viernes 23'],
-    spotify: "https://open.spotify.com/artist/...",
+    spotify: "https://https://open.spotify.com/intl-es/artist/0WSxxeaRyEijDqsE2TziXK?si=p-4SCFYFTXmS4f5Dh2RW7A.spotify.com/artist/...",
     galeria: [ "/artistas/artist1-1.jpg","/artistas/artist1-2.jpg"],
   },
   {
@@ -95,7 +95,7 @@ export const ARTISTAS: Artista[] = [
     bio: 'Música con influencia de los 60s, bossa-nova y samba. Indie rock de guitarra, con letras principalmente autobiográficas y armonías vocales.',
     imagen: 'paulamargalef.jpg',
     actividades: ['Concierto - Viernes 23'],
-    spotify: "https://open.spotify.com/artist/...",
+    spotify: "https://open.https://open.spotify.com/intl-es/artist/7rrMG4yltzIz7oFiRpOBc2?si=8r-6X7gdQSOtbK35G_45eg.com/artist/...",
     galeria: [ "/artistas/artist1-1.jpg","/artistas/artist1-2.jpg"],
   },
   {
@@ -105,14 +105,14 @@ export const ARTISTAS: Artista[] = [
     bio: 'Banda de Barcelona con su propuesta “turbo electro mega roc de tu abuela”. Punk entre el cachondeo y el cabreo. Sus canciones duran solo un instante.',
     imagen: 'tetasfrias.jpg',
     actividades: ['Concierto - Viernes 23'],
-    spotify: "https://open.spotify.com/artist/...",
+    spotify: "https://open.spotify.com/intl-es/artist/6Lplaf8qcklV41FjuyBw8S?si=ZkGW5twjQmGJk-D8QP7XxQ",
     galeria: [ "/artistas/artist1-1.jpg","/artistas/artist1-2.jpg"],
   },
   {
     id: 't4',
     nombre: '¿Dónde estaban las tías?',
     disciplina: 'Charlas',
-    bio: 'Conversación sobre la invisibilización de las mujeres en la historia del arte y cómo reescribir el relato desde el presente.',
+    bio: 'Conversación sobre la invisibilización de las mujeres en la historia del arte y cómo reescribir el relato desde el presente. Impartida por Rose Bennet.',
     imagen: 'donde.jpg',
     actividades: ['Charla - Sábado 24'],
     spotify: "https://open.spotify.com/artist/...",
@@ -130,9 +130,9 @@ export const ARTISTAS: Artista[] = [
   },
   {
     id: 't6',
-    nombre: 'El impacto de la IA generativa',
+    nombre: 'El impacto de la IA',
     disciplina: 'Charlas',
-    bio: 'El impacto de la Inteligencia Artificial generativa en el medioambiente y en el arte. Retos éticos y ecológicos.',
+    bio: 'El impacto de la Inteligencia Artificial generativa en el medioambiente y en el arte. Retos éticos y ecológicos. Impartida por Miguel Brieva.',
     imagen: 'ia.jpg',
     actividades: ['Charla - Sábado 24'],
     spotify: "https://open.spotify.com/artist/...",
@@ -155,7 +155,7 @@ export const ARTISTAS: Artista[] = [
     bio: 'Una banda que ha sabido capturar la esencia del indie y el romanticismo en su música. Con un sonido único que fusiona melodías suaves y letras profundas.',
     imagen: 'malditasgaviotas.jpg',
     actividades: ['Concierto - Sábado 24'],
-    spotify: "https://open.spotify.com/artist/...",
+    spotify: "https://open.spotify.com/intl-es/artist/5NDXkVoVeB6qGr110Ofjlp?si=9yX6OFHnTvyvhy1Mp2SzCA",
     galeria: [ "/artistas/artist1-1.jpg","/artistas/artist1-2.jpg"],
   },
   {
@@ -165,7 +165,7 @@ export const ARTISTAS: Artista[] = [
     bio: 'Grupo de pop de guitarras con letras en español formado en Barcelona, con su formato de trío estable desde 2019.',
     imagen: 'diamantenegro.jpg',
     actividades: ['Concierto - Sábado 24'],
-    spotify: "https://open.spotify.com/artist/...",
+    spotify: "https://open.spotify.com/intl-es/artist/51WUBWxuW4MAoBwuYraA4v?si=4DCQ839CRJekEwrmXv5Byw",
     galeria: [ "/artistas/artist1-1.jpg","/artistas/artist1-2.jpg"],
   },
   {
@@ -175,7 +175,7 @@ export const ARTISTAS: Artista[] = [
     bio: 'Una de las voces más emocionantes de la nueva ola underground española. Su primer LP es un testimonio sonoro de sus ansiedades, romances y el vértigo de ser veinteañeras.',
     imagen: 'petunias.jpg',
     actividades: ['Concierto - Sábado 24'],
-    spotify: "https://open.spotify.com/artist/...",
+    spotify: "https://open.spotify.com/intl-es/artist/5ahvDss0AH60cd2AWqoU1r?si=Kchv7lajSIehYhcs3RF3Uw",
     galeria: [ "/artistas/artist1-1.jpg","/artistas/artist1-2.jpg"],
   },
   {
@@ -190,9 +190,9 @@ export const ARTISTAS: Artista[] = [
   },
   {
     id: 't7',
-    nombre: 'Vivir del Cuento (Literalmente)',
+    nombre: 'Vivir del Cuento',
     disciplina: 'Charlas',
-    bio: 'Cómo autopublicarse, sobrevivir a las redes sociales y vender en ferias de autopublicación. Guía de supervivencia creativa.',
+    bio: 'Cómo autopublicarse, sobrevivir a las redes sociales y vender en ferias de autopublicación. Guía de supervivencia creativa. Impartida por Theo Malorde.',
     imagen: 'vivir.jpg',
     actividades: ['Charla - Domingo 25'],
     spotify: "https://open.spotify.com/artist/...",
@@ -215,7 +215,7 @@ export const ARTISTAS: Artista[] = [
     bio: 'Una de las nuevas propuestas frescas que se suman a la escena contemporánea.',
     imagen: 'lakala.jpg',
     actividades: ['Concierto - Domingo 25'],
-    spotify: "https://open.spotify.com/artist/...",
+    spotify: "https://open.spotify.com/intl-es/artist/4k9urycI0mmEXS8Rakahfl?si=f9AEFVbLSqieoWfi5hABog",
     galeria: [ "/artistas/artist1-1.jpg","/artistas/artist1-2.jpg"],
   },
   {
@@ -225,7 +225,7 @@ export const ARTISTAS: Artista[] = [
     bio: 'Canciones divertidas, frikis y con nostalgia dosmilera. Hablan sobre el amor, problemas de precariedad juvenil, dramas millenials, noches de fiesta y pelis.',
     imagen: 'amarillofiesta.jpg',
     actividades: ['Concierto - Domingo 25'],
-    spotify: "https://open.spotify.com/artist/...",
+    spotify: "https://open.spotify.com/intl-es/artist/1WtAt5aQmMPP12o51x97kY?si=xHxQRHN9TYKvdvL2HLh6Bg",
     galeria: [ "/artistas/artist1-1.jpg","/artistas/artist1-2.jpg"],
   },
   {
@@ -235,7 +235,7 @@ export const ARTISTAS: Artista[] = [
     bio: 'Directo vibrante que fusiona géneros y pone el foco en la presencia escénica y la conexión emocional con el público.',
     imagen: 'lareinamora.jpg',
     actividades: ['Concierto - Domingo 25'],
-    spotify: "https://open.spotify.com/artist/...",
+    spotify: "https://open.spotify.com/intl-es/artist/5rmX9scJKfqFrSJGuRQQXa?si=qrUKrMszTia3_coZOaO9uQ",
     galeria: [ "/artistas/artist1-1.jpg","/artistas/artist1-2.jpg"],
   },
   {
@@ -245,7 +245,7 @@ export const ARTISTAS: Artista[] = [
     bio: 'Artista valenciana que refleja su propio universo a través de composiciones honestas y melodías cautivadoras.',
     imagen: 'lunavalle.jpg',
     actividades: ['Concierto - Domingo 25'],
-    spotify: "https://open.spotify.com/artist/...",
+    spotify: "https://open.spotify.com/intl-es/artist/7i2n4SRaxtVZFBOOOPKvPB?si=ATc9yY2NRZCY9yOnofw8XQ",
     galeria: [ "/artistas/artist1-1.jpg","/artistas/artist1-2.jpg"],
   },
   {
@@ -255,7 +255,7 @@ export const ARTISTAS: Artista[] = [
     bio: 'Propuesta musical emergente que cierra el festival rompiendo las barreras de los géneros tradicionales.',
     imagen: 'lg1do.jpg',
     actividades: ['Concierto - Domingo 25'],
-    spotify: "https://open.spotify.com/artist/...",
+    spotify: "https://open.spotify.com/intl-es/artist/57dwtWkjg3IdbVB68wX7Ra?si=kuPWllWZRLunYFTMsfeVBg",
     galeria: [ "/artistas/artist1-1.jpg","/artistas/artist1-2.jpg"],
   }
 ];
@@ -264,7 +264,7 @@ export const AGENDA: Evento[] = [
   // DÍA 23
   {
     id: 'e1',
-    titulo: 'Ansiedad y Autotune',
+    titulo: 'Música y Ansiedad',
     hora: '11:00 - 12:30',
     dia: 'Viernes',
     espacio: 'Sala La Polivalent',
@@ -354,7 +354,7 @@ export const AGENDA: Evento[] = [
   },
   {
     id: 'e10',
-    titulo: 'El impacto de la IA generativa',
+    titulo: 'El impacto de la IA',
     hora: '16:00 - 17:30',
     dia: 'Sábado',
     espacio: 'Sala Visual Room',
@@ -414,7 +414,7 @@ export const AGENDA: Evento[] = [
   },
   {
     id: 'e16',
-    titulo: 'Vivir del Cuento (Literalmente)',
+    titulo: 'Vivir del Cuento',
     hora: '11:00 - 12:15',
     dia: 'Domingo',
     espacio: 'Sala La Polivalent',

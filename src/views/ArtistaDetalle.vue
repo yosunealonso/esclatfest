@@ -23,6 +23,17 @@ const imagenCabecera = `/cabeceras/${artista?.nombre
   Conciertos: 'el artista'
 }[artista?.disciplina ?? ''] ?? 'la actividad';
 
+const spotifyEmbedUrl = artista?.spotify
+  ? (() => {
+      const match = artista.spotify.match(/artist\/([a-zA-Z0-9]+)/);
+      const artistId = match?.[1];
+
+      return artistId
+        ? `https://open.spotify.com/embed/artist/${artistId}`
+        : null;
+    })()
+  : null;
+
 </script>
 
 <template>
@@ -98,18 +109,21 @@ const imagenCabecera = `/cabeceras/${artista?.nombre
 
         </div>
 
-        <div class="overflow-hidden">
-          <iframe
-            style="border-radius:12px"
-            src="https://open.spotify.com/embed/artist/0TnOYISbd1XYRBk9myaseg"
-            width="100%"
-            height="400"
-            frameBorder="0"
-            allowFullScreen
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"
-          ></iframe>
-        </div>
+        <div
+  v-if="artista.disciplina === 'Conciertos' && spotifyEmbedUrl"
+  class="overflow-hidden"
+>
+  <iframe
+    style="border-radius:12px"
+    :src="spotifyEmbedUrl"
+    width="100%"
+    height="400"
+    frameborder="0"
+    allowfullscreen
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy"
+  ></iframe>
+</div>
 
       </div>
 

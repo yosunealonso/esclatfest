@@ -64,14 +64,14 @@ const descargarHorario = async () => {
         class="relative border-b-4 border-[#2f1204]/20 pb-10 min-h-65 flex flex-col justify-center items-center overflow-visible"
         >
         <img
-            src="/estrelaa.png"
+            src="/8.PNG"
             alt=""
-            class="absolute -top-2 -left-10 w-40 md:w-56 object-contain pointer-events-none select-none"
+            class="absolute top-0 left-0 w-20 sm:w-30 md:w-39 object-contain pointer-events-none select-none"
         />
         <img
-            src="/estrella.png"
+            src="/1.PNG"
             alt=""
-            class="absolute top-10 -right-8 w-44 md:w-60 object-contain pointer-events-none select-none"
+            class="absolute top-35 -right-6 w-20 sm:w-25 sm:right-2 sm:top-25 md:w-33 md:top-18 object-contain pointer-events-none select-none"
         />
         <h1
             class="relative z-10 font-variex text-[#dd2f03] text-6xl md:text-8xl leading-none"

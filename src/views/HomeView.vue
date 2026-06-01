@@ -193,7 +193,7 @@ onUnmounted(() => {
             />
 
             <h3 class="mt-10 font-articulat-bold uppercase text-[#2f1204] text-3xl md:text-4xl">
-              Camisetas
+              Ropa
             </h3>
           </a>
 
@@ -208,7 +208,7 @@ onUnmounted(() => {
             />
 
             <h3 class="mt-10 font-articulat-bold uppercase text-[#2f1204] text-3xl md:text-4xl">
-              Tote Bag
+              Accesorios
             </h3>
           </a>
 
