@@ -198,7 +198,7 @@ onUnmounted(() => {
           </a>
 
           <a
-            href="/tienda"
+            href="/accesorios"
             class="group flex flex-col items-center text-center transition-transform duration-300 hover:scale-110 hover:rotate-2"
           >
             <img
@@ -213,7 +213,7 @@ onUnmounted(() => {
           </a>
 
           <a
-            href="/tienda"
+            href="/posters"
             class="group flex flex-col items-center text-center transition-transform duration-300 hover:scale-110 hover:-rotate-2"
           >
             <img

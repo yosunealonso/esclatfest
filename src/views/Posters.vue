@@ -8,7 +8,6 @@ const tipoProducto = ref('');
 const compradorNombre = ref('');
 const compradorEmail = ref('');
 const compradorCantidad = ref(1);
-const talla = ref('');
 const direccion = ref('');
 
 const abrirCompra = (producto: string) => {
@@ -33,94 +32,71 @@ const finalizarCompra = () => {
     <div class="container mx-auto px-6 ">
         <div class="space-y-2 ml-5">
             <h1 class="text-4xl md:text-5xl font-articulat-bold uppercase tracking-tight ">
-                Merch · Ropa
+                Merch · Posters
             </h1>
 
             <p class="font-articulat-medium text-[#2f1204]/80 text-lg mb-15">
-                    Llévate un recuerdo del festival y descubre nuestra selección de camisetas y sudaderas.
+                    Llévate un recuerdo del festival y descubre nuestra selección de accesorios.
             </p>
         </div>
       
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
 
-        <!-- CAMISETA ROJA -->
-        <div
-            class="border-4 border-[#c7b8a6] bg-[#fff3d7] p-6 flex flex-col items-center text-center"
-            >
-            <h3 class="font-articulat-bold uppercase text-2xl mb-4">
-                Camiseta Roja
-            </h3>
-
-            <img
-                src="/camiseta1TIENDA.png"
-                alt="Camiseta Roja"
-                class="w-64 h-80 object-contain hover:scale-105 transition-transform duration-300"
-            />
-
-            <button
-                @click="abrirCompra('Camiseta Roja')"
-                class="mt-6 bg-[#dd2f03] text-[#fff3d7] px-8 py-3 uppercase font-articulat-bold hover:opacity-90 transition cursor-pointer"
-            >
-                Comprar
-            </button>
-        </div>
-
-        <!-- CAMISETA BEIGE -->
+        <!-- poster 1 -->
         <div class="border-4 border-[#c7b8a6] bg-[#fff3d7] p-6 flex flex-col items-center text-center">
-           <h3 class="font-articulat-bold uppercase text-2xl mb-4">
-                Camiseta Beige
+          <h3 class="font-articulat-bold uppercase text-2xl mb-4">
+                Cartel principal
             </h3>
-
 
           <img
-            src="/camiseta2.png"
-            alt="Camiseta Beige"
-            class="w-64 h-80 object-contain hover:scale-105 transition-transform duration-300"
+            src="/poster1.png"
+            alt="Cartel principal"
+            class="class=w-64 h-80 object-contain hover:scale-105 transition-transform duration-300"
           />
 
           <button
-            @click="abrirCompra('Camiseta Beige')"
+            @click="abrirCompra('Cartel principal')"
             class="mt-6 bg-[#dd2f03] text-[#fff3d7] px-8 py-3 uppercase font-articulat-bold hover:opacity-90 transition cursor-pointer"
           >
             Comprar
           </button>
         </div>
 
-        <!-- SUDADERA Beige -->
+        <!-- chapa 1 -->
         <div class="border-4 border-[#c7b8a6] bg-[#fff3d7] p-6 flex flex-col items-center text-center">
           <h3 class="font-articulat-bold uppercase text-2xl mb-4">
-                Sudadera beige
+                Cartel programación I
             </h3>
 
           <img
-            src="/sudadera1.png"
-            alt="Sudadera Beige"
+            src="/chapa1.png"
+            alt="Chapa logo"
             class="w-64 h-80 object-contain hover:scale-105 transition-transform duration-300"
           />
 
           <button
-            @click="abrirCompra('Sudadera Beige')"
+            @click="abrirCompra('Chapa logo')"
             class="mt-6 bg-[#dd2f03] text-[#fff3d7] px-8 py-3 uppercase font-articulat-bold hover:opacity-90 transition cursor-pointer"
           >
             Comprar
           </button>
         </div>
 
-        <!-- SUDADERA Roja -->
+        <!-- chapa disco -->
         <div class="border-4 border-[#c7b8a6] bg-[#fff3d7] p-6 flex flex-col items-center text-center">
           <h3 class="font-articulat-bold uppercase text-2xl mb-4">
-                Sudadera Roja
+                Cartel programación II
             </h3>
 
           <img
-            src="/sudadera2.png"
-            alt="Sudadera Roja"
+            src="/chapaDisco.png"
+            alt="Chapa disco"
             class="w-64 h-80 object-contain hover:scale-105 transition-transform duration-300"
           />
 
           <button
-            @click="abrirCompra('Sudadera Roja')"
+            @click="abrirCompra('Chapa disco')"
             class="mt-6 bg-[#dd2f03] text-[#fff3d7] px-8 py-3 uppercase font-articulat-bold hover:opacity-90 transition cursor-pointer"
           >
             Comprar
@@ -134,14 +110,14 @@ const finalizarCompra = () => {
     <!-- MODAL DE COMPRA -->
     <div
       v-if="mostrarCompra"
-      class="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-6"
+      class="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4"
     >
       <div
         :class="[
-        'mt-15 w-full max-w-2xl p-8 relative max-h-[90vh] overflow-y-auto',
-        compraCompletada ? 'bg-[#de3f26]' : 'bg-[#fff3d7]'
+          'w-full max-w-2xl p-8 relative',
+          compraCompletada ? 'bg-[#de3f26]' : 'bg-[#fff3d7]'
         ]"
-    >
+      >
         <button
           @click="cerrarCompra"
           class="absolute top-4 right-4 text-2xl font-bold"
@@ -207,25 +183,7 @@ const finalizarCompra = () => {
             />
           </div>
 
-          <div>
-            <label class="block uppercase font-articulat-bold text-sm mb-2">
-                Talla
-            </label>
-
-            <select
-                v-model="talla"
-                class="w-full border-2 border-[#c7b8a6] px-4 py-3 bg-[#fff3d7]"
-            >
-                <option disabled value="">
-                Selecciona una talla
-                </option>
-
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="L">L</option>
-                <option value="XL">XL</option>
-            </select>
-        </div>
+          
 
           <div>
             <label class="block uppercase font-articulat-bold text-sm mb-2">
@@ -263,7 +221,6 @@ const finalizarCompra = () => {
             <p><strong>Nombre:</strong> {{ compradorNombre }}</p>
             <p><strong>Email:</strong> {{ compradorEmail }}</p>
             <p><strong>Cantidad:</strong> {{ compradorCantidad }}</p>
-            <p><strong>Talla:</strong> {{ talla }}</p>
             <p><strong>Estado:</strong> Compra confirmada</p>
             
           </div>

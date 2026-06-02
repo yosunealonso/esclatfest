@@ -67,7 +67,17 @@ const routes: Array<RouteRecordRaw> = [
     path: '/ropa',
     name: 'Ropa',
     component: () => import('../views/Ropa.vue')
-  }
+  },
+  {
+    path: '/accesorios',
+    name: 'Accesorios',
+    component: () => import('../views/Accesorios.vue')
+  },
+  {
+    path: '/posters',
+    name: 'IPosters',
+    component: () => import('../views/Posters.vue')
+  },
 ];
 
 const router = createRouter({
