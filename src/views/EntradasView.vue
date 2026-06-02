@@ -94,7 +94,7 @@ const descargarComprobante = async () => {
         <img
           src="/estrella.png"
           alt=""
-          class="absolute -top-6 right-0 w-44 md:w-56 pointer-events-none"
+          class="absolute top-26 -right-11 w-35 md:w-50 md:top-15 pointer-events-none"
         />
       </section>
 
@@ -166,9 +166,9 @@ const descargarComprobante = async () => {
       </section>
 
       <img
-        src="/estrella.png"
+        src="/2.PNG"
         alt=""
-        class="absolute top-[300px] left-[-50px] w-32 md:w-44 pointer-events-none"
+        class="hidden lg:block absolute lg:w-44 lg:left-5 lg:top-130 pointer-events-none"
       />
 
       <section
@@ -440,7 +440,7 @@ const descargarComprobante = async () => {
             >
 
               <img
-                src="/estrella.png"
+                src="/7.PNG"
                 alt=""
                 class="absolute top-4 right-4 w-20 opacity-20"
               />
@@ -507,9 +507,9 @@ const descargarComprobante = async () => {
         </div>
 
         <img
-          src="/estrella.png"
+          src="/7.PNG"
           alt=""
-          class="absolute bottom-0 right-0 w-32 md:w-48 pointer-events-none"
+          class="absolute -top-15 -right-10 w-30 md:w-40 md:-right-17 lg:-right-5 lg:w-45 lg:-top-23 pointer-events-none"
         />
 
       </section>

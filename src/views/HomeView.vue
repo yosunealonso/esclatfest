@@ -183,7 +183,7 @@ onUnmounted(() => {
         <div class="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8 items-end">
           
           <a
-            href="/tienda"
+            href="/ropa"
             class="group flex flex-col items-center text-center transition-transform duration-300 hover:scale-110 hover:-rotate-3"
           >
             <img
