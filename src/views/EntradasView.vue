@@ -94,7 +94,7 @@ const descargarComprobante = async () => {
         <img
           src="/estrella.png"
           alt=""
-          class="absolute top-26 -right-11 w-35 md:w-50 md:top-15 pointer-events-none"
+          class="absolute top-26 -right-15 w-40 md:w-50 md:top-15 lg:w-60 lg:top-10 lg:-right-20 pointer-events-none"
         />
       </section>
 
@@ -165,11 +165,7 @@ const descargarComprobante = async () => {
         </div>
       </section>
 
-      <img
-        src="/2.PNG"
-        alt=""
-        class="hidden lg:block absolute lg:w-44 lg:left-5 lg:top-130 pointer-events-none"
-      />
+      
 
       <section
         id="entradas-pases"
@@ -506,11 +502,7 @@ const descargarComprobante = async () => {
 
         </div>
 
-        <img
-          src="/7.PNG"
-          alt=""
-          class="absolute -top-15 -right-10 w-30 md:w-40 md:-right-17 lg:-right-5 lg:w-45 lg:-top-23 pointer-events-none"
-        />
+        
 
       </section>
 
@@ -650,17 +642,7 @@ const descargarComprobante = async () => {
           class="bg-[#fff3d7] border-4 border-[#2f1204] p-8 relative overflow-hidden"
         >
 
-          <img
-            src="/3.PNG"
-            alt=""
-            class="absolute top-30 right-4 w-20 opacity-100"
-          />
-
-          <img
-            src="/9.PNG"
-            alt=""
-            class="absolute top-50 right-13 w-35 opacity-100"
-          />
+         <!-- COMPROBANTE -->
 
           <p
             class="text-[#dd2f03] uppercase font-articulat-bold text-sm tracking-widest"

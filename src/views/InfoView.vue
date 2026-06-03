@@ -24,9 +24,12 @@ const toggleFaq = (index: number) => {
         <p class="font-articulat-medium text-[#2f1204]/80 text-lg">
           Todo lo que necesitas saber sobre el espacio, entradas y los accesos a ESCLAT 2026.
         </p>
+
+
+        
       </div>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 relative z-10">
-        <div class="bg-[#fff3d7] border-[#aaa59b]/30 border-3 text-[#2f1204] p-8 md:p-10 min-h-[320px] duration-300 group" >
+        <div class="bg-[#fff3d7] text-[#2f1204]" >
         
           <div class="space-y-6">
 
@@ -47,7 +50,7 @@ const toggleFaq = (index: number) => {
           </div>
         </div>
 
-        <div class="bg-[#fff3d7] border-[#aaa59b]/30 border-3 text-[#2f1204] p-8 md:p-10 min-h-[320px] duration-300 group" >
+        <div class="bg-[#fff3d7] text-[#2f1204]" >
 
           <div class="space-y-6">
 
@@ -116,16 +119,16 @@ const toggleFaq = (index: number) => {
         </div>
       </div>
 
-      <img
+      <!-- <img
         src="/vinilo.png"
         alt="Decoración vinilo"
         class="absolute left-[-90px] top-[450px] w-[220px] mb-10 z-20 pointer-events-none"
-      />
+      /> -->
 
       <img
-        src="/estrella.png"
+        src="/1.PNG"
         alt="Decoración estrella"
-        class="absolute right-[-40px] top-[20px] w-[240px] rotate-[12deg] z-20 pointer-events-none"
+        class="absolute hidden sm:block lg:right-0 lg:-top-25 lg:w-55 rotate-[12deg] z-20 pointer-events-none"
       />
 
     </div>

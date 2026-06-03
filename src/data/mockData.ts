@@ -31,9 +31,9 @@ export const FESTIVAL_INFO = {
   enfoque: "",
   valores: "",
   normas: [
-    "Respeto absoluto a la diversidad de género, cultural y sostenibilidad del espacio.",
+    "No se tolerará ninguna falta de respeto hacia otros asistentes, ni tampoco hacia los miembros de la organización del festival y el resto del staff.",
     "El acceso a las zonas comunes es libre; los talleres prácticos requieren inscripción previa.",
-    "Prohibida la entrada de plásticos de un solo uso en todo el recinto de Las Naves."
+    "Se ruega mantener un buen uso de los espacios. Evite tirar residuos al suelo, utilice las zonas habilitadas para ello. Prohibida la entrada de plásticos de un solo uso en todo el recinto de Las Naves."
   ]
 };
 
@@ -491,6 +491,18 @@ export const FAQS: FAQ[] = [
   },
   {
     pregunta: "¿Cuáles son las normas básicas del festival?",
-    respuesta: "ESCLAT es un espacio seguro libre de discriminación. Promovemos de forma activa la sostenibilidad urbana, la diversidad de género y la gestión responsable de residuos dentro de Las Naves."
-  }
+    respuesta: "ESCLAT es un espacio seguro libre de discriminación. Promovemos de forma activa la sostenibilidad urbana, la tolerancia y la gestión responsable de residuos dentro de Las Naves."
+  },
+  {
+    pregunta: "Objetos no permitidos",
+    respuesta: "No se permite la entrada de objetos punzantes, armas de fuego ni de pirotecnia."
+  },
+  {
+    pregunta: "Movilidad reducida",
+    respuesta: "En caso de necesidad de adaptación de los espacios por movilidad reducida, contacte con nosotros a través de nuestro correo electrónico, hola@esclatfestival.com"
+  },
+  {
+    pregunta: "Menores de edad",
+    respuesta: "Los menores de 16 años deberán entrar siempre acompañados de un adulto responsable, ya sea su tutor legal o alguien autorizado por el mismo. En caso de tener más de 16 años, el menor podrá entrar por su cuenta siempre y cuando tenga una autorización firmada por su tutor legal."
+  },
 ];

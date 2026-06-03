@@ -50,54 +50,54 @@ const finalizarCompra = () => {
             </h3>
 
           <img
-            src="/poster1.png"
+            src="/FINALISIMO.jpg"
             alt="Cartel principal"
             class="class=w-64 h-80 object-contain hover:scale-105 transition-transform duration-300"
           />
 
           <button
             @click="abrirCompra('Cartel principal')"
-            class="mt-6 bg-[#dd2f03] text-[#fff3d7] px-8 py-3 uppercase font-articulat-bold hover:opacity-90 transition cursor-pointer"
+            class="mt-6 bg-[#de3f26] text-[#fff3d7] px-8 py-3 uppercase font-articulat-bold hover:opacity-90 transition cursor-pointer"
           >
             Comprar
           </button>
         </div>
 
-        <!-- chapa 1 -->
-        <div class="border-4 border-[#c7b8a6] bg-[#fff3d7] p-6 flex flex-col items-center text-center">
+        <!-- programacion 1 -->
+        <div class="border-4 border-[#ae9e8a] bg-[#c7b8a6] p-6 flex flex-col items-center text-center">
           <h3 class="font-articulat-bold uppercase text-2xl mb-4">
                 Cartel programación I
             </h3>
 
           <img
-            src="/chapa1.png"
+            src="/programacion1.jpg"
             alt="Chapa logo"
             class="w-64 h-80 object-contain hover:scale-105 transition-transform duration-300"
           />
 
           <button
             @click="abrirCompra('Chapa logo')"
-            class="mt-6 bg-[#dd2f03] text-[#fff3d7] px-8 py-3 uppercase font-articulat-bold hover:opacity-90 transition cursor-pointer"
+            class="mt-6 bg-[#de3f26] text-[#fff3d7] px-8 py-3 uppercase font-articulat-bold hover:opacity-90 transition cursor-pointer"
           >
             Comprar
           </button>
         </div>
 
-        <!-- chapa disco -->
-        <div class="border-4 border-[#c7b8a6] bg-[#fff3d7] p-6 flex flex-col items-center text-center">
+        <!-- programación 2 -->
+        <div class="border-4 border-[#c7b8a6] bg-[#de3f26] p-6 flex flex-col items-center text-center">
           <h3 class="font-articulat-bold uppercase text-2xl mb-4">
                 Cartel programación II
             </h3>
 
           <img
-            src="/chapaDisco.png"
+            src="/programacion2.jpg"
             alt="Chapa disco"
             class="w-64 h-80 object-contain hover:scale-105 transition-transform duration-300"
           />
 
           <button
             @click="abrirCompra('Chapa disco')"
-            class="mt-6 bg-[#dd2f03] text-[#fff3d7] px-8 py-3 uppercase font-articulat-bold hover:opacity-90 transition cursor-pointer"
+            class="mt-6 text-[#de3f26] bg-[#fff3d7] px-8 py-3 uppercase font-articulat-bold hover:opacity-90 transition cursor-pointer"
           >
             Comprar
           </button>
@@ -110,7 +110,7 @@ const finalizarCompra = () => {
     <!-- MODAL DE COMPRA -->
     <div
       v-if="mostrarCompra"
-      class="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4"
+      class="fixed mt-15 inset-0 bg-black/60 flex items-center justify-center z-50 p-4"
     >
       <div
         :class="[
@@ -125,7 +125,7 @@ const finalizarCompra = () => {
           ×
         </button>
 
-        <p class="uppercase text-[#dd2f03] font-articulat-bold tracking-widest text-sm">
+        <p class="uppercase text-[#de3f26] font-articulat-bold tracking-widest text-sm">
           Festival ESCLAT 2026
         </p>
 
@@ -201,7 +201,7 @@ const finalizarCompra = () => {
 
           <button
             @click="finalizarCompra"
-            class="w-full bg-[#dd2f03] text-[#fff3d7] py-4 uppercase font-articulat-bold"
+            class="w-full bg-[#de3f26] text-[#fff3d7] py-4 uppercase font-articulat-bold"
           >
             Finalizar compra
           </button>

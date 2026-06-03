@@ -41,11 +41,11 @@ onUnmounted(() => {
 <template>
   <div class="bg-[#fff3d7]">
     
-    <div class="w-full bg-[#fff3d7] text-[#dd2f03] font-articulat-demibold text-center py-4 text-4xl md:text-4xl relative">
+    <div class="w-full bg-[#fff3d7] text-[#de3f26] font-articulat-demibold text-center py-4 text-4xl md:text-4xl relative">
      {{ dias }} DÍAS, {{ horas }} HORAS, {{ minutes }} MINUTOS Y {{ segundos }} SEGUNDOS PARA ESCLAT 2026
     </div>
     
-    <section class="relative min-h-[90vh] flex flex-col items-center justify-between bg-[#dd2f03] py-16 overflow-hidden">      
+    <section class="relative min-h-[90vh] flex flex-col items-center justify-between bg-[#de3f26] py-16 overflow-hidden">      
       
       <img 
         src="/publico.png" 
@@ -83,7 +83,7 @@ onUnmounted(() => {
         
         <div class="absolute inset-0 bg-linear-to-t from-[#2f1204]/40 via-transparent to-transparent opacity-80 z-0"></div>
         
-        <div class="h-20 w-20 md:h-24 md:w-24 text-[#fff3d7] bg-[#2f1204] group-hover:bg-[#dd2f03] p-6 md:p-7 rounded-full group-hover:scale-110 transition-all duration-300 relative z-10 flex items-center justify-center shadow-2xl">
+        <div class="h-20 w-20 md:h-24 md:w-24 text-[#fff3d7] bg-[#2f1204] group-hover:bg-[#de3f26] p-6 md:p-7 rounded-full group-hover:scale-110 transition-all duration-300 relative z-10 flex items-center justify-center shadow-2xl">
           <Play class="h-full w-full fill-[#fff3d7]" />
         </div>
 
@@ -96,13 +96,13 @@ onUnmounted(() => {
         
         <div class="px-8 md:px-16 lg:px-24 flex flex-col items-start justify-center">
           
-          <h3 class="font-articulat-bold uppercase text-[#dd2f03] text-2xl md:text-4xl lg:text-5xl">
+          <h3 class="font-articulat-bold uppercase text-[#de3f26] text-2xl md:text-4xl lg:text-5xl">
             Festival de música<br>
             pensamiento y<br>
             creatividad
           </h3>
           
-          <p class="mt-8 text-[#dd2f03] font-articulat-demibold text-xl md:text-2xl max-w-2xl">
+          <p class="mt-8 text-[#de3f26] font-articulat-demibold text-xl md:text-2xl max-w-2xl">
             Esclat es un festival dirigido a público joven que combina música en directo con talleres, conversaciones y otras propuestas vinculadas a la creación contemporánea. Busca ser una amplificación para las voces de los artistas emergentes del país.
           </p>
           
@@ -148,7 +148,7 @@ onUnmounted(() => {
           Escucha la playlist oficial de Esclat 2026
         </h2>
 
-        <div class="w-full rounded-[3rem] overflow-hidden bg-[#dd2f03] p-2 md:p-4">
+        <div class="w-full rounded-[3rem] overflow-hidden bg-[#de3f26] p-2 md:p-4">
           
           <iframe
             style="border-radius: 2.5rem"
@@ -166,7 +166,7 @@ onUnmounted(() => {
       </div>
     </section>
 
-    <section class="relative w-full bg-[#8baee9] py-20 md:py-20 overflow-visible">
+    <section class="relative w-full bg-[#fff3d7] py-20 md:py-20 overflow-visible">
   
       <img
         src="/estrelaa.png"

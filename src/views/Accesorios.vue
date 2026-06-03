@@ -52,7 +52,7 @@ const finalizarCompra = () => {
           <img
             src="/tote.png"
             alt="Tote bag"
-            class="class=w-64 h-80 object-contain hover:scale-105 transition-transform duration-300"
+            class="class=w-100 h-100 object-contain hover:scale-105 transition-transform duration-300"
           />
 
           <button
@@ -171,7 +171,7 @@ const finalizarCompra = () => {
     <!-- MODAL DE COMPRA -->
     <div
       v-if="mostrarCompra"
-      class="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4"
+      class="fixed mt-15 inset-0 bg-black/60 flex items-center justify-center z-50 p-4"
     >
       <div
         :class="[
