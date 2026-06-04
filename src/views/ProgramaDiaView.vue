@@ -43,7 +43,7 @@ const eventosDelDia = computed(() => {
           v-for="evento in eventosDelDia"
           :key="evento.id"
           :to="`/artistas/${evento.artistaId}`"
-          class="relative block bg-[#fff3d7] border-[#aaa59b]/30 border-3 hover:bg-[#de3f26] hover:border-0 text-[#2f1204] rounded-none overflow-hidden flex flex-col transition-all duration-300 group hover:shadow-lg p-4 md:p-4"
+          class="relative block bg-[#fff3d7] border-[#aaa59b]/30 border-2 hover:bg-[#de3f26] hover:border-0 text-[#2f1204] rounded-none overflow-hidden flex flex-col transition-all duration-300 group hover:shadow-lg p-4 md:p-4"
         >
 
           <button

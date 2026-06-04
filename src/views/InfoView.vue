@@ -15,7 +15,6 @@ const toggleFaq = (index: number) => {
 
     <div class="container mx-auto px-5 max-w-[96%] relative space-y-14">
 
-      <!-- HEADER -->
       <div class="space-y-2 text-left">
         <h1 class="text-4xl md:text-5xl font-articulat-bold uppercase tracking-tight]">
           Guia del Asistente
@@ -55,7 +54,7 @@ const toggleFaq = (index: number) => {
           </div>
         </div>
 
-        <div class="bg-[#fff3d7] text-[#2f1204]" >
+        <div class="bg-[#fff3d7] text-[#2f1204] py-5" >
 
           <div class="space-y-6">
 
@@ -88,7 +87,7 @@ const toggleFaq = (index: number) => {
             v-for="(faq, index) in FAQS"
             :key="index"
             :class="[
-              'border-[#aaa59b]/30 border-3 overflow-hidden transition-all duration-300',
+              'border-[#aaa59b]/30 border-2 overflow-hidden transition-all duration-300',
               faqAbierta === index
                 ? 'bg-[#de3f26] text-[#fff3d7] border-0'
                 : 'bg-[#fff3d7] text-[#2f1204]'

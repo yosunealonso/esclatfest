@@ -46,7 +46,7 @@ const finalizarCompra = () => {
 
         <!-- CAMISETA ROJA -->
         <div
-            class="border-4 border-[#c7b8a6] bg-[#fff3d7] p-6 flex flex-col items-center text-center"
+            class="border-2 border-[#c7b8a6] bg-[#fff3d7] p-6 flex flex-col items-center text-center"
             >
             <h3 class="font-articulat-bold uppercase text-2xl mb-4">
                 Camiseta Roja
@@ -67,7 +67,7 @@ const finalizarCompra = () => {
         </div>
 
         <!-- CAMISETA BEIGE -->
-        <div class="border-4 border-[#c7b8a6] bg-[#fff3d7] p-6 flex flex-col items-center text-center">
+        <div class="border-2 border-[#c7b8a6] bg-[#fff3d7] p-6 flex flex-col items-center text-center">
            <h3 class="font-articulat-bold uppercase text-2xl mb-4">
                 Camiseta Beige
             </h3>
@@ -88,7 +88,7 @@ const finalizarCompra = () => {
         </div>
 
         <!-- SUDADERA Beige -->
-        <div class="border-4 border-[#c7b8a6] bg-[#fff3d7] p-6 flex flex-col items-center text-center">
+        <div class="border-2 border-[#c7b8a6] bg-[#fff3d7] p-6 flex flex-col items-center text-center">
           <h3 class="font-articulat-bold uppercase text-2xl mb-4">
                 Sudadera beige
             </h3>
@@ -108,7 +108,7 @@ const finalizarCompra = () => {
         </div>
 
         <!-- SUDADERA Roja -->
-        <div class="border-4 border-[#c7b8a6] bg-[#fff3d7] p-6 flex flex-col items-center text-center">
+        <div class="border-2 border-[#c7b8a6] bg-[#fff3d7] p-6 flex flex-col items-center text-center">
           <h3 class="font-articulat-bold uppercase text-2xl mb-4">
                 Sudadera Roja
             </h3>
@@ -252,7 +252,7 @@ const finalizarCompra = () => {
 
         <div
           v-else
-          class="bg-[#fff3d7] border-4 border-[#2f1204] p-8"
+          class="bg-[#fff3d7] border-2 border-[#2f1204] p-8"
         >
           <h3 class="text-4xl font-articulat-bold uppercase mb-8">
             Pedido Confirmado

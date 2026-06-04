@@ -44,7 +44,7 @@ const finalizarCompra = () => {
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
 
         <!-- totebag -->
-        <div class="border-4 border-[#c7b8a6] bg-[#fff3d7] p-6 flex flex-col items-center text-center">
+        <div class="border-2 border-[#c7b8a6] bg-[#fff3d7] p-6 flex flex-col items-center text-center">
           
             <h3 class="font-articulat-bold uppercase text-2xl mb-4">
                 Tote bag
@@ -64,7 +64,7 @@ const finalizarCompra = () => {
         </div>
 
         <!-- chapa 1 -->
-        <div class="border-4 border-[#c7b8a6] bg-[#fff3d7] p-6 flex flex-col items-center text-center">
+        <div class="border-2 border-[#c7b8a6] bg-[#fff3d7] p-6 flex flex-col items-center text-center">
           <h3 class="font-articulat-bold uppercase text-2xl mb-4">
                 Chapa logo
             </h3>
@@ -84,7 +84,7 @@ const finalizarCompra = () => {
         </div>
 
         <!-- chapa disco -->
-        <div class="border-4 border-[#c7b8a6] bg-[#fff3d7] p-6 flex flex-col items-center text-center">
+        <div class="border-2 border-[#c7b8a6] bg-[#fff3d7] p-6 flex flex-col items-center text-center">
           <h3 class="font-articulat-bold uppercase text-2xl mb-4">
                 Chapa disco
             </h3>
@@ -104,7 +104,7 @@ const finalizarCompra = () => {
         </div>
 
         <!-- Chapa cine-->
-        <div class="border-4 border-[#c7b8a6] bg-[#fff3d7] p-6 flex flex-col items-center text-center">
+        <div class="border-2 border-[#c7b8a6] bg-[#fff3d7] p-6 flex flex-col items-center text-center">
           <h3 class="font-articulat-bold uppercase text-2xl mb-4">
                 Chapa cine
             </h3>
@@ -124,7 +124,7 @@ const finalizarCompra = () => {
         </div>
 
         <!-- Chapa marrón -->
-        <div class="border-4 border-[#c7b8a6] bg-[#fff3d7] p-6 flex flex-col items-center text-center">
+        <div class="border-2 border-[#c7b8a6] bg-[#fff3d7] p-6 flex flex-col items-center text-center">
           <h3 class="font-articulat-bold uppercase text-2xl mb-4">
                 Chapa marrón
             </h3>
@@ -144,7 +144,7 @@ const finalizarCompra = () => {
         </div>
 
          <!-- Chapa rojo -->
-        <div class="border-4 border-[#c7b8a6] bg-[#fff3d7] p-6 flex flex-col items-center text-center">
+        <div class="border-2 border-[#c7b8a6] bg-[#fff3d7] p-6 flex flex-col items-center text-center">
           <h3 class="font-articulat-bold uppercase text-2xl mb-4">
                 Chapa rojo
             </h3>
@@ -271,7 +271,7 @@ const finalizarCompra = () => {
 
         <div
           v-else
-          class="bg-[#fff3d7] border-4 border-[#2f1204] p-8"
+          class="bg-[#fff3d7] border-2 border-[#2f1204] p-8"
         >
           <h3 class="text-4xl font-articulat-bold uppercase mb-8">
             Pedido Confirmado

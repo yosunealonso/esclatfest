@@ -101,7 +101,7 @@ const descargarComprobante = async () => {
       <section class="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
         <div
-          class="border-4 border-[#c7b8a6] bg-[#fff3d7] p-6 md:p-8 flex flex-col justify-between min-h-[340px]"
+          class="border-2 border-[#c7b8a6] bg-[#fff3d7] p-6 md:p-8 flex flex-col justify-between min-h-[340px]"
         >
 
           <div class="space-y-6">
@@ -134,7 +134,7 @@ const descargarComprobante = async () => {
         </div>
 
         <div
-          class="border-4 border-[#c7b8a6] bg-[#fff3d7] p-6 md:p-8 flex flex-col justify-between min-h-[340px]"
+          class="border-2 border-[#c7b8a6] bg-[#fff3d7] p-6 md:p-8 flex flex-col justify-between min-h-[340px]"
         >
 
           <div class="space-y-6">
@@ -169,7 +169,7 @@ const descargarComprobante = async () => {
 
       <section
         id="entradas-pases"
-        class="scroll-mt-20 border-4 border-[#c7b8a6] bg-[#fff3d7] p-8 md:p-12"
+        class="scroll-mt-20 border-2 border-[#c7b8a6] bg-[#fff3d7] p-8 md:p-12"
       >
         <h2 class="text-center text-3xl md:text-4xl uppercase font-articulat-bold mb-12">
           Entradas y Pases Completos
@@ -233,7 +233,7 @@ const descargarComprobante = async () => {
 
       <section
         id="formulario-registro"
-        class="scroll-mt-20 border-4 border-[#c7b8a6] bg-[#fff3d7] p-8 md:p-12 min-h-[500px] relative"
+        class="scroll-mt-20 border-2 border-[#c7b8a6] bg-[#fff3d7] p-8 md:p-12 min-h-[500px] relative"
       >
         <h2 class="text-center text-3xl md:text-4xl uppercase font-articulat-bold mb-12">
           Inscripción a Talleres, Charlas y Más
@@ -432,7 +432,7 @@ const descargarComprobante = async () => {
           >
             <div
               ref="comprobanteRef"
-              class="bg-[#fff3d7] border-4 border-[#2f1204] p-8 relative overflow-hidden"
+              class="bg-[#fff3d7] border-2 border-[#2f1204] p-8 relative overflow-hidden"
             >
 
               <img
@@ -510,11 +510,11 @@ const descargarComprobante = async () => {
 
     <div
   v-if="mostrarCompra"
-  class="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4"
+  class="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4 overflow-y-auto"
 >
   <div
     :class="[
-      'w-full max-w-2xl p-8 relative',
+      'w-full max-w-2xl p-8 relative max-h-[calc(100vh-2rem)] overflow-y-auto',
       compraCompletada ? 'bg-[#de3f26]' : 'bg-[#fff3d7]'
     ]"
   >
@@ -632,14 +632,14 @@ const descargarComprobante = async () => {
             @click="finalizarCompra"
             class="w-full bg-[#de3f26] text-[#fff3d7] py-4 uppercase font-articulat-bold"
           >
-            Finalizar compra (demo)
+            Finalizar compra
           </button>
 
         </div>
 
         <div
           v-else
-          class="bg-[#fff3d7] border-4 border-[#2f1204] p-8 relative overflow-hidden"
+          class="bg-[#fff3d7] border-2 border-[#2f1204] p-8 relative overflow-hidden"
         >
 
          <!-- COMPROBANTE -->
