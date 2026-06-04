@@ -41,7 +41,7 @@ onUnmounted(() => {
 <template>
   <div class="bg-[#fff3d7]">
     
-    <div class="w-full text-[#fff3d7] bg-[#de3f26] font-articulat-demibold text-center py-4 text-4xl md:text-4xl relative">
+    <div class="w-full text-[#fff3d7] bg-[#de3f26] font-articulat-demibold text-center py-4 text-sm md:text-2xl lg:text-4xl relative">
      {{ dias }} DÍAS, {{ horas }} HORAS, {{ minutes }} MINUTOS Y {{ segundos }} SEGUNDOS PARA ESCLAT 2026
     </div>
     
@@ -52,7 +52,7 @@ onUnmounted(() => {
         class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none" 
       />
       
-      <div class=" bg-black/30 z-10 pointer-events-none"></div>
+      <div class="z-10 pointer-events-none"></div>
 
       <div class="container mx-auto relative z-20 flex flex-col justify-between h-full w-full flex-1">
         
@@ -62,13 +62,13 @@ onUnmounted(() => {
           </h1>
         </div>
         
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-end w-full text-[#fff3d7] mt-auto pt-12">
+        <div class="flex justify-between items-start md:items-end w-full text-[#fff3d7] mt-auto pt-12">
           
-          <div class="text-left font-articulat-demibold text-3xl sm:text-4xl md:text-4xl lg:text-6xl uppercase leading-[1.1] max-w-2xl select-none">
+          <div class="px-5 text-left font-articulat-demibold text-3xl sm:text-4xl md:text-4xl lg:text-6xl uppercase leading-[1.1] max-w-2xl select-none">
             Festival de música<br>pensament i<br>creativitat
           </div>
           
-          <div class="text-left md:text-right font-articulat-medium text-2xl sm:text-3xl md:text-4xl lg:text-5xl  leading-[1.2] shrink-0 select-none">
+          <div class="px-5 text-right font-articulat-medium text-2xl sm:text-3xl md:text-4xl lg:text-5xl  leading-[1.2] shrink-0 select-none">
             23-25.10<br>2026<br>Las Naves, València
           </div>
 
@@ -119,7 +119,7 @@ onUnmounted(() => {
         <img
         src="/baterista1.png"
         alt="Baterista ESCLAT"
-        class="w-[120%] md:w-[120%] max-w-5xl h-auto object-contain select-none pointer-events-none translate-y-5"
+        class="w-full md:w-[120%] max-w-5xl h-auto object-contain select-none pointer-events-none translate-y-5"
         />
       </div>
       
@@ -127,14 +127,14 @@ onUnmounted(() => {
   </section>
 
   <div class="w-full bg-[#2f1204] overflow-hidden py-6 flex select-none  relative z-30">
-    <div class="flex animate-marquee whitespace-nowrap font-articulat-bold text-[#fff3d7] text-3xl md:text-4xl tracking-widest uppercase">
+    <div class="flex animate-marquee whitespace-nowrap font-articulat-bold text-[#fff3d7] text-xl md:text-4xl tracking-widest uppercase">
       <span class="mx-4">FESTIVAL DE MUSICA, PENSAMENT I CREATIVIDAD | CONCIERTOS | DJ SETS | TALLERES | CHARLAS | EXPOSICIONES |</span>
       <span class="mx-4">FESTIVAL DE MUSICA, PENSAMENT I CREATIVIDAD | CONCIERTOS | DJ SETS | TALLERES | CHARLAS | EXPOSICIONES |</span>
       <span class="mx-4">FESTIVAL DE MUSICA, PENSAMENT I CREATIVIDAD | CONCIERTOS | DJ SETS | TALLERES | CHARLAS | EXPOSICIONES |</span>
     </div>
   </div>
 
-    <section class="relative w-full bg-[#fff3d7] md:py-15 overflow-x-visible">
+    <section class="relative w-full bg-[#fff3d7] py-15 overflow-x-visible">
   
       <img
         src="/cascos.png"
