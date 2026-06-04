@@ -107,7 +107,7 @@ const descargarComprobante = async () => {
           <div class="space-y-6">
 
             <div
-              class="bg-[#7d9400] text-[#fff3d7] px-5 py-3 w-fit uppercase text-sm font-articulat-bold flex items-center gap-2">
+              class="bg-[#808d26] text-[#fff3d7] px-5 py-3 w-fit uppercase text-sm font-articulat-bold flex items-center gap-2">
               <Ticket class="h-4 w-4" />
               <span>Acceso con Entrada</span>
             </div>
@@ -126,7 +126,7 @@ const descargarComprobante = async () => {
 
           <a
             href="#entradas-pases"
-            class="mt-10 bg-[#7d9400] text-[#fff3d7] text-center py-5 uppercase text-xl font-articulat-bold hover:opacity-90 transition block"
+            class="mt-10 bg-[#808d26] text-[#fff3d7] text-center py-5 uppercase text-xl font-articulat-bold hover:opacity-90 transition block"
           >
             Comprar Entradas / Pases
           </a>
@@ -139,7 +139,7 @@ const descargarComprobante = async () => {
 
           <div class="space-y-6">
             <div
-              class="bg-[#89a9e8] text-[#fff3d7] px-5 py-3 w-fit uppercase text-sm font-articulat-bold flex items-center gap-2">
+              class="bg-[#8bb2f1] text-[#fff3d7] px-5 py-3 w-fit uppercase text-sm font-articulat-bold flex items-center gap-2">
               <Info class="h-4 w-4" />
               <span>Gratuito - Aforo Limitado</span>
             </div>
@@ -158,7 +158,7 @@ const descargarComprobante = async () => {
           <a
             href="#formulario-registro"
             @click="actividadSeleccionada = 'Taller / Charla'"
-            class="mt-10 bg-[#89a9e8] text-[#fff3d7] text-center py-5 uppercase text-xl font-articulat-bold hover:opacity-90 transition"
+            class="mt-10 bg-[#8bb2f1] text-[#fff3d7] text-center py-5 uppercase text-xl font-articulat-bold hover:opacity-90 transition"
           >
             Reservar Plaza / Inscribirse
           </a>
@@ -175,7 +175,7 @@ const descargarComprobante = async () => {
           Entradas y Pases Completos
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="bg-[#7d9400] p-8 text-left text-[#fff3d7] min-h-[360px] flex flex-col justify-between">
+          <div class="bg-[#808d26] p-8 text-left text-[#fff3d7] min-h-[360px] flex flex-col justify-between">
             <div>
               <h3 class="text-3xl text-center uppercase font-articulat-bold mb-6">
                 Entrada x Día
@@ -193,7 +193,7 @@ const descargarComprobante = async () => {
             </button>
           </div>
 
-          <div class="bg-[#89a9e8] p-8 text-left text-[#fff3d7] min-h-[360px] flex flex-col justify-between">
+          <div class="bg-[#8bb2f1] p-8 text-left text-[#fff3d7] min-h-[360px] flex flex-col justify-between">
             <div>
               <h3 class="text-3xl text-center uppercase font-articulat-bold mb-6">
                 Entrada x 2 Días
@@ -211,7 +211,7 @@ const descargarComprobante = async () => {
             </button>
           </div>
 
-          <div class="bg-[#dd2f03] p-8 text-left text-[#fff3d7] min-h-[360px] flex flex-col justify-between">
+          <div class="bg-[#de3f26] p-8 text-left text-[#fff3d7] min-h-[360px] flex flex-col justify-between">
             <div>
               <h3 class="text-3xl text-center uppercase font-articulat-bold mb-6">
                 Abono Completo
@@ -274,7 +274,7 @@ const descargarComprobante = async () => {
                 name="nombre"
                 type="text"
                 required
-                class="w-full border-2 border-[#c7b8a6] bg-[#fff3d7] px-4 py-3 outline-none focus:border-[#dd2f03]"
+                class="w-full border-2 border-[#c7b8a6] bg-[#fff3d7] px-4 py-3 outline-none focus:border-[#de3f26]"
               />
             </div>
 
@@ -292,7 +292,7 @@ const descargarComprobante = async () => {
                 name="email"
                 type="email"
                 required
-                class="w-full border-2 border-[#c7b8a6] bg-[#fff3d7] px-4 py-3 outline-none focus:border-[#dd2f03]"
+                class="w-full border-2 border-[#c7b8a6] bg-[#fff3d7] px-4 py-3 outline-none focus:border-[#de3f26]"
               />
             </div>
 
@@ -309,7 +309,7 @@ const descargarComprobante = async () => {
                 id="telefono"
                 name="telefono"
                 type="tel"
-                class="w-full border-2 border-[#c7b8a6] bg-[#fff3d7] px-4 py-3 outline-none focus:border-[#dd2f03]"
+                class="w-full border-2 border-[#c7b8a6] bg-[#fff3d7] px-4 py-3 outline-none focus:border-[#de3f26]"
               />
             </div>
 
@@ -326,7 +326,7 @@ const descargarComprobante = async () => {
                 name="actividad"
                 required
                 v-model="actividadSeleccionada"
-                class="w-full border-2 border-[#c7b8a6] bg-[#fff3d7] px-4 py-3 outline-none focus:border-[#dd2f03]"
+                class="w-full border-2 border-[#c7b8a6] bg-[#fff3d7] px-4 py-3 outline-none focus:border-[#de3f26]"
               >
                 <option disabled value="">
                   Selecciona una actividad
@@ -382,7 +382,7 @@ const descargarComprobante = async () => {
                 type="number"
                 min="1"
                 max="4"
-                class="w-full border-2 border-[#c7b8a6] bg-[#fff3d7] px-4 py-3 outline-none focus:border-[#dd2f03]"
+                class="w-full border-2 border-[#c7b8a6] bg-[#fff3d7] px-4 py-3 outline-none focus:border-[#de3f26]"
               />  
             </div>
 
@@ -398,7 +398,7 @@ const descargarComprobante = async () => {
                 id="comentarios"
                 name="comentarios"
                 rows="4"
-                class="w-full border-2 border-[#c7b8a6] bg-[#fff3d7] px-4 py-3 outline-none focus:border-[#dd2f03]"
+                class="w-full border-2 border-[#c7b8a6] bg-[#fff3d7] px-4 py-3 outline-none focus:border-[#de3f26]"
                 placeholder="Necesidades de accesibilidad, dudas o información adicional..."
               />
             </div>
@@ -418,7 +418,7 @@ const descargarComprobante = async () => {
 
             <button
               type="submit"
-              class="w-full bg-[#dd2f03] text-[#fff3d7] py-5 uppercase text-xl font-articulat-bold hover:opacity-90 transition"
+              class="w-full bg-[#de3f26] text-[#fff3d7] py-5 uppercase text-xl font-articulat-bold hover:opacity-90 transition"
             >
               Enviar inscripción
             </button>
@@ -442,7 +442,7 @@ const descargarComprobante = async () => {
               />
 
               <p
-                class="text-[#dd2f03] uppercase font-articulat-bold text-sm tracking-widest"
+                class="text-[#de3f26] uppercase font-articulat-bold text-sm tracking-widest"
               >
                 Festival ESCLAT 2026
               </p>
@@ -494,7 +494,7 @@ const descargarComprobante = async () => {
 
               <button
                 @click="descargarComprobante"
-                class="w-full bg-[#7d9400] text-[#fff3d7] py-5 uppercase text-xl font-articulat-bold hover:opacity-90 transition"
+                class="w-full bg-[#808d26] text-[#fff3d7] py-5 uppercase text-xl font-articulat-bold hover:opacity-90 transition"
               >
                 Descargar comprobante JPG
               </button>
@@ -630,7 +630,7 @@ const descargarComprobante = async () => {
 
           <button
             @click="finalizarCompra"
-            class="w-full bg-[#dd2f03] text-[#fff3d7] py-4 uppercase font-articulat-bold"
+            class="w-full bg-[#de3f26] text-[#fff3d7] py-4 uppercase font-articulat-bold"
           >
             Finalizar compra (demo)
           </button>
@@ -645,7 +645,7 @@ const descargarComprobante = async () => {
          <!-- COMPROBANTE -->
 
           <p
-            class="text-[#dd2f03] uppercase font-articulat-bold text-sm tracking-widest"
+            class="text-[#de3f26] uppercase font-articulat-bold text-sm tracking-widest"
           >
             Festival ESCLAT 2026
           </p>

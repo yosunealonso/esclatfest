@@ -41,7 +41,7 @@ onUnmounted(() => {
 <template>
   <div class="bg-[#fff3d7]">
     
-    <div class="w-full bg-[#fff3d7] text-[#de3f26] font-articulat-demibold text-center py-4 text-4xl md:text-4xl relative">
+    <div class="w-full text-[#fff3d7] bg-[#de3f26] font-articulat-demibold text-center py-4 text-4xl md:text-4xl relative">
      {{ dias }} DÍAS, {{ horas }} HORAS, {{ minutes }} MINUTOS Y {{ segundos }} SEGUNDOS PARA ESCLAT 2026
     </div>
     

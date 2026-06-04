@@ -60,7 +60,7 @@ const finalizarCompra = () => {
 
             <button
                 @click="abrirCompra('Camiseta Roja')"
-                class="mt-6 bg-[#dd2f03] text-[#fff3d7] px-8 py-3 uppercase font-articulat-bold hover:opacity-90 transition cursor-pointer"
+                class="mt-6 bg-[#de3f26] text-[#fff3d7] px-8 py-3 uppercase font-articulat-bold hover:opacity-90 transition cursor-pointer"
             >
                 Comprar
             </button>
@@ -81,7 +81,7 @@ const finalizarCompra = () => {
 
           <button
             @click="abrirCompra('Camiseta Beige')"
-            class="mt-6 bg-[#dd2f03] text-[#fff3d7] px-8 py-3 uppercase font-articulat-bold hover:opacity-90 transition cursor-pointer"
+            class="mt-6 bg-[#de3f26] text-[#fff3d7] px-8 py-3 uppercase font-articulat-bold hover:opacity-90 transition cursor-pointer"
           >
             Comprar
           </button>
@@ -101,7 +101,7 @@ const finalizarCompra = () => {
 
           <button
             @click="abrirCompra('Sudadera Beige')"
-            class="mt-6 bg-[#dd2f03] text-[#fff3d7] px-8 py-3 uppercase font-articulat-bold hover:opacity-90 transition cursor-pointer"
+            class="mt-6 bg-[#de3f26] text-[#fff3d7] px-8 py-3 uppercase font-articulat-bold hover:opacity-90 transition cursor-pointer"
           >
             Comprar
           </button>
@@ -121,7 +121,7 @@ const finalizarCompra = () => {
 
           <button
             @click="abrirCompra('Sudadera Roja')"
-            class="mt-6 bg-[#dd2f03] text-[#fff3d7] px-8 py-3 uppercase font-articulat-bold hover:opacity-90 transition cursor-pointer"
+            class="mt-6 bg-[#de3f26] text-[#fff3d7] px-8 py-3 uppercase font-articulat-bold hover:opacity-90 transition cursor-pointer"
           >
             Comprar
           </button>
@@ -149,7 +149,7 @@ const finalizarCompra = () => {
           ×
         </button>
 
-        <p class="uppercase text-[#dd2f03] font-articulat-bold tracking-widest text-sm">
+        <p class="uppercase text-[#de3f26] font-articulat-bold tracking-widest text-sm">
           Festival ESCLAT 2026
         </p>
 
@@ -243,7 +243,7 @@ const finalizarCompra = () => {
 
           <button
             @click="finalizarCompra"
-            class="w-full bg-[#dd2f03] text-[#fff3d7] py-4 uppercase font-articulat-bold"
+            class="w-full bg-[#de3f26] text-[#fff3d7] py-4 uppercase font-articulat-bold"
           >
             Finalizar compra
           </button>

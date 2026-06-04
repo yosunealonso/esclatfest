@@ -50,7 +50,7 @@ const descargarHorario = async () => {
 
       <button
         @click="descargarHorario"
-        class="bg-[#dd2f03] text-[#fff3d7] px-5 py-3 uppercase font-articulat-bold hover:scale-105 transition-transform"
+        class="bg-[#de3f26] text-[#fff3d7] px-5 py-3 uppercase font-articulat-bold hover:scale-105 transition-transform"
       >
         Descargar JPG
       </button>
@@ -58,7 +58,7 @@ const descargarHorario = async () => {
 
     <div
       ref="horarioRef"
-      class="bg-[#fff3d7] p-8 md:p-12 border-4 border-[#2f1204]/20 space-y-10"
+      class="bg-[#fff3d7] p-8 md:p-12 border-b-15 border-[#2f1204]/10 pb-6 space-y-10"
     >
         <div
         class="relative border-b-4 border-[#2f1204]/20 pb-10 min-h-65 flex flex-col justify-center items-center overflow-visible"
@@ -74,7 +74,7 @@ const descargarHorario = async () => {
             class="absolute top-35 -right-6 w-20 sm:w-25 sm:right-2 sm:top-25 md:w-33 md:top-18 object-contain pointer-events-none select-none"
         />
         <h1
-            class="relative z-10 font-variex text-[#dd2f03] text-6xl md:text-8xl leading-none"
+            class="relative z-10 font-variex text-[#de3f26] text-6xl md:text-8xl leading-none"
         >
             eSclat
         </h1>
@@ -86,7 +86,7 @@ const descargarHorario = async () => {
         </div>
 
       <div v-if="viernes.length">
-        <h2 class="font-articulat-bold uppercase text-3xl text-[#dd2f03] mb-4">
+        <h2 class="font-articulat-bold uppercase text-3xl text-[#de3f26] mb-4">
           Viernes 23
         </h2>
 
@@ -108,7 +108,7 @@ const descargarHorario = async () => {
       </div>
 
       <div v-if="sabado.length">
-        <h2 class="font-articulat-bold uppercase text-3xl text-[#dd2f03] mb-4">
+        <h2 class="font-articulat-bold uppercase text-3xl text-[#de3f26] mb-4">
           Sábado 24
         </h2>
 
@@ -130,7 +130,7 @@ const descargarHorario = async () => {
       </div>
 
       <div v-if="domingo.length">
-        <h2 class="font-articulat-bold uppercase text-3xl text-[#dd2f03] mb-4">
+        <h2 class="font-articulat-bold uppercase text-3xl text-[#de3f26] mb-4">
           Domingo 25
         </h2>
 

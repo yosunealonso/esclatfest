@@ -53,7 +53,7 @@ const spotifyEmbedUrl = artista?.spotify
       <div class="absolute inset-0"></div>
 
       <div class="absolute bottom-10 left-6 md:left-12 lg:left-20 z-10">
-        <span class="bg-[#dd2f03] text-[#fff3d7] px-4 py-2 uppercase text-sm font-articulat-bold">
+        <span class="bg-[#de3f26] text-[#fff3d7] px-4 py-2 uppercase text-sm font-articulat-bold">
           {{ artista.disciplina }}
         </span>
 
@@ -89,7 +89,7 @@ const spotifyEmbedUrl = artista?.spotify
                   :key="index"
                   class="flex items-center gap-3 text-lg"
                 >
-                  <span class="w-3 h-3 bg-[#dd2f03]"></span>
+                  <span class="w-3 h-3 bg-[#de3f26]"></span>
                   {{ actividad }}
                 </li>
               </ul>
@@ -100,7 +100,7 @@ const spotifyEmbedUrl = artista?.spotify
 
             <a
               href="/entradas"
-              class="bg-[#8baee9] text-[#fff3d7] px-6 py-4 uppercase font-articulat-bold hover:scale-105 transition-transform"
+              class="bg-[#8bb2f1] text-[#fff3d7] px-6 py-4 uppercase font-articulat-bold hover:scale-105 transition-transform"
             >
               Comprar entradas
             </a>

@@ -43,7 +43,7 @@ const eventosDelDia = computed(() => {
           v-for="evento in eventosDelDia"
           :key="evento.id"
           :to="`/artistas/${evento.artistaId}`"
-          class="relative block bg-[#fff3d7] border-[#aaa59b]/30 border-3 hover:bg-[#dd2f03] hover:border-0 text-[#2f1204] rounded-none overflow-hidden flex flex-col transition-all duration-300 group hover:shadow-lg p-4 md:p-4"
+          class="relative block bg-[#fff3d7] border-[#aaa59b]/30 border-3 hover:bg-[#de3f26] hover:border-0 text-[#2f1204] rounded-none overflow-hidden flex flex-col transition-all duration-300 group hover:shadow-lg p-4 md:p-4"
         >
 
           <button
@@ -64,7 +64,7 @@ const eventosDelDia = computed(() => {
             <div class="flex flex-wrap gap-2 items-center text-xs">
 
               <span
-                class="flex items-center gap-1 text-[#fff3d7] group-hover:text-[#2f1204] bg-[#dd2f03] group-hover:bg-[#fff3d7] px-2.5 py-1 rounded-none font-articulat-bold uppercase tracking-wider"
+                class="flex items-center gap-1 text-[#fff3d7] group-hover:text-[#2f1204] bg-[#de3f26] group-hover:bg-[#fff3d7] px-2.5 py-1 rounded-none font-articulat-bold uppercase tracking-wider"
               >
                 <Clock class="h-3.5 w-3.5" />
                 {{ evento.hora }}
@@ -73,7 +73,7 @@ const eventosDelDia = computed(() => {
               <span
                 class="flex items-center gap-1 text-[#fff3d7]/90 bg-[#1a0a02] px-2.5 py-1 rounded-none border border-[#fff3d7]/10 uppercase font-articulat-bold"
               >
-                <MapPin class="h-3.5 w-3.5 text-[#7a8c36]" />
+                <MapPin class="h-3.5 w-3.5 text-[#808d26]" />
                 {{ evento.espacio }}
               </span>
             </div>
@@ -95,7 +95,7 @@ const eventosDelDia = computed(() => {
             <span
               class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-none text-xs font-articulat-bold uppercase bg-[#1a0a02] border border-[#fff3d7]/10 text-[#fff3d7]"
             >
-              <Tag class="h-3 w-3 text-[#7a8c36]" />
+              <Tag class="h-3 w-3 text-[#808d26]" />
               {{ evento.categoria }}
             </span>
           </div>

@@ -35,13 +35,13 @@ const finalizarCompra = () => {
                 Merch · Posters
             </h1>
 
-            <p class="font-articulat-medium text-[#2f1204]/80 text-lg mb-15">
+            <p class="font-articulat-medium  text-[#2f1204]/80 text-lg mb-15">
                     Llévate un recuerdo del festival y descubre nuestra selección de accesorios.
             </p>
         </div>
       
 
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
 
         <!-- poster 1 -->
         <div class="border-4 border-[#c7b8a6] bg-[#fff3d7] p-6 flex flex-col items-center text-center">
@@ -50,7 +50,7 @@ const finalizarCompra = () => {
             </h3>
 
           <img
-            src="/FINALISIMO.jpg"
+            src="/PRINCIPALSOMBRA.png"
             alt="Cartel principal"
             class="class=w-64 h-80 object-contain hover:scale-105 transition-transform duration-300"
           />
@@ -63,41 +63,22 @@ const finalizarCompra = () => {
           </button>
         </div>
 
-        <!-- programacion 1 -->
-        <div class="border-4 border-[#ae9e8a] bg-[#c7b8a6] p-6 flex flex-col items-center text-center">
-          <h3 class="font-articulat-bold uppercase text-2xl mb-4">
-                Cartel programación I
-            </h3>
-
-          <img
-            src="/programacion1.jpg"
-            alt="Chapa logo"
-            class="w-64 h-80 object-contain hover:scale-105 transition-transform duration-300"
-          />
-
-          <button
-            @click="abrirCompra('Chapa logo')"
-            class="mt-6 bg-[#de3f26] text-[#fff3d7] px-8 py-3 uppercase font-articulat-bold hover:opacity-90 transition cursor-pointer"
-          >
-            Comprar
-          </button>
-        </div>
 
         <!-- programación 2 -->
-        <div class="border-4 border-[#c7b8a6] bg-[#de3f26] p-6 flex flex-col items-center text-center">
+        <div class="border-4 border-[#c7b8a6] bg-[#fff3d7] p-6 flex flex-col items-center text-center">
           <h3 class="font-articulat-bold uppercase text-2xl mb-4">
-                Cartel programación II
+                Cartel programación 
             </h3>
 
           <img
-            src="/programacion2.jpg"
+            src="/PROGRAMACIONSOMBRA.png"
             alt="Chapa disco"
             class="w-64 h-80 object-contain hover:scale-105 transition-transform duration-300"
           />
 
           <button
             @click="abrirCompra('Chapa disco')"
-            class="mt-6 text-[#de3f26] bg-[#fff3d7] px-8 py-3 uppercase font-articulat-bold hover:opacity-90 transition cursor-pointer"
+            class="mt-6 bg-[#de3f26] text-[#fff3d7] px-8 py-3 uppercase font-articulat-bold hover:opacity-90 transition cursor-pointer"
           >
             Comprar
           </button>

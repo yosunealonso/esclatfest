@@ -11,7 +11,7 @@ const toggleFaq = (index: number) => {
 </script>
 
 <template>
-  <div class="w-full min-h-screen bg-[#fff3d7] text-[#2f1204] py-12 font-articulat-medium overflow-hidden">
+  <div class="w-full min-h-screen  bg-[#fff3d7] text-[#2f1204] py-12 font-articulat-medium overflow-hidden">
 
     <div class="container mx-auto px-5 max-w-[96%] relative space-y-14">
 
@@ -21,7 +21,7 @@ const toggleFaq = (index: number) => {
           Guia del Asistente
         </h1>
 
-        <p class="font-articulat-medium text-[#2f1204]/80 text-lg">
+        <p class="font-articulat-medium border-b-3 border-[#2f1204]/10 pb-6 text-[#2f1204]/80 text-lg">
           Todo lo que necesitas saber sobre el espacio, entradas y los accesos a ESCLAT 2026.
         </p>
 
@@ -43,7 +43,12 @@ const toggleFaq = (index: number) => {
               </p>
 
               <p>
-                Las actividades se dividirán entre el Patio Central para grandes directos y la Sala Polivalente para los talleres interactivos.
+                Consulte la ubicación de cada actividad en la sección de programa. Dentro del recinto tendrá acceso al folleto del festival, que incluye esta misma información así como un mapa de Las Naves.
+              </p>
+
+              <p>
+                Consulte la ubicación de cada actividad en la sección de programa. Dentro del recinto tendrá acceso al folleto del festival, que incluye esta misma información así como un mapa de Las Naves.
+                En cuanto al transporte público, puede utilizar las líneas 5, 6, 7, y 8 de metro o las líneas 4, 19, 30, 94, 95 y 99 de autobús.
               </p>
             </div>
 
@@ -85,7 +90,7 @@ const toggleFaq = (index: number) => {
             :class="[
               'border-[#aaa59b]/30 border-3 overflow-hidden transition-all duration-300',
               faqAbierta === index
-                ? 'bg-[#dd2f03] text-[#fff3d7] border-0'
+                ? 'bg-[#de3f26] text-[#fff3d7] border-0'
                 : 'bg-[#fff3d7] text-[#2f1204]'
             ]"
           >
@@ -95,8 +100,8 @@ const toggleFaq = (index: number) => {
               :class="[
                 'w-full flex justify-between items-center text-left px-6 py-5 uppercase font-articulat-bold text-lg md:text-2xl transition-all',
                 faqAbierta === index
-                  ? 'bg-[#dd2f03] text-[#fff3d7]'
-                  : 'text-[#2f1204] hover:bg-[#dd2f03] hover:text-[#fff3d7]']">
+                  ? 'bg-[#de3f26] text-[#fff3d7]'
+                  : 'text-[#2f1204] hover:bg-[#de3f26] hover:text-[#fff3d7]']">
               <span>
                 {{ faq.pregunta }}
               </span>
