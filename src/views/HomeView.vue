@@ -36,6 +36,70 @@ onMounted(() => {
 onUnmounted(() => {
   clearInterval(intervalo);
 });
+
+import * as htmlToImage from 'html-to-image';
+
+const personajeRef = ref();
+
+const prendasColocadas = ref<
+  {
+    id: number;
+    src: string;
+    x: number;
+    y: number;
+  }[]
+>([]);
+
+let contador = 0;
+
+const agregarPrenda = (src: string) => {
+  prendasColocadas.value.push({
+    id: contador++,
+    src,
+    x: 100,
+    y: 150
+  });
+};
+
+const iniciarMovimiento = (
+  e: MouseEvent,
+  id: number
+) => {
+  e.preventDefault();
+
+  const mover = (ev: MouseEvent) => {
+    const prenda = prendasColocadas.value.find(
+      p => p.id === id
+    );
+
+    if (!prenda) return;
+
+    prenda.x += ev.movementX;
+    prenda.y += ev.movementY;
+  };
+
+  const parar = () => {
+    window.removeEventListener("mousemove", mover);
+    window.removeEventListener("mouseup", parar);
+  };
+
+  window.addEventListener("mousemove", mover);
+  window.addEventListener("mouseup", parar);
+};
+
+const descargarPersonaje = async () => {
+  if (!personajeRef.value) return;
+
+  const dataUrl = await htmlToImage.toPng(
+    personajeRef.value
+  );
+
+  const link = document.createElement("a");
+  link.download = "personaje-esclat.png";
+  link.href = dataUrl;
+  link.click();
+};
+
 </script>
 
 <template>
@@ -166,7 +230,7 @@ onUnmounted(() => {
       </div>
     </section>
 
-    <section class="relative w-full bg-[#fff3d7] py-20 md:py-20 overflow-visible">
+    <section class="relative w-full border-b-3 border-[#2f1204]/10 bg-[#fff3d7] py-20 md:py-20 overflow-visible">
   
       <img
         src="/estrelaa.png"
@@ -230,6 +294,179 @@ onUnmounted(() => {
         </div>
 
       </div>
+    </section>
+
+    <section  class="hidden lg:block w-full bg-[#fff3d7] py-7 overflow-hidden">
+
+      <div class="px-6 pt-20 pb-20 md:px-12 lg:px-16">
+
+        <h2 class="font-articulat-bold uppercase text-[#2f1204] text-center text-4xl md:text-5xl mb-10">
+          Crea tu personaje ESCLAT
+        </h2>
+
+        <p class="font-articulat-medium  pb-6 text-[#2f1204]/80 text-lg text-center mb-10">
+          Haz clic sobre las prendas y luego arrástralas hasta la posición deseada. Descarga la imagen dándole al botón, ¡y listo!
+        </p>
+
+        <div class="grid lg:grid-cols-3 gap-12 items-center">
+
+          <!-- IZQUIERDA -->
+
+          <div class="grid grid-cols-2 gap-6">
+
+            <img
+              src="/camisetaa1.png"
+              @click="agregarPrenda('/camisetaa1.png')"
+              class="cursor-pointer w-40 hover:scale-105 transition"
+            />
+
+            <img
+              src="/camisetaa2.PNG"
+               @click="agregarPrenda('/camisetaa2.PNG')"
+              class="cursor-pointer w-40 hover:scale-105 transition"
+            />
+
+            <img
+              src="/camisetaa3.png"
+              @click="agregarPrenda('/camisetaa3.png')"
+              class="cursor-pointer w-40 hover:scale-105 transition"
+            />
+
+            <img
+              src="/camisetaa4.PNG"
+              @click="agregarPrenda('/camisetaa4.PNG')"
+              class="cursor-pointer w-40 hover:scale-105 transition"
+            />
+
+            <img
+              src="/pantalon1.PNG"
+              @click="agregarPrenda('/pantalon1.PNG')"
+              class="cursor-pointer w-40 hover:scale-105 transition"
+            />
+
+            <img
+              src="/pantalon2.PNG"
+              @click="agregarPrenda('/pantalon2.PNG')"
+              class="cursor-pointer w-40 hover:scale-105 transition"
+            />
+
+            <img
+              src="/pantalon3.PNG"
+              @click="agregarPrenda('/pantalon3.PNG')"
+              class="cursor-pointer w-40 hover:scale-105 transition"
+            />
+
+            <img
+              src="/pantalon4.PNG"
+              @click="agregarPrenda('/pantalon4.PNG')"
+              class="cursor-pointer w-40 hover:scale-105 transition"
+            />
+
+          </div>
+
+          <!-- PERSONAJE -->
+
+          <div class="flex flex-col items-center">
+
+            <div
+              ref="personajeRef"
+              class="relative w-[320px] h-[700px] bg-[#fff3d7] border-15 border-[#de3f26] overflow-hidden"
+            >
+              <!-- personaje base -->
+
+              <img
+                src="/personaje-base.png"
+                class="absolute inset-0 w-full h-full object-contain"
+              />
+
+              <!-- prendas añadidas -->
+
+              <div
+                v-for="prenda in prendasColocadas"
+                :key="prenda.id"
+                class="absolute cursor-move"
+                :style="{
+                  left: `${prenda.x}px`,
+                  top: `${prenda.y}px`
+                }"
+                @mousedown="iniciarMovimiento($event, prenda.id)"
+              >
+                <img
+                  :src="prenda.src"
+                  class="w-45 select-none pointer-events-none"
+                />
+              </div>
+            </div>
+
+            
+
+            <button
+              @click="descargarPersonaje"
+              class="mt-8 bg-[#de3f26] text-[#fff3d7] px-8 py-4 uppercase font-articulat-bold hover:scale-105 transition"
+            >
+              Descargar personaje
+            </button>
+
+          </div>
+
+          <!-- DERECHA -->
+
+          <div class="grid grid-cols-2 gap-6">
+
+            <img
+              src="/peinado1.png"
+              @click="agregarPrenda('/peinado1.png')"
+              class="cursor-pointer w-60 hover:scale-105 transition"
+            />
+
+            <img
+              src="/peinado2.png"
+              @click="agregarPrenda('/peinado2.png')"
+              class="cursor-pointer w-60 hover:scale-105 transition"
+            />
+
+            <img
+              src="/peinado3.png"
+              @click="agregarPrenda('/peinado3.png')"
+              class="cursor-pointer w-60 hover:scale-105 transition"
+            />
+
+            <img
+              src="/peinado4.png"
+              @click="agregarPrenda('/peinado4.png')"
+              class="cursor-pointer w-60 hover:scale-105 transition"
+            />
+
+            <img
+              src="/accesorio1.png"
+              @click="agregarPrenda('/accesorio1.png')"
+              class="cursor-pointer w-40 hover:scale-105 transition"
+            />
+
+            <img
+              src="/accesorio2.png"
+              @click="agregarPrenda('/accesorio2.png')"
+              class="cursor-pointer w-40 hover:scale-105 transition"
+            />
+
+            <img
+              src="/accesorio3.png"
+              @click="agregarPrenda('/accesorio3.png')"
+              class="cursor-pointer w-200 hover:scale-105 transition"
+            />
+
+            <img
+              src="/accesorio4.png"
+              @click="agregarPrenda('/accesorio4.png')"
+              class="cursor-pointer w-40 hover:scale-105 transition"
+            />
+
+           </div> 
+
+        </div>
+
+      </div>
+
     </section>
 
   </div>

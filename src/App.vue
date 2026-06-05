@@ -47,7 +47,7 @@ const toggleMenu = () => {
 
         <div>
 
-          <h4 class="font-articulat uppercase text-sm tracking-widest mb-5 text-[#8bb2f1]">
+          <h4 class="font-articulat uppercase text-sm tracking-widest mb-5 text-[#fff3d7]">
             Organiza
           </h4>
 
@@ -69,7 +69,7 @@ const toggleMenu = () => {
         </div>
 
         <div class="mt-10 pb-12 border-b border-[#fff3d7]/20">
-          <h4 class="font-articulat uppercase text-sm tracking-widest mb-5 text-[#8bb2f1]">
+          <h4 class="font-articulat uppercase text-sm tracking-widest mb-5 text-[#fff3d7]">
             Colaboran
           </h4>
           <div class="flex flex-wrap items-center gap-6">
@@ -125,7 +125,7 @@ const toggleMenu = () => {
             </h3>
 
             <div class="space-y-2 text-[#fff3d7]/80">
-              <p>hola@esclatfestival.com</p>
+              <p>ayuda@esclatfestival.com</p>
               <p>Valencia, España</p>
             </div>
 
