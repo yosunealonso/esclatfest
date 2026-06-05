@@ -19,7 +19,7 @@ const toggleMenu = () => {
         </RouterLink>
         
         <nav class="hidden md:flex items-center space-x-8 font-articulat-medium text-xl tracking-wider">
-          <RouterLink to="/artistas" class="text-[#fff3d7] hover:text-[#8bb2f1] transition-colors" active-class="text-[#8bb2f1]">ARTISTAS</RouterLink>
+          <RouterLink to="/artistas" class="text-[#fff3d7] hover:text-[#8bb2f1] transition-colors" active-class="text-[#8bb2f1]">LINEUP</RouterLink>
           <RouterLink to="/programa" class="text-[#fff3d7] hover:text-[#8bb2f1] transition-colors" active-class="text-[#8bb2f1]">PROGRAMA</RouterLink>
           <RouterLink to="/entradas" class="text-[#fff3d7] hover:text-[#8bb2f1] transition-colors" active-class="text-[#8bb2f1]">ENTRADAS</RouterLink>
           <RouterLink to="/info" class="text-[#fff3d7] hover:text-[#8bb2f1] transition-colors" active-class="text-[#8bb2f1]">FAQs</RouterLink>

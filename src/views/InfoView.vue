@@ -54,7 +54,7 @@ const toggleFaq = (index: number) => {
           </div>
         </div>
 
-        <div class="bg-[#fff3d7] text-[#2f1204] py-5" >
+        <div class="bg-[#fff3d7] text-[#2f1204] py-10" >
 
           <div class="space-y-6">
 
