@@ -53,7 +53,7 @@ const finalizarCompra = () => {
             </h3>
 
             <img
-                src="/camiseta1TIENDA.png"
+                src="/camiseta1.png"
                 alt="Camiseta Roja"
                 class="w-64 h-80 object-contain hover:scale-105 transition-transform duration-300"
             />
