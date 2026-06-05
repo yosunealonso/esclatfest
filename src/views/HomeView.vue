@@ -118,10 +118,10 @@ const descargarPersonaje = async () => {
       
       <div class="z-10 pointer-events-none"></div>
 
-      <div class="container mx-auto relative z-20 flex flex-col justify-between h-full w-full flex-1">
+      <div class="container mx-auto relative z-20 flex flex-col justify-between h-full w-full flex-1 px-15">
         
         <div class="w-full flex justify-center">
-          <h1 class="font-variex text-[#fff3d7] text-9xl md:text-[14rem] lg:text-[23rem] select-none text-center">
+          <h1 class="font-variex text-[#fff3d7] text-8xl md:text-[1rem] lg:text-[20rem] select-none text-center px-20">
             eSclat
           </h1>
         </div>
@@ -141,15 +141,21 @@ const descargarPersonaje = async () => {
       </div>
     </section>
 
-    <section id="spot" class="w-full bg-[#2f1204] flex items-center justify-center scroll-mt-24">
-  
-      <div class="aspect-video w-full bg-[#2f1204] border-y-2 border-[#2f1204]/10 flex flex-col items-center justify-center shadow-2xl relative overflow-hidden group cursor-pointer">
+    <section
+      id="spot"
+      className="w-full bg-[#2f1204] flex items-center justify-center scroll-mt-24"
+    >
+      <div className="aspect-video w-full overflow-hidden shadow-2xl relative">
         
-        <div class="absolute inset-0 bg-linear-to-t from-[#2f1204]/40 via-transparent to-transparent opacity-80 z-0"></div>
-        
-        <div class="h-20 w-20 md:h-24 md:w-24 text-[#fff3d7] bg-[#2f1204] group-hover:bg-[#de3f26] p-6 md:p-7 rounded-full group-hover:scale-110 transition-all duration-300 relative z-10 flex items-center justify-center shadow-2xl">
-          <Play class="h-full w-full fill-[#fff3d7]" />
-        </div>
+        <iframe
+          className="w-full h-full"
+          src="https://www.youtube.com/embed/JzHZTDki0Kg"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        />
 
       </div>
     </section>
