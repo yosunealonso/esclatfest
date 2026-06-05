@@ -321,8 +321,8 @@ const descargarPersonaje = async () => {
             />
 
             <img
-              src="/camisetaa2.PNG"
-               @click="agregarPrenda('/camisetaa2.PNG')"
+              src="/camisetaa2.png"
+               @click="agregarPrenda('/camisetaa2.png')"
               class="cursor-pointer w-40 hover:scale-105 transition"
             />
 
@@ -333,26 +333,26 @@ const descargarPersonaje = async () => {
             />
 
             <img
-              src="/camisetaa4.PNG"
-              @click="agregarPrenda('/camisetaa4.PNG')"
+              src="/camisetaa4.png"
+              @click="agregarPrenda('/camisetaa4.png')"
               class="cursor-pointer w-40 hover:scale-105 transition"
             />
 
             <img
-              src="/pantalon1.PNG"
-              @click="agregarPrenda('/pantalon1.PNG')"
+              src="/pantalon1.png"
+              @click="agregarPrenda('/pantalon1.png')"
               class="cursor-pointer w-40 hover:scale-105 transition"
             />
 
             <img
-              src="/pantalon2.PNG"
-              @click="agregarPrenda('/pantalon2.PNG')"
+              src="/pantalon2.png"
+              @click="agregarPrenda('/pantalon2.png')"
               class="cursor-pointer w-40 hover:scale-105 transition"
             />
 
             <img
-              src="/pantalon3.PNG"
-              @click="agregarPrenda('/pantalon3.PNG')"
+              src="/pantalon3.png"
+              @click="agregarPrenda('/pantalon3.png')"
               class="cursor-pointer w-40 hover:scale-105 transition"
             />
 
